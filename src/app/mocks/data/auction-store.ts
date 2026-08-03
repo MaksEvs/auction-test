@@ -1,0 +1,5362 @@
+import type { IAuctionStoreItem } from '@/app/mocks/types/auction-store'
+
+export const auctionStoreItems: IAuctionStoreItem[] = [
+  {
+    "main": {
+      "id": 1236,
+      "cargo_num": "00000001059",
+      "cargo_date": "2026-05-04T10:00:00",
+      "order_uid": "3a05d045-0e67-4f85-b20a-de81d18bba7a",
+      "auc_type": "Down",
+      "created_at": "2026-05-25T11:00:00"
+    },
+    "organizer": {
+      "subscriber_id": 98,
+      "subscriber_code": "98",
+      "infobase_code": "RU_Cargo_01",
+      "organization_name": "LIM",
+      "organization_inn": "7703769184",
+      "organization_kpp": "770301001",
+      "organization_id": 340
+    },
+    "contacts": [
+      {
+        "name": "Contact 1",
+        "phone": "+79001234500",
+        "work_phone": null,
+        "uid": "550e8400-e29b-41d4-a716-446655440001",
+        "email": "contact1@example.com"
+      }
+    ],
+    "cargo": {
+      "price": "30000",
+      "currency": 643,
+      "is_international": false,
+      "distance": 700,
+      "truck_count": 1,
+      "body_type": "Tilt",
+      "temp_from": -18,
+      "temp_to": -12,
+      "conics": 0,
+      "belts": 0,
+      "adr": 0,
+      "coupling": false,
+      "air_pass": false,
+      "low_loader": false,
+      "additional_load": false,
+      "containered": false,
+      "container_type": null,
+      "container_size": null,
+      "loading_types": {
+        "side": true,
+        "top": true,
+        "rear": true,
+        "full": true
+      },
+      "docs": {
+        "tir": false,
+        "cmr": true,
+        "t1": false,
+        "med": true
+      },
+      "car": {
+        "type": "Truck tractor",
+        "weight": 20,
+        "volume": 82,
+        "width": 2.4,
+        "length": 13.6,
+        "height": 2.7
+      }
+    },
+    "trading": {
+      "status": "Auction",
+      "status_mobile": "NotParticipating",
+      "start_time": "2026-05-25T16:00:00",
+      "stop_time": "2026-05-25T17:00:00",
+      "bid_measurement_type": "PerRoute",
+      "can_set_bet": true,
+      "allow_counter_bets": true,
+      "hide_bets_history": false,
+      "hide_places": false,
+      "no_view_cargo_price": false,
+      "hide_points_address_and_contacts": false,
+      "is_bidder": false,
+      "is_favorite": false,
+      "is_last_bet_with_vat": null,
+      "red_bet_with_vat": false,
+      "red_bet_no_vat": false,
+      "send_deal_before_load": false,
+      "chat_id": null,
+      "price": {
+        "start": 33000,
+        "start_no_vat": 27500,
+        "current": 30000,
+        "current_no_vat": 25000,
+        "available": 29000,
+        "available_no_vat": 24166.67,
+        "min": 20000,
+        "min_no_vat": 16666.67,
+        "max": 33000,
+        "max_no_vat": 27500,
+        "step": 500,
+        "step_no_vat": 416.67,
+        "price_per_km": 16.39
+      },
+      "your": {
+        "bet": false,
+        "last_bet": null,
+        "last_bet_with_vat": null,
+        "win": false
+      },
+      "settings": {
+        "prolong_after_bet": 10,
+        "winner_confirm": 1,
+        "winner_counter_mode": null,
+        "transmission_time_in": 24,
+        "coefficient": 10
+      }
+    },
+    "payment": {
+      "condition": "Payment by original transport documents",
+      "condition_predefined": "OriginalDocuments",
+      "form": "Bank transfer with VAT",
+      "delay": 30,
+      "delay_type": "CalendarDays",
+      "currency_code": "643",
+      "prepay": "0"
+    },
+    "assembly": {
+      "num": null,
+      "date": null
+    },
+    "routes": [
+      {
+        "row_num": 1,
+        "op_type": "Loading",
+        "start_date": "2026-05-26T09:00:00",
+        "end_date": "2026-05-26T11:00:00",
+        "comment": "Main loading point",
+        "contractor": "",
+        "contractor_inn": "",
+        "location": {
+          "city_name": "Perm",
+          "city_full_name": "Perm, Russia",
+          "city_gc_id": 59,
+          "loading_address": "Transportnaya 9",
+          "lon": 56.238,
+          "lat": 58.01
+        },
+        "cargo": {
+          "name": "Frozen goods",
+          "package_name": "",
+          "weight": "0.500",
+          "volume": "0.500",
+          "length": "0",
+          "width": "0",
+          "height": "0",
+          "oversized": false,
+          "package_amount": null
+        },
+        "contact": {
+          "name": "Loading contact",
+          "phone": "+79001112233"
+        }
+      },
+      {
+        "row_num": 2,
+        "op_type": "Loading",
+        "start_date": "2026-05-27T10:00:00",
+        "end_date": "2026-05-27T12:00:00",
+        "comment": "Additional loading point",
+        "contractor": "",
+        "contractor_inn": "",
+        "location": {
+          "city_name": "Saint Petersburg",
+          "city_full_name": "Saint Petersburg, Russia",
+          "city_gc_id": 78,
+          "loading_address": "Portovaya 4",
+          "lon": 30.3159,
+          "lat": 59.9391
+        },
+        "cargo": {
+          "name": "Frozen goods",
+          "package_name": "",
+          "weight": "0.500",
+          "volume": "0.500",
+          "length": "0",
+          "width": "0",
+          "height": "0",
+          "oversized": false,
+          "package_amount": null
+        },
+        "contact": {
+          "name": "Loading contact",
+          "phone": "+79001112233"
+        }
+      },
+      {
+        "row_num": 3,
+        "op_type": "Unloading",
+        "start_date": "2026-05-28T11:00:00",
+        "end_date": "2026-05-28T13:00:00",
+        "comment": null,
+        "contractor": "",
+        "contractor_inn": "",
+        "location": {
+          "city_name": "Moscow",
+          "city_full_name": "Moscow, Russia",
+          "city_gc_id": 100,
+          "loading_address": "Skladskaya 12",
+          "lon": 37.6173,
+          "lat": 55.7558
+        },
+        "cargo": {
+          "name": "Frozen goods",
+          "package_name": "",
+          "weight": "1.000",
+          "volume": "1.000",
+          "length": "0",
+          "width": "0",
+          "height": "0",
+          "oversized": false,
+          "package_amount": null
+        },
+        "contact": {
+          "name": "Unloading contact",
+          "phone": "+79004445566"
+        }
+      }
+    ],
+    "admitted_organizations": [],
+    "hide_bets_history": false,
+    "list": {
+      "priority_sort": 0,
+      "is_assembly": false,
+      "price_per_km": 16.39,
+      "route": {
+        "load": {
+          "city": "Perm",
+          "address": "Transportnaya 9",
+          "date": "2026-05-26T09:00:00",
+          "city_gc_id": 59,
+          "points_count": 2
+        },
+        "unload": {
+          "city": "Moscow",
+          "address": "Skladskaya 12",
+          "date": "2026-05-27T16:00:00",
+          "city_gc_id": 100,
+          "points_count": 2
+        }
+      },
+      "cargo": {
+        "name": "Frozen goods",
+        "weight": 1,
+        "volume": 1,
+        "incoterms": ""
+      },
+      "organizer": {
+        "is_hide_organization": false
+      },
+      "payment": {
+        "consignor": null,
+        "consignee": null
+      },
+      "trading": {
+        "direction": "Down",
+        "comment": "Auction is available",
+        "is_available": true,
+        "is_accredited": true
+      }
+    }
+  },
+  {
+    "main": {
+      "id": 1237,
+      "cargo_num": "00000001060",
+      "cargo_date": "2026-05-05T11:00:00",
+      "order_uid": "550e8400-e29b-41d4-a716-446655440001",
+      "auc_type": "Request",
+      "created_at": "2026-05-25T12:00:00"
+    },
+    "organizer": {
+      "subscriber_id": 99,
+      "subscriber_code": "99",
+      "infobase_code": "RU_Cargo_01",
+      "organization_name": "TransLogistic",
+      "organization_inn": "7703769185",
+      "organization_kpp": "770301002",
+      "organization_id": 341
+    },
+    "contacts": [],
+    "cargo": {
+      "price": "33500",
+      "currency": 643,
+      "is_international": false,
+      "distance": 820,
+      "truck_count": 2,
+      "body_type": "Van",
+      "temp_from": 0,
+      "temp_to": 0,
+      "conics": 1,
+      "belts": 1,
+      "adr": 0,
+      "coupling": false,
+      "air_pass": false,
+      "low_loader": false,
+      "additional_load": false,
+      "containered": false,
+      "container_type": null,
+      "container_size": null,
+      "loading_types": {
+        "side": false,
+        "top": false,
+        "rear": false,
+        "full": false
+      },
+      "docs": {
+        "tir": false,
+        "cmr": false,
+        "t1": false,
+        "med": false
+      },
+      "car": null
+    },
+    "trading": {
+      "status": "Planning",
+      "status_mobile": "Leading",
+      "start_time": "2026-05-26T16:00:00",
+      "stop_time": "2026-05-26T17:00:00",
+      "bid_measurement_type": "PerKm",
+      "can_set_bet": true,
+      "allow_counter_bets": false,
+      "hide_bets_history": false,
+      "hide_places": false,
+      "no_view_cargo_price": false,
+      "hide_points_address_and_contacts": false,
+      "is_bidder": true,
+      "is_favorite": true,
+      "is_last_bet_with_vat": true,
+      "red_bet_with_vat": false,
+      "red_bet_no_vat": false,
+      "send_deal_before_load": false,
+      "chat_id": null,
+      "price": {
+        "start": 36500,
+        "start_no_vat": 30416.67,
+        "current": 33500,
+        "current_no_vat": 27916.67,
+        "available": 32500,
+        "available_no_vat": 27083.33,
+        "min": 23500,
+        "min_no_vat": 19583.33,
+        "max": 36500,
+        "max_no_vat": 30416.67,
+        "step": 500,
+        "step_no_vat": 416.67,
+        "price_per_km": 18.24
+      },
+      "your": {
+        "bet": true,
+        "last_bet": 32500,
+        "last_bet_with_vat": 32500,
+        "win": false
+      },
+      "settings": {
+        "prolong_after_bet": 10,
+        "winner_confirm": 1,
+        "winner_counter_mode": null,
+        "transmission_time_in": 24,
+        "coefficient": 10
+      }
+    },
+    "payment": {
+      "condition": "Payment by original transport documents",
+      "condition_predefined": "OriginalDocuments",
+      "form": "Bank transfer without VAT",
+      "delay": 30,
+      "delay_type": "CalendarDays",
+      "currency_code": "643",
+      "prepay": "0"
+    },
+    "assembly": {
+      "num": null,
+      "date": null
+    },
+    "routes": [
+      {
+        "row_num": 1,
+        "op_type": "Loading",
+        "start_date": "2026-05-26T09:00:00",
+        "end_date": "2026-05-26T11:00:00",
+        "comment": null,
+        "contractor": "",
+        "contractor_inn": "",
+        "location": {
+          "city_name": "Moscow",
+          "city_full_name": "Moscow, Russia",
+          "city_gc_id": 100,
+          "loading_address": "Skladskaya 12",
+          "lon": 37.6173,
+          "lat": 55.7558
+        },
+        "cargo": {
+          "name": "Equipment",
+          "package_name": "",
+          "weight": "2.250",
+          "volume": "5.500",
+          "length": "0",
+          "width": "0",
+          "height": "0",
+          "oversized": false,
+          "package_amount": null
+        },
+        "contact": {
+          "name": "Loading contact",
+          "phone": "+79001112233"
+        }
+      },
+      {
+        "row_num": 2,
+        "op_type": "Unloading",
+        "start_date": "2026-05-27T10:00:00",
+        "end_date": "2026-05-27T12:00:00",
+        "comment": "Intermediate unloading point",
+        "contractor": "",
+        "contractor_inn": "",
+        "location": {
+          "city_name": "Kazan",
+          "city_full_name": "Kazan, Russia",
+          "city_gc_id": 16,
+          "loading_address": "Proizvodstvennaya 18",
+          "lon": 49.1064,
+          "lat": 55.7961
+        },
+        "cargo": {
+          "name": "Equipment",
+          "package_name": "",
+          "weight": "1.125",
+          "volume": "2.750",
+          "length": "0",
+          "width": "0",
+          "height": "0",
+          "oversized": false,
+          "package_amount": null
+        },
+        "contact": {
+          "name": "Unloading contact",
+          "phone": "+79004445566"
+        }
+      },
+      {
+        "row_num": 3,
+        "op_type": "Unloading",
+        "start_date": "2026-05-28T11:00:00",
+        "end_date": "2026-05-28T13:00:00",
+        "comment": "Final unloading point",
+        "contractor": "",
+        "contractor_inn": "",
+        "location": {
+          "city_name": "Saint Petersburg",
+          "city_full_name": "Saint Petersburg, Russia",
+          "city_gc_id": 78,
+          "loading_address": "Portovaya 4",
+          "lon": 30.3159,
+          "lat": 59.9391
+        },
+        "cargo": {
+          "name": "Equipment",
+          "package_name": "",
+          "weight": "1.125",
+          "volume": "2.750",
+          "length": "0",
+          "width": "0",
+          "height": "0",
+          "oversized": false,
+          "package_amount": null
+        },
+        "contact": {
+          "name": "Unloading contact",
+          "phone": "+79004445566"
+        }
+      }
+    ],
+    "admitted_organizations": [],
+    "hide_bets_history": false,
+    "list": {
+      "priority_sort": 1,
+      "is_assembly": false,
+      "price_per_km": 18.24,
+      "route": {
+        "load": {
+          "city": "Moscow",
+          "address": "Skladskaya 12",
+          "date": "2026-05-27T10:00:00",
+          "city_gc_id": 100,
+          "points_count": 1
+        },
+        "unload": {
+          "city": "Saint Petersburg",
+          "address": "Portovaya 4",
+          "date": "2026-05-28T17:00:00",
+          "city_gc_id": 78,
+          "points_count": 1
+        }
+      },
+      "cargo": {
+        "name": "Equipment",
+        "weight": 2.25,
+        "volume": 5.5,
+        "incoterms": ""
+      },
+      "organizer": {
+        "is_hide_organization": false
+      },
+      "payment": {
+        "consignor": null,
+        "consignee": null
+      },
+      "trading": {
+        "direction": null,
+        "comment": "Auction is available",
+        "is_available": true,
+        "is_accredited": true
+      }
+    }
+  },
+  {
+    "main": {
+      "id": 1238,
+      "cargo_num": "00000001061",
+      "cargo_date": "2026-05-06T12:00:00",
+      "order_uid": "550e8400-e29b-41d4-a716-446655440002",
+      "auc_type": "Up",
+      "created_at": "2026-05-25T13:00:00"
+    },
+    "organizer": {
+      "subscriber_id": 100,
+      "subscriber_code": "100",
+      "infobase_code": "RU_Cargo_01",
+      "organization_name": "NorthCargo",
+      "organization_inn": "7703769186",
+      "organization_kpp": "770301003",
+      "organization_id": 342
+    },
+    "contacts": [
+      {
+        "name": "Contact 3",
+        "phone": "+79001234502",
+        "work_phone": null,
+        "uid": "550e8400-e29b-41d4-a716-446655440003",
+        "email": "contact3@example.com"
+      }
+    ],
+    "cargo": {
+      "price": "37000",
+      "currency": 643,
+      "is_international": false,
+      "distance": 940,
+      "truck_count": 3,
+      "body_type": "Refrigerator",
+      "temp_from": 0,
+      "temp_to": 0,
+      "conics": 2,
+      "belts": 2,
+      "adr": 0,
+      "coupling": true,
+      "air_pass": false,
+      "low_loader": false,
+      "additional_load": false,
+      "containered": false,
+      "container_type": null,
+      "container_size": null,
+      "loading_types": {
+        "side": true,
+        "top": false,
+        "rear": true,
+        "full": false
+      },
+      "docs": {
+        "tir": false,
+        "cmr": true,
+        "t1": false,
+        "med": false
+      },
+      "car": {
+        "type": "Truck tractor",
+        "weight": 20,
+        "volume": 82,
+        "width": 2.4,
+        "length": 13.6,
+        "height": 2.7
+      }
+    },
+    "trading": {
+      "status": "Auction",
+      "status_mobile": "Losing",
+      "start_time": "2026-05-27T16:00:00",
+      "stop_time": "2026-05-27T17:00:00",
+      "bid_measurement_type": "PerRoute",
+      "can_set_bet": true,
+      "allow_counter_bets": true,
+      "hide_bets_history": false,
+      "hide_places": false,
+      "no_view_cargo_price": false,
+      "hide_points_address_and_contacts": false,
+      "is_bidder": true,
+      "is_favorite": false,
+      "is_last_bet_with_vat": true,
+      "red_bet_with_vat": false,
+      "red_bet_no_vat": false,
+      "send_deal_before_load": false,
+      "chat_id": null,
+      "price": {
+        "start": 40000,
+        "start_no_vat": 33333.33,
+        "current": 37000,
+        "current_no_vat": 30833.33,
+        "available": 36000,
+        "available_no_vat": 30000,
+        "min": 27000,
+        "min_no_vat": 22500,
+        "max": 40000,
+        "max_no_vat": 33333.33,
+        "step": 500,
+        "step_no_vat": 416.67,
+        "price_per_km": 20.09
+      },
+      "your": {
+        "bet": true,
+        "last_bet": 36000,
+        "last_bet_with_vat": 36000,
+        "win": false
+      },
+      "settings": {
+        "prolong_after_bet": 10,
+        "winner_confirm": 1,
+        "winner_counter_mode": null,
+        "transmission_time_in": 24,
+        "coefficient": 10
+      }
+    },
+    "payment": {
+      "condition": "Payment by original transport documents",
+      "condition_predefined": "OriginalDocuments",
+      "form": "Bank transfer with VAT",
+      "delay": 30,
+      "delay_type": "CalendarDays",
+      "currency_code": "643",
+      "prepay": "0"
+    },
+    "assembly": {
+      "num": null,
+      "date": null
+    },
+    "routes": [
+      {
+        "row_num": 1,
+        "op_type": "Loading",
+        "start_date": "2026-05-26T09:00:00",
+        "end_date": "2026-05-26T11:00:00",
+        "comment": "First loading point",
+        "contractor": "",
+        "contractor_inn": "",
+        "location": {
+          "city_name": "Saint Petersburg",
+          "city_full_name": "Saint Petersburg, Russia",
+          "city_gc_id": 78,
+          "loading_address": "Portovaya 4",
+          "lon": 30.3159,
+          "lat": 59.9391
+        },
+        "cargo": {
+          "name": "Building materials",
+          "package_name": "Oversized steel frame",
+          "weight": "1.750",
+          "volume": "5.000",
+          "length": "6.200",
+          "width": "2.800",
+          "height": "3.100",
+          "oversized": true,
+          "package_amount": 4
+        },
+        "contact": {
+          "name": "Loading contact",
+          "phone": "+79001112233"
+        }
+      },
+      {
+        "row_num": 2,
+        "op_type": "Loading",
+        "start_date": "2026-05-27T10:00:00",
+        "end_date": "2026-05-27T12:00:00",
+        "comment": "Second loading point",
+        "contractor": "",
+        "contractor_inn": "",
+        "location": {
+          "city_name": "Yekaterinburg",
+          "city_full_name": "Yekaterinburg, Russia",
+          "city_gc_id": 66,
+          "loading_address": "Logisticheskaya 7",
+          "lon": 60.6057,
+          "lat": 56.8389
+        },
+        "cargo": {
+          "name": "Building materials",
+          "package_name": "",
+          "weight": "1.750",
+          "volume": "5.000",
+          "length": "0",
+          "width": "0",
+          "height": "0",
+          "oversized": false,
+          "package_amount": null
+        },
+        "contact": {
+          "name": "Loading contact",
+          "phone": "+79001112233"
+        }
+      },
+      {
+        "row_num": 3,
+        "op_type": "Unloading",
+        "start_date": "2026-05-28T11:00:00",
+        "end_date": "2026-05-28T13:00:00",
+        "comment": "First unloading point",
+        "contractor": "",
+        "contractor_inn": "",
+        "location": {
+          "city_name": "Novosibirsk",
+          "city_full_name": "Novosibirsk, Russia",
+          "city_gc_id": 54,
+          "loading_address": "Severny proezd 3",
+          "lon": 82.9204,
+          "lat": 55.0302
+        },
+        "cargo": {
+          "name": "Building materials",
+          "package_name": "",
+          "weight": "1.750",
+          "volume": "5.000",
+          "length": "0",
+          "width": "0",
+          "height": "0",
+          "oversized": false,
+          "package_amount": null
+        },
+        "contact": {
+          "name": "Unloading contact",
+          "phone": "+79004445566"
+        }
+      },
+      {
+        "row_num": 4,
+        "op_type": "Unloading",
+        "start_date": "2026-05-29T12:00:00",
+        "end_date": "2026-05-29T14:00:00",
+        "comment": "Second unloading point",
+        "contractor": "",
+        "contractor_inn": "",
+        "location": {
+          "city_name": "Kazan",
+          "city_full_name": "Kazan, Russia",
+          "city_gc_id": 16,
+          "loading_address": "Proizvodstvennaya 18",
+          "lon": 49.1064,
+          "lat": 55.7961
+        },
+        "cargo": {
+          "name": "Building materials",
+          "package_name": "",
+          "weight": "1.750",
+          "volume": "5.000",
+          "length": "0",
+          "width": "0",
+          "height": "0",
+          "oversized": false,
+          "package_amount": null
+        },
+        "contact": {
+          "name": "Unloading contact",
+          "phone": "+79004445566"
+        }
+      }
+    ],
+    "admitted_organizations": [],
+    "hide_bets_history": false,
+    "list": {
+      "priority_sort": 2,
+      "is_assembly": false,
+      "price_per_km": 20.09,
+      "route": {
+        "load": {
+          "city": "Saint Petersburg",
+          "address": "Portovaya 4",
+          "date": "2026-05-28T11:00:00",
+          "city_gc_id": 78,
+          "points_count": 2
+        },
+        "unload": {
+          "city": "Kazan",
+          "address": "Proizvodstvennaya 18",
+          "date": "2026-05-29T18:00:00",
+          "city_gc_id": 16,
+          "points_count": 1
+        }
+      },
+      "cargo": {
+        "name": "Building materials",
+        "weight": 3.5,
+        "volume": 10,
+        "incoterms": ""
+      },
+      "organizer": {
+        "is_hide_organization": false
+      },
+      "payment": {
+        "consignor": null,
+        "consignee": null
+      },
+      "trading": {
+        "direction": "Up",
+        "comment": "Auction is available",
+        "is_available": true,
+        "is_accredited": true
+      }
+    }
+  },
+  {
+    "main": {
+      "id": 1239,
+      "cargo_num": "00000001062",
+      "cargo_date": "2026-05-07T13:00:00",
+      "order_uid": "550e8400-e29b-41d4-a716-446655440003",
+      "auc_type": "FixPrice",
+      "created_at": "2026-05-25T14:00:00"
+    },
+    "organizer": {
+      "subscriber_id": 101,
+      "subscriber_code": "101",
+      "infobase_code": "RU_Cargo_01",
+      "organization_name": "Vector Trans",
+      "organization_inn": "7703769187",
+      "organization_kpp": "770301004",
+      "organization_id": 343
+    },
+    "contacts": [
+      {
+        "name": "Contact 4",
+        "phone": "+79001234503",
+        "work_phone": null,
+        "uid": "550e8400-e29b-41d4-a716-446655440004",
+        "email": "contact4@example.com"
+      }
+    ],
+    "cargo": {
+      "price": "40500",
+      "currency": 643,
+      "is_international": false,
+      "distance": 1060,
+      "truck_count": 1,
+      "body_type": "Isothermal",
+      "temp_from": 0,
+      "temp_to": 0,
+      "conics": 0,
+      "belts": 3,
+      "adr": 0,
+      "coupling": false,
+      "air_pass": false,
+      "low_loader": false,
+      "additional_load": true,
+      "containered": false,
+      "container_type": null,
+      "container_size": null,
+      "loading_types": {
+        "side": false,
+        "top": true,
+        "rear": true,
+        "full": false
+      },
+      "docs": {
+        "tir": false,
+        "cmr": false,
+        "t1": false,
+        "med": false
+      },
+      "car": {
+        "type": "Truck",
+        "weight": 20,
+        "volume": 82,
+        "width": 2.4,
+        "length": 13.6,
+        "height": 2.7
+      }
+    },
+    "trading": {
+      "status": "WaitDeal",
+      "status_mobile": "OnPending",
+      "start_time": "2026-05-25T16:00:00",
+      "stop_time": "2026-05-25T17:00:00",
+      "bid_measurement_type": "PerKm",
+      "can_set_bet": false,
+      "allow_counter_bets": false,
+      "hide_bets_history": false,
+      "hide_places": false,
+      "no_view_cargo_price": false,
+      "hide_points_address_and_contacts": false,
+      "is_bidder": true,
+      "is_favorite": false,
+      "is_last_bet_with_vat": true,
+      "red_bet_with_vat": false,
+      "red_bet_no_vat": false,
+      "send_deal_before_load": false,
+      "chat_id": null,
+      "price": {
+        "start": 43500,
+        "start_no_vat": 36250,
+        "current": 40500,
+        "current_no_vat": 33750,
+        "available": null,
+        "available_no_vat": null,
+        "min": null,
+        "min_no_vat": null,
+        "max": 43500,
+        "max_no_vat": 36250,
+        "step": null,
+        "step_no_vat": null,
+        "price_per_km": 21.94
+      },
+      "your": {
+        "bet": true,
+        "last_bet": 39500,
+        "last_bet_with_vat": 39500,
+        "win": false
+      },
+      "settings": {
+        "prolong_after_bet": 10,
+        "winner_confirm": 1,
+        "winner_counter_mode": null,
+        "transmission_time_in": 24,
+        "coefficient": 10
+      }
+    },
+    "payment": {
+      "condition": "Payment after acceptance of electronic transport documents",
+      "condition_predefined": "ElectronicDocuments",
+      "form": "Bank transfer without VAT",
+      "delay": 10,
+      "delay_type": "WorkDays",
+      "currency_code": "643",
+      "prepay": "25"
+    },
+    "assembly": {
+      "num": null,
+      "date": null
+    },
+    "routes": [
+      {
+        "row_num": 1,
+        "op_type": "Loading",
+        "start_date": "2026-05-26T09:00:00",
+        "end_date": "2026-05-26T11:00:00",
+        "comment": null,
+        "contractor": "",
+        "contractor_inn": "",
+        "location": {
+          "city_name": "Kazan",
+          "city_full_name": "Kazan, Russia",
+          "city_gc_id": 16,
+          "loading_address": "Proizvodstvennaya 18",
+          "lon": 49.1064,
+          "lat": 55.7961
+        },
+        "cargo": {
+          "name": "Home appliances",
+          "package_name": "",
+          "weight": "4.750",
+          "volume": "14.500",
+          "length": "0",
+          "width": "0",
+          "height": "0",
+          "oversized": false,
+          "package_amount": null
+        },
+        "contact": {
+          "name": "Loading contact",
+          "phone": "+79001112233"
+        }
+      },
+      {
+        "row_num": 2,
+        "op_type": "Unloading",
+        "start_date": "2026-05-27T10:00:00",
+        "end_date": "2026-05-27T12:00:00",
+        "comment": null,
+        "contractor": "",
+        "contractor_inn": "",
+        "location": {
+          "city_name": "Yekaterinburg",
+          "city_full_name": "Yekaterinburg, Russia",
+          "city_gc_id": 66,
+          "loading_address": "Logisticheskaya 7",
+          "lon": 60.6057,
+          "lat": 56.8389
+        },
+        "cargo": {
+          "name": "Home appliances",
+          "package_name": "",
+          "weight": "4.750",
+          "volume": "14.500",
+          "length": "0",
+          "width": "0",
+          "height": "0",
+          "oversized": false,
+          "package_amount": null
+        },
+        "contact": {
+          "name": "Unloading contact",
+          "phone": "+79004445566"
+        }
+      }
+    ],
+    "admitted_organizations": [],
+    "hide_bets_history": false,
+    "list": {
+      "priority_sort": 3,
+      "is_assembly": false,
+      "price_per_km": 21.94,
+      "route": {
+        "load": {
+          "city": "Kazan",
+          "address": "Proizvodstvennaya 18",
+          "date": "2026-05-26T12:00:00",
+          "city_gc_id": 16,
+          "points_count": 1
+        },
+        "unload": {
+          "city": "Yekaterinburg",
+          "address": "Logisticheskaya 7",
+          "date": "2026-05-27T19:00:00",
+          "city_gc_id": 66,
+          "points_count": 2
+        }
+      },
+      "cargo": {
+        "name": "Home appliances",
+        "weight": 4.75,
+        "volume": 14.5,
+        "incoterms": ""
+      },
+      "organizer": {
+        "is_hide_organization": false
+      },
+      "payment": {
+        "consignor": null,
+        "consignee": null
+      },
+      "trading": {
+        "direction": null,
+        "comment": null,
+        "is_available": false,
+        "is_accredited": true
+      }
+    }
+  },
+  {
+    "main": {
+      "id": 1240,
+      "cargo_num": "00000001063",
+      "cargo_date": "2026-05-08T14:00:00",
+      "order_uid": "550e8400-e29b-41d4-a716-446655440004",
+      "auc_type": "Down",
+      "created_at": "2026-05-25T15:00:00"
+    },
+    "organizer": {
+      "subscriber_id": 102,
+      "subscriber_code": "102",
+      "infobase_code": "RU_Cargo_01",
+      "organization_name": "PromSnab",
+      "organization_inn": "7703769188",
+      "organization_kpp": "770301005",
+      "organization_id": 344
+    },
+    "contacts": [
+      {
+        "name": "Contact 5",
+        "phone": "+79001234504",
+        "work_phone": null,
+        "uid": "550e8400-e29b-41d4-a716-446655440005",
+        "email": "contact5@example.com"
+      }
+    ],
+    "cargo": {
+      "price": "44000",
+      "currency": 643,
+      "is_international": false,
+      "distance": 1180,
+      "truck_count": 2,
+      "body_type": "Container truck",
+      "temp_from": 0,
+      "temp_to": 0,
+      "conics": 1,
+      "belts": 4,
+      "adr": 0,
+      "coupling": false,
+      "air_pass": false,
+      "low_loader": false,
+      "additional_load": false,
+      "containered": true,
+      "container_type": "40HC",
+      "container_size": "40",
+      "loading_types": {
+        "side": true,
+        "top": false,
+        "rear": true,
+        "full": true
+      },
+      "docs": {
+        "tir": false,
+        "cmr": true,
+        "t1": false,
+        "med": false
+      },
+      "car": {
+        "type": "Truck tractor",
+        "weight": 20,
+        "volume": 82,
+        "width": 2.4,
+        "length": 13.6,
+        "height": 2.7
+      }
+    },
+    "trading": {
+      "status": "InProgress",
+      "status_mobile": "Confirmed",
+      "start_time": "2026-05-26T16:00:00",
+      "stop_time": "2026-05-26T17:00:00",
+      "bid_measurement_type": "PerRoute",
+      "can_set_bet": false,
+      "allow_counter_bets": true,
+      "hide_bets_history": false,
+      "hide_places": false,
+      "no_view_cargo_price": false,
+      "hide_points_address_and_contacts": false,
+      "is_bidder": true,
+      "is_favorite": true,
+      "is_last_bet_with_vat": true,
+      "red_bet_with_vat": false,
+      "red_bet_no_vat": false,
+      "send_deal_before_load": false,
+      "chat_id": null,
+      "price": {
+        "start": 47000,
+        "start_no_vat": 39166.67,
+        "current": 44000,
+        "current_no_vat": 36666.67,
+        "available": null,
+        "available_no_vat": null,
+        "min": null,
+        "min_no_vat": null,
+        "max": 47000,
+        "max_no_vat": 39166.67,
+        "step": null,
+        "step_no_vat": null,
+        "price_per_km": 23.79
+      },
+      "your": {
+        "bet": true,
+        "last_bet": 43000,
+        "last_bet_with_vat": 43000,
+        "win": false
+      },
+      "settings": {
+        "prolong_after_bet": 10,
+        "winner_confirm": 1,
+        "winner_counter_mode": null,
+        "transmission_time_in": 24,
+        "coefficient": 10
+      }
+    },
+    "payment": {
+      "condition": "Payment by original transport documents",
+      "condition_predefined": "OriginalDocuments",
+      "form": "Bank transfer with VAT",
+      "delay": 30,
+      "delay_type": "CalendarDays",
+      "currency_code": "643",
+      "prepay": "0"
+    },
+    "assembly": {
+      "num": "AS-104",
+      "date": "2026-05-24T13:00:00"
+    },
+    "routes": [
+      {
+        "row_num": 1,
+        "op_type": "Loading",
+        "start_date": "2026-05-26T09:00:00",
+        "end_date": "2026-05-26T11:00:00",
+        "comment": "Main loading point",
+        "contractor": "",
+        "contractor_inn": "",
+        "location": {
+          "city_name": "Yekaterinburg",
+          "city_full_name": "Yekaterinburg, Russia",
+          "city_gc_id": 66,
+          "loading_address": "Logisticheskaya 7",
+          "lon": 60.6057,
+          "lat": 56.8389
+        },
+        "cargo": {
+          "name": "Furniture",
+          "package_name": "",
+          "weight": "3.000",
+          "volume": "9.500",
+          "length": "0",
+          "width": "0",
+          "height": "0",
+          "oversized": false,
+          "package_amount": null
+        },
+        "contact": {
+          "name": "Loading contact",
+          "phone": "+79001112233"
+        }
+      },
+      {
+        "row_num": 2,
+        "op_type": "Loading",
+        "start_date": "2026-05-27T10:00:00",
+        "end_date": "2026-05-27T12:00:00",
+        "comment": "Additional loading point",
+        "contractor": "",
+        "contractor_inn": "",
+        "location": {
+          "city_name": "Krasnodar",
+          "city_full_name": "Krasnodar, Russia",
+          "city_gc_id": 23,
+          "loading_address": "Yuzhnaya 21",
+          "lon": 38.9753,
+          "lat": 45.0355
+        },
+        "cargo": {
+          "name": "Furniture",
+          "package_name": "",
+          "weight": "3.000",
+          "volume": "9.500",
+          "length": "0",
+          "width": "0",
+          "height": "0",
+          "oversized": false,
+          "package_amount": null
+        },
+        "contact": {
+          "name": "Loading contact",
+          "phone": "+79001112233"
+        }
+      },
+      {
+        "row_num": 3,
+        "op_type": "Unloading",
+        "start_date": "2026-05-28T11:00:00",
+        "end_date": "2026-05-28T13:00:00",
+        "comment": null,
+        "contractor": "",
+        "contractor_inn": "",
+        "location": {
+          "city_name": "Novosibirsk",
+          "city_full_name": "Novosibirsk, Russia",
+          "city_gc_id": 54,
+          "loading_address": "Severny proezd 3",
+          "lon": 82.9204,
+          "lat": 55.0302
+        },
+        "cargo": {
+          "name": "Furniture",
+          "package_name": "",
+          "weight": "6.000",
+          "volume": "19.000",
+          "length": "0",
+          "width": "0",
+          "height": "0",
+          "oversized": false,
+          "package_amount": null
+        },
+        "contact": {
+          "name": "Unloading contact",
+          "phone": "+79004445566"
+        }
+      }
+    ],
+    "admitted_organizations": [],
+    "hide_bets_history": false,
+    "list": {
+      "priority_sort": 4,
+      "is_assembly": true,
+      "price_per_km": 23.79,
+      "route": {
+        "load": {
+          "city": "Yekaterinburg",
+          "address": "Logisticheskaya 7",
+          "date": "2026-05-27T09:00:00",
+          "city_gc_id": 66,
+          "points_count": 2
+        },
+        "unload": {
+          "city": "Novosibirsk",
+          "address": "Severny proezd 3",
+          "date": "2026-05-28T16:00:00",
+          "city_gc_id": 54,
+          "points_count": 1
+        }
+      },
+      "cargo": {
+        "name": "Furniture",
+        "weight": 6,
+        "volume": 19,
+        "incoterms": ""
+      },
+      "organizer": {
+        "is_hide_organization": false
+      },
+      "payment": {
+        "consignor": null,
+        "consignee": null
+      },
+      "trading": {
+        "direction": "Down",
+        "comment": null,
+        "is_available": false,
+        "is_accredited": true
+      }
+    }
+  },
+  {
+    "main": {
+      "id": 1241,
+      "cargo_num": "00000001064",
+      "cargo_date": "2026-05-09T15:00:00",
+      "order_uid": "550e8400-e29b-41d4-a716-446655440005",
+      "auc_type": "Request",
+      "created_at": "2026-05-25T16:00:00"
+    },
+    "organizer": {
+      "subscriber_id": 103,
+      "subscriber_code": "103",
+      "infobase_code": "RU_Cargo_01",
+      "organization_name": "Rail Auto",
+      "organization_inn": "7703769189",
+      "organization_kpp": "770301006",
+      "organization_id": 345
+    },
+    "contacts": [
+      {
+        "name": "Contact 6",
+        "phone": "+79001234505",
+        "work_phone": null,
+        "uid": "550e8400-e29b-41d4-a716-446655440006",
+        "email": "contact6@example.com"
+      }
+    ],
+    "cargo": {
+      "price": "47500",
+      "currency": 643,
+      "is_international": true,
+      "distance": 1300,
+      "truck_count": 3,
+      "body_type": "Tilt",
+      "temp_from": -18,
+      "temp_to": -12,
+      "conics": 2,
+      "belts": 5,
+      "adr": 0,
+      "coupling": false,
+      "air_pass": true,
+      "low_loader": false,
+      "additional_load": false,
+      "containered": false,
+      "container_type": null,
+      "container_size": null,
+      "loading_types": {
+        "side": false,
+        "top": false,
+        "rear": true,
+        "full": false
+      },
+      "docs": {
+        "tir": true,
+        "cmr": false,
+        "t1": false,
+        "med": false
+      },
+      "car": {
+        "type": "Truck",
+        "weight": 20,
+        "volume": 82,
+        "width": 2.4,
+        "length": 13.6,
+        "height": 2.7
+      }
+    },
+    "trading": {
+      "status": "Finished",
+      "status_mobile": "ChoosingWinner",
+      "start_time": "2026-05-27T16:00:00",
+      "stop_time": "2026-05-27T17:00:00",
+      "bid_measurement_type": "PerKm",
+      "can_set_bet": false,
+      "allow_counter_bets": false,
+      "hide_bets_history": false,
+      "hide_places": false,
+      "no_view_cargo_price": false,
+      "hide_points_address_and_contacts": false,
+      "is_bidder": true,
+      "is_favorite": false,
+      "is_last_bet_with_vat": true,
+      "red_bet_with_vat": false,
+      "red_bet_no_vat": false,
+      "send_deal_before_load": false,
+      "chat_id": null,
+      "price": {
+        "start": 50500,
+        "start_no_vat": 42083.33,
+        "current": 47500,
+        "current_no_vat": 39583.33,
+        "available": null,
+        "available_no_vat": null,
+        "min": null,
+        "min_no_vat": null,
+        "max": 50500,
+        "max_no_vat": 42083.33,
+        "step": null,
+        "step_no_vat": null,
+        "price_per_km": 25.64
+      },
+      "your": {
+        "bet": true,
+        "last_bet": 46500,
+        "last_bet_with_vat": 46500,
+        "win": false
+      },
+      "settings": {
+        "prolong_after_bet": 10,
+        "winner_confirm": 1,
+        "winner_counter_mode": null,
+        "transmission_time_in": 24,
+        "coefficient": 10
+      }
+    },
+    "payment": {
+      "condition": "Payment by original transport documents",
+      "condition_predefined": "OriginalDocuments",
+      "form": "Bank transfer without VAT",
+      "delay": 30,
+      "delay_type": "CalendarDays",
+      "currency_code": "643",
+      "prepay": "0"
+    },
+    "assembly": {
+      "num": null,
+      "date": null
+    },
+    "routes": [
+      {
+        "row_num": 1,
+        "op_type": "Loading",
+        "start_date": "2026-05-26T09:00:00",
+        "end_date": "2026-05-26T11:00:00",
+        "comment": null,
+        "contractor": "",
+        "contractor_inn": "",
+        "location": {
+          "city_name": "Novosibirsk",
+          "city_full_name": "Novosibirsk, Russia",
+          "city_gc_id": 54,
+          "loading_address": "Severny proezd 3",
+          "lon": 82.9204,
+          "lat": 55.0302
+        },
+        "cargo": {
+          "name": "Food products",
+          "package_name": "",
+          "weight": "7.250",
+          "volume": "23.500",
+          "length": "0",
+          "width": "0",
+          "height": "0",
+          "oversized": false,
+          "package_amount": null
+        },
+        "contact": {
+          "name": "Loading contact",
+          "phone": "+79001112233"
+        }
+      },
+      {
+        "row_num": 2,
+        "op_type": "Unloading",
+        "start_date": "2026-05-27T10:00:00",
+        "end_date": "2026-05-27T12:00:00",
+        "comment": "Intermediate unloading point",
+        "contractor": "",
+        "contractor_inn": "",
+        "location": {
+          "city_name": "Nizhny Novgorod",
+          "city_full_name": "Nizhny Novgorod, Russia",
+          "city_gc_id": 52,
+          "loading_address": "Gruzovaya 5",
+          "lon": 44.002,
+          "lat": 56.3269
+        },
+        "cargo": {
+          "name": "Food products",
+          "package_name": "",
+          "weight": "3.625",
+          "volume": "11.750",
+          "length": "0",
+          "width": "0",
+          "height": "0",
+          "oversized": false,
+          "package_amount": null
+        },
+        "contact": {
+          "name": "Unloading contact",
+          "phone": "+79004445566"
+        }
+      },
+      {
+        "row_num": 3,
+        "op_type": "Unloading",
+        "start_date": "2026-05-28T11:00:00",
+        "end_date": "2026-05-28T13:00:00",
+        "comment": "Final unloading point",
+        "contractor": "",
+        "contractor_inn": "",
+        "location": {
+          "city_name": "Krasnodar",
+          "city_full_name": "Krasnodar, Russia",
+          "city_gc_id": 23,
+          "loading_address": "Yuzhnaya 21",
+          "lon": 38.9753,
+          "lat": 45.0355
+        },
+        "cargo": {
+          "name": "Food products",
+          "package_name": "",
+          "weight": "3.625",
+          "volume": "11.750",
+          "length": "0",
+          "width": "0",
+          "height": "0",
+          "oversized": false,
+          "package_amount": null
+        },
+        "contact": {
+          "name": "Unloading contact",
+          "phone": "+79004445566"
+        }
+      }
+    ],
+    "admitted_organizations": [],
+    "hide_bets_history": false,
+    "list": {
+      "priority_sort": 5,
+      "is_assembly": false,
+      "price_per_km": 25.64,
+      "route": {
+        "load": {
+          "city": "Novosibirsk",
+          "address": "Severny proezd 3",
+          "date": "2026-05-28T10:00:00",
+          "city_gc_id": 54,
+          "points_count": 1
+        },
+        "unload": {
+          "city": "Krasnodar",
+          "address": "Yuzhnaya 21",
+          "date": "2026-05-29T17:00:00",
+          "city_gc_id": 23,
+          "points_count": 1
+        }
+      },
+      "cargo": {
+        "name": "Food products",
+        "weight": 7.25,
+        "volume": 23.5,
+        "incoterms": ""
+      },
+      "organizer": {
+        "is_hide_organization": false
+      },
+      "payment": {
+        "consignor": null,
+        "consignee": null
+      },
+      "trading": {
+        "direction": null,
+        "comment": null,
+        "is_available": false,
+        "is_accredited": true
+      }
+    }
+  },
+  {
+    "main": {
+      "id": 1242,
+      "cargo_num": "00000001065",
+      "cargo_date": "2026-05-10T10:00:00",
+      "order_uid": "550e8400-e29b-41d4-a716-446655440006",
+      "auc_type": "Up",
+      "created_at": "2026-05-25T11:00:00"
+    },
+    "organizer": {
+      "subscriber_id": 104,
+      "subscriber_code": "104",
+      "infobase_code": "RU_Cargo_01",
+      "organization_name": "Logistics Plus",
+      "organization_inn": "7703769190",
+      "organization_kpp": "770301007",
+      "organization_id": 346
+    },
+    "contacts": [
+      {
+        "name": "Elena Volkova",
+        "phone": "+79001234506",
+        "work_phone": "+74951234506",
+        "uid": "550e8400-e29b-41d4-a716-446655440007",
+        "email": "elena.volkova@logistics-plus.example"
+      }
+    ],
+    "cargo": {
+      "price": "51000",
+      "currency": 643,
+      "is_international": false,
+      "distance": 1420,
+      "truck_count": 1,
+      "body_type": "Van",
+      "temp_from": 0,
+      "temp_to": 0,
+      "conics": 0,
+      "belts": 6,
+      "adr": 0,
+      "coupling": false,
+      "air_pass": false,
+      "low_loader": true,
+      "additional_load": false,
+      "containered": false,
+      "container_type": null,
+      "container_size": null,
+      "loading_types": {
+        "side": true,
+        "top": true,
+        "rear": true,
+        "full": false
+      },
+      "docs": {
+        "tir": false,
+        "cmr": true,
+        "t1": false,
+        "med": false
+      },
+      "car": {
+        "type": "Truck tractor",
+        "weight": 20,
+        "volume": 82,
+        "width": 2.4,
+        "length": 13.6,
+        "height": 2.7
+      }
+    },
+    "trading": {
+      "status": "Stopped",
+      "status_mobile": "Winner",
+      "start_time": "2026-05-25T16:00:00",
+      "stop_time": "2026-05-25T17:00:00",
+      "bid_measurement_type": "PerRoute",
+      "can_set_bet": false,
+      "allow_counter_bets": true,
+      "hide_bets_history": false,
+      "hide_places": false,
+      "no_view_cargo_price": true,
+      "hide_points_address_and_contacts": false,
+      "is_bidder": true,
+      "is_favorite": false,
+      "is_last_bet_with_vat": true,
+      "red_bet_with_vat": false,
+      "red_bet_no_vat": false,
+      "send_deal_before_load": false,
+      "chat_id": null,
+      "price": {
+        "start": 54000,
+        "start_no_vat": 45000,
+        "current": 51000,
+        "current_no_vat": 42500,
+        "available": null,
+        "available_no_vat": null,
+        "min": null,
+        "min_no_vat": null,
+        "max": 54000,
+        "max_no_vat": 45000,
+        "step": null,
+        "step_no_vat": null,
+        "price_per_km": 27.49
+      },
+      "your": {
+        "bet": true,
+        "last_bet": 50000,
+        "last_bet_with_vat": 50000,
+        "win": true
+      },
+      "settings": {
+        "prolong_after_bet": 10,
+        "winner_confirm": 1,
+        "winner_counter_mode": null,
+        "transmission_time_in": 24,
+        "coefficient": 10
+      }
+    },
+    "payment": {
+      "condition": "Payment by original transport documents",
+      "condition_predefined": "OriginalDocuments",
+      "form": "Bank transfer with VAT",
+      "delay": 30,
+      "delay_type": "CalendarDays",
+      "currency_code": "643",
+      "prepay": "0"
+    },
+    "assembly": {
+      "num": null,
+      "date": null
+    },
+    "routes": [
+      {
+        "row_num": 1,
+        "op_type": "Loading",
+        "start_date": "2026-05-26T09:00:00",
+        "end_date": "2026-05-26T11:00:00",
+        "comment": "First loading point",
+        "contractor": "",
+        "contractor_inn": "",
+        "location": {
+          "city_name": "Krasnodar",
+          "city_full_name": "Krasnodar, Russia",
+          "city_gc_id": 23,
+          "loading_address": "Yuzhnaya 21",
+          "lon": 38.9753,
+          "lat": 45.0355
+        },
+        "cargo": {
+          "name": "Metal rolls",
+          "package_name": "",
+          "weight": "4.250",
+          "volume": "14.000",
+          "length": "0",
+          "width": "0",
+          "height": "0",
+          "oversized": false,
+          "package_amount": null
+        },
+        "contact": {
+          "name": "Loading contact",
+          "phone": "+79001112233"
+        }
+      },
+      {
+        "row_num": 2,
+        "op_type": "Loading",
+        "start_date": "2026-05-27T10:00:00",
+        "end_date": "2026-05-27T12:00:00",
+        "comment": "Second loading point",
+        "contractor": "",
+        "contractor_inn": "",
+        "location": {
+          "city_name": "Samara",
+          "city_full_name": "Samara, Russia",
+          "city_gc_id": 63,
+          "loading_address": "Zavodskaya 14",
+          "lon": 50.1002,
+          "lat": 53.1959
+        },
+        "cargo": {
+          "name": "Metal rolls",
+          "package_name": "",
+          "weight": "4.250",
+          "volume": "14.000",
+          "length": "0",
+          "width": "0",
+          "height": "0",
+          "oversized": false,
+          "package_amount": null
+        },
+        "contact": {
+          "name": "Loading contact",
+          "phone": "+79001112233"
+        }
+      },
+      {
+        "row_num": 3,
+        "op_type": "Unloading",
+        "start_date": "2026-05-28T11:00:00",
+        "end_date": "2026-05-28T13:00:00",
+        "comment": "First unloading point",
+        "contractor": "",
+        "contractor_inn": "",
+        "location": {
+          "city_name": "Rostov-on-Don",
+          "city_full_name": "Rostov-on-Don, Russia",
+          "city_gc_id": 61,
+          "loading_address": "Donskaya 8",
+          "lon": 39.7203,
+          "lat": 47.2225
+        },
+        "cargo": {
+          "name": "Metal rolls",
+          "package_name": "",
+          "weight": "4.250",
+          "volume": "14.000",
+          "length": "0",
+          "width": "0",
+          "height": "0",
+          "oversized": false,
+          "package_amount": null
+        },
+        "contact": {
+          "name": "Unloading contact",
+          "phone": "+79004445566"
+        }
+      },
+      {
+        "row_num": 4,
+        "op_type": "Unloading",
+        "start_date": "2026-05-29T12:00:00",
+        "end_date": "2026-05-29T14:00:00",
+        "comment": "Second unloading point",
+        "contractor": "",
+        "contractor_inn": "",
+        "location": {
+          "city_name": "Nizhny Novgorod",
+          "city_full_name": "Nizhny Novgorod, Russia",
+          "city_gc_id": 52,
+          "loading_address": "Gruzovaya 5",
+          "lon": 44.002,
+          "lat": 56.3269
+        },
+        "cargo": {
+          "name": "Metal rolls",
+          "package_name": "",
+          "weight": "4.250",
+          "volume": "14.000",
+          "length": "0",
+          "width": "0",
+          "height": "0",
+          "oversized": false,
+          "package_amount": null
+        },
+        "contact": {
+          "name": "Unloading contact",
+          "phone": "+79004445566"
+        }
+      }
+    ],
+    "admitted_organizations": [],
+    "hide_bets_history": false,
+    "list": {
+      "priority_sort": 6,
+      "is_assembly": false,
+      "price_per_km": 27.49,
+      "route": {
+        "load": {
+          "city": "Krasnodar",
+          "address": "Yuzhnaya 21",
+          "date": "2026-05-26T11:00:00",
+          "city_gc_id": 23,
+          "points_count": 2
+        },
+        "unload": {
+          "city": "Nizhny Novgorod",
+          "address": "Gruzovaya 5",
+          "date": "2026-05-27T18:00:00",
+          "city_gc_id": 52,
+          "points_count": 2
+        }
+      },
+      "cargo": {
+        "name": "Metal rolls",
+        "weight": 8.5,
+        "volume": 28,
+        "incoterms": ""
+      },
+      "organizer": {
+        "is_hide_organization": true
+      },
+      "payment": {
+        "consignor": null,
+        "consignee": null
+      },
+      "trading": {
+        "direction": "Up",
+        "comment": null,
+        "is_available": false,
+        "is_accredited": true
+      }
+    }
+  },
+  {
+    "main": {
+      "id": 1243,
+      "cargo_num": "00000001066",
+      "cargo_date": "2026-05-11T11:00:00",
+      "order_uid": "550e8400-e29b-41d4-a716-446655440007",
+      "auc_type": "FixPrice",
+      "created_at": "2026-05-25T12:00:00"
+    },
+    "organizer": {
+      "subscriber_id": 105,
+      "subscriber_code": "105",
+      "infobase_code": "RU_Cargo_01",
+      "organization_name": "TK Magistral",
+      "organization_inn": "7703769191",
+      "organization_kpp": "770301008",
+      "organization_id": 347
+    },
+    "contacts": [
+      {
+        "name": "Contact 8",
+        "phone": "+79001234507",
+        "work_phone": null,
+        "uid": "550e8400-e29b-41d4-a716-446655440008",
+        "email": "contact8@example.com"
+      }
+    ],
+    "cargo": {
+      "price": "54500",
+      "currency": 643,
+      "is_international": false,
+      "distance": 1540,
+      "truck_count": 2,
+      "body_type": "Refrigerator",
+      "temp_from": 0,
+      "temp_to": 0,
+      "conics": 1,
+      "belts": 0,
+      "adr": 0,
+      "coupling": true,
+      "air_pass": false,
+      "low_loader": false,
+      "additional_load": false,
+      "containered": false,
+      "container_type": null,
+      "container_size": null,
+      "loading_types": {
+        "side": false,
+        "top": false,
+        "rear": true,
+        "full": false
+      },
+      "docs": {
+        "tir": false,
+        "cmr": false,
+        "t1": false,
+        "med": false
+      },
+      "car": {
+        "type": "Truck",
+        "weight": 20,
+        "volume": 82,
+        "width": 2.4,
+        "length": 13.6,
+        "height": 2.7
+      }
+    },
+    "trading": {
+      "status": "Canceled",
+      "status_mobile": "Accepted",
+      "start_time": "2026-05-26T16:00:00",
+      "stop_time": "2026-05-26T17:00:00",
+      "bid_measurement_type": "PerKm",
+      "can_set_bet": false,
+      "allow_counter_bets": false,
+      "hide_bets_history": true,
+      "hide_places": false,
+      "no_view_cargo_price": false,
+      "hide_points_address_and_contacts": false,
+      "is_bidder": true,
+      "is_favorite": false,
+      "is_last_bet_with_vat": true,
+      "red_bet_with_vat": false,
+      "red_bet_no_vat": false,
+      "send_deal_before_load": false,
+      "chat_id": null,
+      "price": {
+        "start": 57500,
+        "start_no_vat": 47916.67,
+        "current": 54500,
+        "current_no_vat": 45416.67,
+        "available": null,
+        "available_no_vat": null,
+        "min": null,
+        "min_no_vat": null,
+        "max": 57500,
+        "max_no_vat": 47916.67,
+        "step": null,
+        "step_no_vat": null,
+        "price_per_km": 29.34
+      },
+      "your": {
+        "bet": true,
+        "last_bet": 53500,
+        "last_bet_with_vat": 53500,
+        "win": false
+      },
+      "settings": {
+        "prolong_after_bet": 10,
+        "winner_confirm": 1,
+        "winner_counter_mode": null,
+        "transmission_time_in": 24,
+        "coefficient": 10
+      }
+    },
+    "payment": {
+      "condition": "Payment by original transport documents",
+      "condition_predefined": "OriginalDocuments",
+      "form": "Bank transfer without VAT",
+      "delay": 30,
+      "delay_type": "CalendarDays",
+      "currency_code": "643",
+      "prepay": "0"
+    },
+    "assembly": {
+      "num": null,
+      "date": null
+    },
+    "routes": [
+      {
+        "row_num": 1,
+        "op_type": "Loading",
+        "start_date": "2026-05-26T09:00:00",
+        "end_date": "2026-05-26T11:00:00",
+        "comment": null,
+        "contractor": "",
+        "contractor_inn": "",
+        "location": {
+          "city_name": "Nizhny Novgorod",
+          "city_full_name": "Nizhny Novgorod, Russia",
+          "city_gc_id": 52,
+          "loading_address": "Gruzovaya 5",
+          "lon": 44.002,
+          "lat": 56.3269
+        },
+        "cargo": {
+          "name": "Auto parts",
+          "package_name": "",
+          "weight": "9.750",
+          "volume": "32.500",
+          "length": "0",
+          "width": "0",
+          "height": "0",
+          "oversized": false,
+          "package_amount": null
+        },
+        "contact": {
+          "name": "Loading contact",
+          "phone": "+79001112233"
+        }
+      },
+      {
+        "row_num": 2,
+        "op_type": "Unloading",
+        "start_date": "2026-05-27T10:00:00",
+        "end_date": "2026-05-27T12:00:00",
+        "comment": null,
+        "contractor": "",
+        "contractor_inn": "",
+        "location": {
+          "city_name": "Samara",
+          "city_full_name": "Samara, Russia",
+          "city_gc_id": 63,
+          "loading_address": "Zavodskaya 14",
+          "lon": 50.1002,
+          "lat": 53.1959
+        },
+        "cargo": {
+          "name": "Auto parts",
+          "package_name": "",
+          "weight": "9.750",
+          "volume": "32.500",
+          "length": "0",
+          "width": "0",
+          "height": "0",
+          "oversized": false,
+          "package_amount": null
+        },
+        "contact": {
+          "name": "Unloading contact",
+          "phone": "+79004445566"
+        }
+      }
+    ],
+    "admitted_organizations": [],
+    "hide_bets_history": true,
+    "list": {
+      "priority_sort": 7,
+      "is_assembly": false,
+      "price_per_km": 29.34,
+      "route": {
+        "load": {
+          "city": "Nizhny Novgorod",
+          "address": "Gruzovaya 5",
+          "date": "2026-05-27T12:00:00",
+          "city_gc_id": 52,
+          "points_count": 1
+        },
+        "unload": {
+          "city": "Samara",
+          "address": "Zavodskaya 14",
+          "date": "2026-05-28T19:00:00",
+          "city_gc_id": 63,
+          "points_count": 1
+        }
+      },
+      "cargo": {
+        "name": "Auto parts",
+        "weight": 9.75,
+        "volume": 32.5,
+        "incoterms": ""
+      },
+      "organizer": {
+        "is_hide_organization": false
+      },
+      "payment": {
+        "consignor": null,
+        "consignee": null
+      },
+      "trading": {
+        "direction": null,
+        "comment": null,
+        "is_available": false,
+        "is_accredited": false
+      }
+    }
+  },
+  {
+    "main": {
+      "id": 1244,
+      "cargo_num": "00000001067",
+      "cargo_date": "2026-05-12T12:00:00",
+      "order_uid": "550e8400-e29b-41d4-a716-446655440008",
+      "auc_type": "Down",
+      "created_at": "2026-05-25T13:00:00"
+    },
+    "organizer": {
+      "subscriber_id": 106,
+      "subscriber_code": "106",
+      "infobase_code": "RU_Cargo_01",
+      "organization_name": "SouthTrans",
+      "organization_inn": "7703769192",
+      "organization_kpp": "770301009",
+      "organization_id": 348
+    },
+    "contacts": [
+      {
+        "name": "Contact 9",
+        "phone": "+79001234508",
+        "work_phone": null,
+        "uid": "550e8400-e29b-41d4-a716-446655440009",
+        "email": "contact9@example.com"
+      }
+    ],
+    "cargo": {
+      "price": "58000",
+      "currency": 643,
+      "is_international": false,
+      "distance": 1660,
+      "truck_count": 3,
+      "body_type": "Isothermal",
+      "temp_from": 0,
+      "temp_to": 0,
+      "conics": 2,
+      "belts": 1,
+      "adr": 1,
+      "coupling": false,
+      "air_pass": false,
+      "low_loader": false,
+      "additional_load": false,
+      "containered": false,
+      "container_type": null,
+      "container_size": null,
+      "loading_types": {
+        "side": true,
+        "top": false,
+        "rear": true,
+        "full": true
+      },
+      "docs": {
+        "tir": false,
+        "cmr": true,
+        "t1": true,
+        "med": false
+      },
+      "car": {
+        "type": "Truck tractor",
+        "weight": 20,
+        "volume": 82,
+        "width": 2.4,
+        "length": 13.6,
+        "height": 2.7
+      }
+    },
+    "trading": {
+      "status": "DeterminateWinner",
+      "status_mobile": "NotParticipating",
+      "start_time": "2026-05-27T16:00:00",
+      "stop_time": "2026-05-27T17:00:00",
+      "bid_measurement_type": "PerRoute",
+      "can_set_bet": false,
+      "allow_counter_bets": true,
+      "hide_bets_history": false,
+      "hide_places": true,
+      "no_view_cargo_price": false,
+      "hide_points_address_and_contacts": false,
+      "is_bidder": false,
+      "is_favorite": true,
+      "is_last_bet_with_vat": null,
+      "red_bet_with_vat": false,
+      "red_bet_no_vat": false,
+      "send_deal_before_load": false,
+      "chat_id": null,
+      "price": {
+        "start": 61000,
+        "start_no_vat": 50833.33,
+        "current": 58000,
+        "current_no_vat": 48333.33,
+        "available": null,
+        "available_no_vat": null,
+        "min": null,
+        "min_no_vat": null,
+        "max": 61000,
+        "max_no_vat": 50833.33,
+        "step": null,
+        "step_no_vat": null,
+        "price_per_km": 31.19
+      },
+      "your": {
+        "bet": false,
+        "last_bet": null,
+        "last_bet_with_vat": null,
+        "win": false
+      },
+      "settings": {
+        "prolong_after_bet": 10,
+        "winner_confirm": 1,
+        "winner_counter_mode": null,
+        "transmission_time_in": 24,
+        "coefficient": 10
+      }
+    },
+    "payment": {
+      "condition": "Payment by original transport documents",
+      "condition_predefined": "OriginalDocuments",
+      "form": "Bank transfer with VAT",
+      "delay": 30,
+      "delay_type": "CalendarDays",
+      "currency_code": "643",
+      "prepay": "0"
+    },
+    "assembly": {
+      "num": "AS-108",
+      "date": "2026-05-24T11:00:00"
+    },
+    "routes": [
+      {
+        "row_num": 1,
+        "op_type": "Loading",
+        "start_date": "2026-05-26T09:00:00",
+        "end_date": "2026-05-26T11:00:00",
+        "comment": "Main loading point",
+        "contractor": "",
+        "contractor_inn": "",
+        "location": {
+          "city_name": "Samara",
+          "city_full_name": "Samara, Russia",
+          "city_gc_id": 63,
+          "loading_address": "Zavodskaya 14",
+          "lon": 50.1002,
+          "lat": 53.1959
+        },
+        "cargo": {
+          "name": "Chemical products",
+          "package_name": "",
+          "weight": "5.500",
+          "volume": "18.500",
+          "length": "0",
+          "width": "0",
+          "height": "0",
+          "oversized": false,
+          "package_amount": null
+        },
+        "contact": {
+          "name": "Loading contact",
+          "phone": "+79001112233"
+        }
+      },
+      {
+        "row_num": 2,
+        "op_type": "Loading",
+        "start_date": "2026-05-27T10:00:00",
+        "end_date": "2026-05-27T12:00:00",
+        "comment": "Additional loading point",
+        "contractor": "",
+        "contractor_inn": "",
+        "location": {
+          "city_name": "Perm",
+          "city_full_name": "Perm, Russia",
+          "city_gc_id": 59,
+          "loading_address": "Transportnaya 9",
+          "lon": 56.238,
+          "lat": 58.01
+        },
+        "cargo": {
+          "name": "Chemical products",
+          "package_name": "",
+          "weight": "5.500",
+          "volume": "18.500",
+          "length": "0",
+          "width": "0",
+          "height": "0",
+          "oversized": false,
+          "package_amount": null
+        },
+        "contact": {
+          "name": "Loading contact",
+          "phone": "+79001112233"
+        }
+      },
+      {
+        "row_num": 3,
+        "op_type": "Unloading",
+        "start_date": "2026-05-28T11:00:00",
+        "end_date": "2026-05-28T13:00:00",
+        "comment": null,
+        "contractor": "",
+        "contractor_inn": "",
+        "location": {
+          "city_name": "Rostov-on-Don",
+          "city_full_name": "Rostov-on-Don, Russia",
+          "city_gc_id": 61,
+          "loading_address": "Donskaya 8",
+          "lon": 39.7203,
+          "lat": 47.2225
+        },
+        "cargo": {
+          "name": "Chemical products",
+          "package_name": "",
+          "weight": "11.000",
+          "volume": "37.000",
+          "length": "0",
+          "width": "0",
+          "height": "0",
+          "oversized": false,
+          "package_amount": null
+        },
+        "contact": {
+          "name": "Unloading contact",
+          "phone": "+79004445566"
+        }
+      }
+    ],
+    "admitted_organizations": [],
+    "hide_bets_history": false,
+    "list": {
+      "priority_sort": 8,
+      "is_assembly": true,
+      "price_per_km": 31.19,
+      "route": {
+        "load": {
+          "city": "Samara",
+          "address": "Zavodskaya 14",
+          "date": "2026-05-28T09:00:00",
+          "city_gc_id": 63,
+          "points_count": 2
+        },
+        "unload": {
+          "city": "Rostov-on-Don",
+          "address": "Donskaya 8",
+          "date": "2026-05-29T16:00:00",
+          "city_gc_id": 61,
+          "points_count": 1
+        }
+      },
+      "cargo": {
+        "name": "Chemical products",
+        "weight": 11,
+        "volume": 37,
+        "incoterms": ""
+      },
+      "organizer": {
+        "is_hide_organization": false
+      },
+      "payment": {
+        "consignor": null,
+        "consignee": null
+      },
+      "trading": {
+        "direction": "Down",
+        "comment": null,
+        "is_available": false,
+        "is_accredited": true
+      }
+    }
+  },
+  {
+    "main": {
+      "id": 1245,
+      "cargo_num": "00000001068",
+      "cargo_date": "2026-05-13T13:00:00",
+      "order_uid": "550e8400-e29b-41d4-a716-446655440009",
+      "auc_type": "Request",
+      "created_at": "2026-05-25T14:00:00"
+    },
+    "organizer": {
+      "subscriber_id": 107,
+      "subscriber_code": "107",
+      "infobase_code": "RU_Cargo_01",
+      "organization_name": "East Cargo",
+      "organization_inn": "7703769193",
+      "organization_kpp": "770301010",
+      "organization_id": 349
+    },
+    "contacts": [
+      {
+        "name": "Contact 10",
+        "phone": "+79001234509",
+        "work_phone": null,
+        "uid": "550e8400-e29b-41d4-a716-446655440010",
+        "email": "contact10@example.com"
+      }
+    ],
+    "cargo": {
+      "price": "61500",
+      "currency": 643,
+      "is_international": false,
+      "distance": 1780,
+      "truck_count": 1,
+      "body_type": "Container truck",
+      "temp_from": 0,
+      "temp_to": 0,
+      "conics": 0,
+      "belts": 2,
+      "adr": 0,
+      "coupling": false,
+      "air_pass": false,
+      "low_loader": false,
+      "additional_load": false,
+      "containered": true,
+      "container_type": "40HC",
+      "container_size": "40",
+      "loading_types": {
+        "side": false,
+        "top": true,
+        "rear": true,
+        "full": false
+      },
+      "docs": {
+        "tir": false,
+        "cmr": false,
+        "t1": false,
+        "med": false
+      },
+      "car": {
+        "type": "Truck",
+        "weight": 20,
+        "volume": 82,
+        "width": 2.4,
+        "length": 13.6,
+        "height": 2.7
+      }
+    },
+    "trading": {
+      "status": "Auction",
+      "status_mobile": "Leading",
+      "start_time": "2026-05-25T16:00:00",
+      "stop_time": "2026-05-25T17:00:00",
+      "bid_measurement_type": "PerKm",
+      "can_set_bet": true,
+      "allow_counter_bets": false,
+      "hide_bets_history": false,
+      "hide_places": false,
+      "no_view_cargo_price": false,
+      "hide_points_address_and_contacts": false,
+      "is_bidder": true,
+      "is_favorite": false,
+      "is_last_bet_with_vat": true,
+      "red_bet_with_vat": false,
+      "red_bet_no_vat": false,
+      "send_deal_before_load": false,
+      "chat_id": null,
+      "price": {
+        "start": 64500,
+        "start_no_vat": 53750,
+        "current": 61500,
+        "current_no_vat": 51250,
+        "available": 60500,
+        "available_no_vat": 50416.67,
+        "min": 51500,
+        "min_no_vat": 42916.67,
+        "max": 64500,
+        "max_no_vat": 53750,
+        "step": 500,
+        "step_no_vat": 416.67,
+        "price_per_km": 33.04
+      },
+      "your": {
+        "bet": true,
+        "last_bet": 60500,
+        "last_bet_with_vat": 60500,
+        "win": false
+      },
+      "settings": {
+        "prolong_after_bet": 10,
+        "winner_confirm": 1,
+        "winner_counter_mode": null,
+        "transmission_time_in": 24,
+        "coefficient": 10
+      }
+    },
+    "payment": {
+      "condition": "Payment by original transport documents",
+      "condition_predefined": "OriginalDocuments",
+      "form": "Bank transfer without VAT",
+      "delay": 30,
+      "delay_type": "CalendarDays",
+      "currency_code": "643",
+      "prepay": "0"
+    },
+    "assembly": {
+      "num": null,
+      "date": null
+    },
+    "routes": [
+      {
+        "row_num": 1,
+        "op_type": "Loading",
+        "start_date": "2026-05-26T09:00:00",
+        "end_date": "2026-05-26T11:00:00",
+        "comment": null,
+        "contractor": "",
+        "contractor_inn": "",
+        "location": {
+          "city_name": "Rostov-on-Don",
+          "city_full_name": "Rostov-on-Don, Russia",
+          "city_gc_id": 61,
+          "loading_address": "Donskaya 8",
+          "lon": 39.7203,
+          "lat": 47.2225
+        },
+        "cargo": {
+          "name": "Textile",
+          "package_name": "",
+          "weight": "12.250",
+          "volume": "41.500",
+          "length": "0",
+          "width": "0",
+          "height": "0",
+          "oversized": false,
+          "package_amount": null
+        },
+        "contact": {
+          "name": "Loading contact",
+          "phone": "+79001112233"
+        }
+      },
+      {
+        "row_num": 2,
+        "op_type": "Unloading",
+        "start_date": "2026-05-27T10:00:00",
+        "end_date": "2026-05-27T12:00:00",
+        "comment": "Intermediate unloading point",
+        "contractor": "",
+        "contractor_inn": "",
+        "location": {
+          "city_name": "Moscow",
+          "city_full_name": "Moscow, Russia",
+          "city_gc_id": 100,
+          "loading_address": "Skladskaya 12",
+          "lon": 37.6173,
+          "lat": 55.7558
+        },
+        "cargo": {
+          "name": "Textile",
+          "package_name": "",
+          "weight": "6.125",
+          "volume": "20.750",
+          "length": "0",
+          "width": "0",
+          "height": "0",
+          "oversized": false,
+          "package_amount": null
+        },
+        "contact": {
+          "name": "Unloading contact",
+          "phone": "+79004445566"
+        }
+      },
+      {
+        "row_num": 3,
+        "op_type": "Unloading",
+        "start_date": "2026-05-28T11:00:00",
+        "end_date": "2026-05-28T13:00:00",
+        "comment": "Final unloading point",
+        "contractor": "",
+        "contractor_inn": "",
+        "location": {
+          "city_name": "Perm",
+          "city_full_name": "Perm, Russia",
+          "city_gc_id": 59,
+          "loading_address": "Transportnaya 9",
+          "lon": 56.238,
+          "lat": 58.01
+        },
+        "cargo": {
+          "name": "Textile",
+          "package_name": "",
+          "weight": "6.125",
+          "volume": "20.750",
+          "length": "0",
+          "width": "0",
+          "height": "0",
+          "oversized": false,
+          "package_amount": null
+        },
+        "contact": {
+          "name": "Unloading contact",
+          "phone": "+79004445566"
+        }
+      }
+    ],
+    "admitted_organizations": [],
+    "hide_bets_history": false,
+    "list": {
+      "priority_sort": 9,
+      "is_assembly": false,
+      "price_per_km": 33.04,
+      "route": {
+        "load": {
+          "city": "Rostov-on-Don",
+          "address": "Donskaya 8",
+          "date": "2026-05-26T10:00:00",
+          "city_gc_id": 61,
+          "points_count": 1
+        },
+        "unload": {
+          "city": "Perm",
+          "address": "Transportnaya 9",
+          "date": "2026-05-27T17:00:00",
+          "city_gc_id": 59,
+          "points_count": 2
+        }
+      },
+      "cargo": {
+        "name": "Textile",
+        "weight": 12.25,
+        "volume": 41.5,
+        "incoterms": ""
+      },
+      "organizer": {
+        "is_hide_organization": false
+      },
+      "payment": {
+        "consignor": null,
+        "consignee": null
+      },
+      "trading": {
+        "direction": null,
+        "comment": "Auction is available",
+        "is_available": true,
+        "is_accredited": true
+      }
+    }
+  },
+  {
+    "main": {
+      "id": 1246,
+      "cargo_num": "00000001069",
+      "cargo_date": "2026-05-14T14:00:00",
+      "order_uid": "550e8400-e29b-41d4-a716-446655440010",
+      "auc_type": "Up",
+      "created_at": "2026-05-25T15:00:00"
+    },
+    "organizer": {
+      "subscriber_id": 108,
+      "subscriber_code": "108",
+      "infobase_code": "RU_Cargo_01",
+      "organization_name": "LIM",
+      "organization_inn": "7703769194",
+      "organization_kpp": "770301011",
+      "organization_id": 350
+    },
+    "contacts": [
+      {
+        "name": "Contact 11",
+        "phone": "+79001234510",
+        "work_phone": null,
+        "uid": "550e8400-e29b-41d4-a716-446655440011",
+        "email": "contact11@example.com"
+      }
+    ],
+    "cargo": {
+      "price": "65000",
+      "currency": 643,
+      "is_international": false,
+      "distance": 1900,
+      "truck_count": 2,
+      "body_type": "Tilt",
+      "temp_from": -18,
+      "temp_to": -12,
+      "conics": 1,
+      "belts": 3,
+      "adr": 0,
+      "coupling": false,
+      "air_pass": false,
+      "low_loader": false,
+      "additional_load": false,
+      "containered": false,
+      "container_type": null,
+      "container_size": null,
+      "loading_types": {
+        "side": true,
+        "top": false,
+        "rear": true,
+        "full": false
+      },
+      "docs": {
+        "tir": false,
+        "cmr": true,
+        "t1": false,
+        "med": true
+      },
+      "car": {
+        "type": "Truck tractor",
+        "weight": 20,
+        "volume": 82,
+        "width": 2.4,
+        "length": 13.6,
+        "height": 2.7
+      }
+    },
+    "trading": {
+      "status": "Auction",
+      "status_mobile": "Losing",
+      "start_time": "2026-05-26T16:00:00",
+      "stop_time": "2026-05-26T17:00:00",
+      "bid_measurement_type": "PerRoute",
+      "can_set_bet": true,
+      "allow_counter_bets": true,
+      "hide_bets_history": false,
+      "hide_places": false,
+      "no_view_cargo_price": false,
+      "hide_points_address_and_contacts": false,
+      "is_bidder": true,
+      "is_favorite": false,
+      "is_last_bet_with_vat": true,
+      "red_bet_with_vat": false,
+      "red_bet_no_vat": false,
+      "send_deal_before_load": false,
+      "chat_id": null,
+      "price": {
+        "start": 68000,
+        "start_no_vat": 56666.67,
+        "current": 65000,
+        "current_no_vat": 54166.67,
+        "available": 64000,
+        "available_no_vat": 53333.33,
+        "min": 55000,
+        "min_no_vat": 45833.33,
+        "max": 68000,
+        "max_no_vat": 56666.67,
+        "step": 500,
+        "step_no_vat": 416.67,
+        "price_per_km": 34.89
+      },
+      "your": {
+        "bet": true,
+        "last_bet": 64000,
+        "last_bet_with_vat": 64000,
+        "win": false
+      },
+      "settings": {
+        "prolong_after_bet": 10,
+        "winner_confirm": 1,
+        "winner_counter_mode": null,
+        "transmission_time_in": 24,
+        "coefficient": 10
+      }
+    },
+    "payment": {
+      "condition": "Payment by original transport documents",
+      "condition_predefined": "OriginalDocuments",
+      "form": "Bank transfer with VAT",
+      "delay": 30,
+      "delay_type": "CalendarDays",
+      "currency_code": "643",
+      "prepay": "0"
+    },
+    "assembly": {
+      "num": null,
+      "date": null
+    },
+    "routes": [
+      {
+        "row_num": 1,
+        "op_type": "Loading",
+        "start_date": "2026-05-26T09:00:00",
+        "end_date": "2026-05-26T11:00:00",
+        "comment": "First loading point",
+        "contractor": "",
+        "contractor_inn": "",
+        "location": {
+          "city_name": "Perm",
+          "city_full_name": "Perm, Russia",
+          "city_gc_id": 59,
+          "loading_address": "Transportnaya 9",
+          "lon": 56.238,
+          "lat": 58.01
+        },
+        "cargo": {
+          "name": "Frozen goods",
+          "package_name": "",
+          "weight": "6.750",
+          "volume": "23.000",
+          "length": "0",
+          "width": "0",
+          "height": "0",
+          "oversized": false,
+          "package_amount": null
+        },
+        "contact": {
+          "name": "Loading contact",
+          "phone": "+79001112233"
+        }
+      },
+      {
+        "row_num": 2,
+        "op_type": "Loading",
+        "start_date": "2026-05-27T10:00:00",
+        "end_date": "2026-05-27T12:00:00",
+        "comment": "Second loading point",
+        "contractor": "",
+        "contractor_inn": "",
+        "location": {
+          "city_name": "Saint Petersburg",
+          "city_full_name": "Saint Petersburg, Russia",
+          "city_gc_id": 78,
+          "loading_address": "Portovaya 4",
+          "lon": 30.3159,
+          "lat": 59.9391
+        },
+        "cargo": {
+          "name": "Frozen goods",
+          "package_name": "",
+          "weight": "6.750",
+          "volume": "23.000",
+          "length": "0",
+          "width": "0",
+          "height": "0",
+          "oversized": false,
+          "package_amount": null
+        },
+        "contact": {
+          "name": "Loading contact",
+          "phone": "+79001112233"
+        }
+      },
+      {
+        "row_num": 3,
+        "op_type": "Unloading",
+        "start_date": "2026-05-28T11:00:00",
+        "end_date": "2026-05-28T13:00:00",
+        "comment": "First unloading point",
+        "contractor": "",
+        "contractor_inn": "",
+        "location": {
+          "city_name": "Kazan",
+          "city_full_name": "Kazan, Russia",
+          "city_gc_id": 16,
+          "loading_address": "Proizvodstvennaya 18",
+          "lon": 49.1064,
+          "lat": 55.7961
+        },
+        "cargo": {
+          "name": "Frozen goods",
+          "package_name": "",
+          "weight": "6.750",
+          "volume": "23.000",
+          "length": "0",
+          "width": "0",
+          "height": "0",
+          "oversized": false,
+          "package_amount": null
+        },
+        "contact": {
+          "name": "Unloading contact",
+          "phone": "+79004445566"
+        }
+      },
+      {
+        "row_num": 4,
+        "op_type": "Unloading",
+        "start_date": "2026-05-29T12:00:00",
+        "end_date": "2026-05-29T14:00:00",
+        "comment": "Second unloading point",
+        "contractor": "",
+        "contractor_inn": "",
+        "location": {
+          "city_name": "Moscow",
+          "city_full_name": "Moscow, Russia",
+          "city_gc_id": 100,
+          "loading_address": "Skladskaya 12",
+          "lon": 37.6173,
+          "lat": 55.7558
+        },
+        "cargo": {
+          "name": "Frozen goods",
+          "package_name": "",
+          "weight": "6.750",
+          "volume": "23.000",
+          "length": "0",
+          "width": "0",
+          "height": "0",
+          "oversized": false,
+          "package_amount": null
+        },
+        "contact": {
+          "name": "Unloading contact",
+          "phone": "+79004445566"
+        }
+      }
+    ],
+    "admitted_organizations": [],
+    "hide_bets_history": false,
+    "list": {
+      "priority_sort": 10,
+      "is_assembly": false,
+      "price_per_km": 34.89,
+      "route": {
+        "load": {
+          "city": "Perm",
+          "address": "Transportnaya 9",
+          "date": "2026-05-27T11:00:00",
+          "city_gc_id": 59,
+          "points_count": 2
+        },
+        "unload": {
+          "city": "Moscow",
+          "address": "Skladskaya 12",
+          "date": "2026-05-28T18:00:00",
+          "city_gc_id": 100,
+          "points_count": 1
+        }
+      },
+      "cargo": {
+        "name": "Frozen goods",
+        "weight": 13.5,
+        "volume": 46,
+        "incoterms": ""
+      },
+      "organizer": {
+        "is_hide_organization": false
+      },
+      "payment": {
+        "consignor": null,
+        "consignee": null
+      },
+      "trading": {
+        "direction": "Up",
+        "comment": "Auction is available",
+        "is_available": true,
+        "is_accredited": true
+      }
+    }
+  },
+  {
+    "main": {
+      "id": 1247,
+      "cargo_num": "00000001070",
+      "cargo_date": "2026-05-15T15:00:00",
+      "order_uid": "550e8400-e29b-41d4-a716-446655440011",
+      "auc_type": "FixPrice",
+      "created_at": "2026-05-25T16:00:00"
+    },
+    "organizer": {
+      "subscriber_id": 109,
+      "subscriber_code": "109",
+      "infobase_code": "RU_Cargo_01",
+      "organization_name": "TransLogistic",
+      "organization_inn": "7703769195",
+      "organization_kpp": "770301012",
+      "organization_id": 351
+    },
+    "contacts": [
+      {
+        "name": "Contact 12",
+        "phone": "+79001234511",
+        "work_phone": null,
+        "uid": "550e8400-e29b-41d4-a716-446655440012",
+        "email": "contact12@example.com"
+      }
+    ],
+    "cargo": {
+      "price": "68500",
+      "currency": 643,
+      "is_international": false,
+      "distance": 2020,
+      "truck_count": 3,
+      "body_type": "Van",
+      "temp_from": 0,
+      "temp_to": 0,
+      "conics": 2,
+      "belts": 4,
+      "adr": 0,
+      "coupling": false,
+      "air_pass": false,
+      "low_loader": false,
+      "additional_load": false,
+      "containered": false,
+      "container_type": null,
+      "container_size": null,
+      "loading_types": {
+        "side": false,
+        "top": false,
+        "rear": true,
+        "full": false
+      },
+      "docs": {
+        "tir": false,
+        "cmr": false,
+        "t1": false,
+        "med": false
+      },
+      "car": null
+    },
+    "trading": {
+      "status": "Planning",
+      "status_mobile": "OnPending",
+      "start_time": "2026-05-27T16:00:00",
+      "stop_time": "2026-05-27T17:00:00",
+      "bid_measurement_type": "PerKm",
+      "can_set_bet": true,
+      "allow_counter_bets": false,
+      "hide_bets_history": false,
+      "hide_places": false,
+      "no_view_cargo_price": false,
+      "hide_points_address_and_contacts": false,
+      "is_bidder": true,
+      "is_favorite": false,
+      "is_last_bet_with_vat": true,
+      "red_bet_with_vat": false,
+      "red_bet_no_vat": false,
+      "send_deal_before_load": false,
+      "chat_id": null,
+      "price": {
+        "start": 71500,
+        "start_no_vat": 59583.33,
+        "current": 68500,
+        "current_no_vat": 57083.33,
+        "available": 67500,
+        "available_no_vat": 56250,
+        "min": 58500,
+        "min_no_vat": 48750,
+        "max": 71500,
+        "max_no_vat": 59583.33,
+        "step": 500,
+        "step_no_vat": 416.67,
+        "price_per_km": 36.74
+      },
+      "your": {
+        "bet": true,
+        "last_bet": 67500,
+        "last_bet_with_vat": 67500,
+        "win": false
+      },
+      "settings": {
+        "prolong_after_bet": 10,
+        "winner_confirm": 1,
+        "winner_counter_mode": null,
+        "transmission_time_in": 24,
+        "coefficient": 10
+      }
+    },
+    "payment": {
+      "condition": "Payment by original transport documents",
+      "condition_predefined": "OriginalDocuments",
+      "form": "Bank transfer without VAT",
+      "delay": 30,
+      "delay_type": "CalendarDays",
+      "currency_code": "643",
+      "prepay": "0"
+    },
+    "assembly": {
+      "num": null,
+      "date": null
+    },
+    "routes": [
+      {
+        "row_num": 1,
+        "op_type": "Loading",
+        "start_date": "2026-05-26T09:00:00",
+        "end_date": "2026-05-26T11:00:00",
+        "comment": null,
+        "contractor": "",
+        "contractor_inn": "",
+        "location": {
+          "city_name": "Moscow",
+          "city_full_name": "Moscow, Russia",
+          "city_gc_id": 100,
+          "loading_address": "Skladskaya 12",
+          "lon": 37.6173,
+          "lat": 55.7558
+        },
+        "cargo": {
+          "name": "Equipment",
+          "package_name": "",
+          "weight": "14.750",
+          "volume": "50.500",
+          "length": "0",
+          "width": "0",
+          "height": "0",
+          "oversized": false,
+          "package_amount": null
+        },
+        "contact": {
+          "name": "Loading contact",
+          "phone": "+79001112233"
+        }
+      },
+      {
+        "row_num": 2,
+        "op_type": "Unloading",
+        "start_date": "2026-05-27T10:00:00",
+        "end_date": "2026-05-27T12:00:00",
+        "comment": null,
+        "contractor": "",
+        "contractor_inn": "",
+        "location": {
+          "city_name": "Saint Petersburg",
+          "city_full_name": "Saint Petersburg, Russia",
+          "city_gc_id": 78,
+          "loading_address": "Portovaya 4",
+          "lon": 30.3159,
+          "lat": 59.9391
+        },
+        "cargo": {
+          "name": "Equipment",
+          "package_name": "",
+          "weight": "14.750",
+          "volume": "50.500",
+          "length": "0",
+          "width": "0",
+          "height": "0",
+          "oversized": false,
+          "package_amount": null
+        },
+        "contact": {
+          "name": "Unloading contact",
+          "phone": "+79004445566"
+        }
+      }
+    ],
+    "admitted_organizations": [],
+    "hide_bets_history": false,
+    "list": {
+      "priority_sort": 11,
+      "is_assembly": false,
+      "price_per_km": 36.74,
+      "route": {
+        "load": {
+          "city": "Moscow",
+          "address": "Skladskaya 12",
+          "date": "2026-05-28T12:00:00",
+          "city_gc_id": 100,
+          "points_count": 1
+        },
+        "unload": {
+          "city": "Saint Petersburg",
+          "address": "Portovaya 4",
+          "date": "2026-05-29T19:00:00",
+          "city_gc_id": 78,
+          "points_count": 1
+        }
+      },
+      "cargo": {
+        "name": "Equipment",
+        "weight": 14.75,
+        "volume": 50.5,
+        "incoterms": ""
+      },
+      "organizer": {
+        "is_hide_organization": false
+      },
+      "payment": {
+        "consignor": null,
+        "consignee": null
+      },
+      "trading": {
+        "direction": null,
+        "comment": "Auction is available",
+        "is_available": true,
+        "is_accredited": true
+      }
+    }
+  },
+  {
+    "main": {
+      "id": 1248,
+      "cargo_num": "00000001071",
+      "cargo_date": "2026-05-16T10:00:00",
+      "order_uid": "550e8400-e29b-41d4-a716-446655440012",
+      "auc_type": "Down",
+      "created_at": "2026-05-25T11:00:00"
+    },
+    "organizer": {
+      "subscriber_id": 110,
+      "subscriber_code": "110",
+      "infobase_code": "RU_Cargo_01",
+      "organization_name": "NorthCargo",
+      "organization_inn": "7703769196",
+      "organization_kpp": "770301013",
+      "organization_id": 352
+    },
+    "contacts": [
+      {
+        "name": "Contact 13",
+        "phone": "+79001234512",
+        "work_phone": null,
+        "uid": "550e8400-e29b-41d4-a716-446655440013",
+        "email": "contact13@example.com"
+      }
+    ],
+    "cargo": {
+      "price": "72000",
+      "currency": 643,
+      "is_international": false,
+      "distance": 2140,
+      "truck_count": 1,
+      "body_type": "Refrigerator",
+      "temp_from": 0,
+      "temp_to": 0,
+      "conics": 0,
+      "belts": 5,
+      "adr": 0,
+      "coupling": true,
+      "air_pass": false,
+      "low_loader": false,
+      "additional_load": false,
+      "containered": false,
+      "container_type": null,
+      "container_size": null,
+      "loading_types": {
+        "side": true,
+        "top": true,
+        "rear": true,
+        "full": true
+      },
+      "docs": {
+        "tir": false,
+        "cmr": true,
+        "t1": false,
+        "med": false
+      },
+      "car": {
+        "type": "Truck tractor",
+        "weight": 20,
+        "volume": 82,
+        "width": 2.4,
+        "length": 13.6,
+        "height": 2.7
+      }
+    },
+    "trading": {
+      "status": "Auction",
+      "status_mobile": "Confirmed",
+      "start_time": "2026-05-25T16:00:00",
+      "stop_time": "2026-05-25T17:00:00",
+      "bid_measurement_type": "PerRoute",
+      "can_set_bet": true,
+      "allow_counter_bets": true,
+      "hide_bets_history": false,
+      "hide_places": false,
+      "no_view_cargo_price": false,
+      "hide_points_address_and_contacts": false,
+      "is_bidder": true,
+      "is_favorite": true,
+      "is_last_bet_with_vat": true,
+      "red_bet_with_vat": false,
+      "red_bet_no_vat": false,
+      "send_deal_before_load": false,
+      "chat_id": null,
+      "price": {
+        "start": 75000,
+        "start_no_vat": 62500,
+        "current": 72000,
+        "current_no_vat": 60000,
+        "available": 71000,
+        "available_no_vat": 59166.67,
+        "min": 62000,
+        "min_no_vat": 51666.67,
+        "max": 75000,
+        "max_no_vat": 62500,
+        "step": 500,
+        "step_no_vat": 416.67,
+        "price_per_km": 38.59
+      },
+      "your": {
+        "bet": true,
+        "last_bet": 71000,
+        "last_bet_with_vat": 71000,
+        "win": false
+      },
+      "settings": {
+        "prolong_after_bet": 10,
+        "winner_confirm": 1,
+        "winner_counter_mode": null,
+        "transmission_time_in": 24,
+        "coefficient": 10
+      }
+    },
+    "payment": {
+      "condition": "Payment by original transport documents",
+      "condition_predefined": "OriginalDocuments",
+      "form": "Bank transfer with VAT",
+      "delay": 30,
+      "delay_type": "CalendarDays",
+      "currency_code": "643",
+      "prepay": "0"
+    },
+    "assembly": {
+      "num": null,
+      "date": null
+    },
+    "routes": [
+      {
+        "row_num": 1,
+        "op_type": "Loading",
+        "start_date": "2026-05-26T09:00:00",
+        "end_date": "2026-05-26T11:00:00",
+        "comment": "Main loading point",
+        "contractor": "",
+        "contractor_inn": "",
+        "location": {
+          "city_name": "Saint Petersburg",
+          "city_full_name": "Saint Petersburg, Russia",
+          "city_gc_id": 78,
+          "loading_address": "Portovaya 4",
+          "lon": 30.3159,
+          "lat": 59.9391
+        },
+        "cargo": {
+          "name": "Building materials",
+          "package_name": "",
+          "weight": "8.000",
+          "volume": "27.500",
+          "length": "0",
+          "width": "0",
+          "height": "0",
+          "oversized": false,
+          "package_amount": null
+        },
+        "contact": {
+          "name": "Loading contact",
+          "phone": "+79001112233"
+        }
+      },
+      {
+        "row_num": 2,
+        "op_type": "Loading",
+        "start_date": "2026-05-27T10:00:00",
+        "end_date": "2026-05-27T12:00:00",
+        "comment": "Additional loading point",
+        "contractor": "",
+        "contractor_inn": "",
+        "location": {
+          "city_name": "Yekaterinburg",
+          "city_full_name": "Yekaterinburg, Russia",
+          "city_gc_id": 66,
+          "loading_address": "Logisticheskaya 7",
+          "lon": 60.6057,
+          "lat": 56.8389
+        },
+        "cargo": {
+          "name": "Building materials",
+          "package_name": "",
+          "weight": "8.000",
+          "volume": "27.500",
+          "length": "0",
+          "width": "0",
+          "height": "0",
+          "oversized": false,
+          "package_amount": null
+        },
+        "contact": {
+          "name": "Loading contact",
+          "phone": "+79001112233"
+        }
+      },
+      {
+        "row_num": 3,
+        "op_type": "Unloading",
+        "start_date": "2026-05-28T11:00:00",
+        "end_date": "2026-05-28T13:00:00",
+        "comment": null,
+        "contractor": "",
+        "contractor_inn": "",
+        "location": {
+          "city_name": "Kazan",
+          "city_full_name": "Kazan, Russia",
+          "city_gc_id": 16,
+          "loading_address": "Proizvodstvennaya 18",
+          "lon": 49.1064,
+          "lat": 55.7961
+        },
+        "cargo": {
+          "name": "Building materials",
+          "package_name": "",
+          "weight": "16.000",
+          "volume": "55.000",
+          "length": "0",
+          "width": "0",
+          "height": "0",
+          "oversized": false,
+          "package_amount": null
+        },
+        "contact": {
+          "name": "Unloading contact",
+          "phone": "+79004445566"
+        }
+      }
+    ],
+    "admitted_organizations": [],
+    "hide_bets_history": false,
+    "list": {
+      "priority_sort": 12,
+      "is_assembly": false,
+      "price_per_km": 38.59,
+      "route": {
+        "load": {
+          "city": "Saint Petersburg",
+          "address": "Portovaya 4",
+          "date": "2026-05-26T09:00:00",
+          "city_gc_id": 78,
+          "points_count": 2
+        },
+        "unload": {
+          "city": "Kazan",
+          "address": "Proizvodstvennaya 18",
+          "date": "2026-05-27T16:00:00",
+          "city_gc_id": 16,
+          "points_count": 2
+        }
+      },
+      "cargo": {
+        "name": "Building materials",
+        "weight": 16,
+        "volume": 55,
+        "incoterms": ""
+      },
+      "organizer": {
+        "is_hide_organization": false
+      },
+      "payment": {
+        "consignor": null,
+        "consignee": null
+      },
+      "trading": {
+        "direction": "Down",
+        "comment": "Auction is available",
+        "is_available": true,
+        "is_accredited": true
+      }
+    }
+  },
+  {
+    "main": {
+      "id": 1249,
+      "cargo_num": "00000001072",
+      "cargo_date": "2026-05-17T11:00:00",
+      "order_uid": "550e8400-e29b-41d4-a716-446655440013",
+      "auc_type": "Request",
+      "created_at": "2026-05-25T12:00:00"
+    },
+    "organizer": {
+      "subscriber_id": 111,
+      "subscriber_code": "111",
+      "infobase_code": "RU_Cargo_01",
+      "organization_name": "Vector Trans",
+      "organization_inn": "7703769197",
+      "organization_kpp": "770301014",
+      "organization_id": 353
+    },
+    "contacts": [
+      {
+        "name": "Contact 14",
+        "phone": "+79001234513",
+        "work_phone": null,
+        "uid": "550e8400-e29b-41d4-a716-446655440014",
+        "email": "contact14@example.com"
+      }
+    ],
+    "cargo": {
+      "price": "75500",
+      "currency": 643,
+      "is_international": false,
+      "distance": 2260,
+      "truck_count": 2,
+      "body_type": "Isothermal",
+      "temp_from": 0,
+      "temp_to": 0,
+      "conics": 1,
+      "belts": 6,
+      "adr": 0,
+      "coupling": false,
+      "air_pass": false,
+      "low_loader": false,
+      "additional_load": true,
+      "containered": false,
+      "container_type": null,
+      "container_size": null,
+      "loading_types": {
+        "side": false,
+        "top": false,
+        "rear": true,
+        "full": false
+      },
+      "docs": {
+        "tir": false,
+        "cmr": false,
+        "t1": false,
+        "med": false
+      },
+      "car": {
+        "type": "Truck",
+        "weight": 20,
+        "volume": 82,
+        "width": 2.4,
+        "length": 13.6,
+        "height": 2.7
+      }
+    },
+    "trading": {
+      "status": "WaitDeal",
+      "status_mobile": "ChoosingWinner",
+      "start_time": "2026-05-26T16:00:00",
+      "stop_time": "2026-05-26T17:00:00",
+      "bid_measurement_type": "PerKm",
+      "can_set_bet": false,
+      "allow_counter_bets": false,
+      "hide_bets_history": false,
+      "hide_places": false,
+      "no_view_cargo_price": false,
+      "hide_points_address_and_contacts": false,
+      "is_bidder": true,
+      "is_favorite": false,
+      "is_last_bet_with_vat": true,
+      "red_bet_with_vat": false,
+      "red_bet_no_vat": false,
+      "send_deal_before_load": false,
+      "chat_id": null,
+      "price": {
+        "start": 78500,
+        "start_no_vat": 65416.67,
+        "current": 75500,
+        "current_no_vat": 62916.67,
+        "available": null,
+        "available_no_vat": null,
+        "min": null,
+        "min_no_vat": null,
+        "max": 78500,
+        "max_no_vat": 65416.67,
+        "step": null,
+        "step_no_vat": null,
+        "price_per_km": 40.44
+      },
+      "your": {
+        "bet": true,
+        "last_bet": 74500,
+        "last_bet_with_vat": 74500,
+        "win": false
+      },
+      "settings": {
+        "prolong_after_bet": 10,
+        "winner_confirm": 1,
+        "winner_counter_mode": null,
+        "transmission_time_in": 24,
+        "coefficient": 10
+      }
+    },
+    "payment": {
+      "condition": "Payment by original transport documents",
+      "condition_predefined": "OriginalDocuments",
+      "form": "Bank transfer without VAT",
+      "delay": 30,
+      "delay_type": "CalendarDays",
+      "currency_code": "643",
+      "prepay": "0"
+    },
+    "assembly": {
+      "num": null,
+      "date": null
+    },
+    "routes": [
+      {
+        "row_num": 1,
+        "op_type": "Loading",
+        "start_date": "2026-05-26T09:00:00",
+        "end_date": "2026-05-26T11:00:00",
+        "comment": null,
+        "contractor": "",
+        "contractor_inn": "",
+        "location": {
+          "city_name": "Kazan",
+          "city_full_name": "Kazan, Russia",
+          "city_gc_id": 16,
+          "loading_address": "Proizvodstvennaya 18",
+          "lon": 49.1064,
+          "lat": 55.7961
+        },
+        "cargo": {
+          "name": "Home appliances",
+          "package_name": "",
+          "weight": "17.250",
+          "volume": "59.500",
+          "length": "0",
+          "width": "0",
+          "height": "0",
+          "oversized": false,
+          "package_amount": null
+        },
+        "contact": {
+          "name": "Loading contact",
+          "phone": "+79001112233"
+        }
+      },
+      {
+        "row_num": 2,
+        "op_type": "Unloading",
+        "start_date": "2026-05-27T10:00:00",
+        "end_date": "2026-05-27T12:00:00",
+        "comment": "Intermediate unloading point",
+        "contractor": "",
+        "contractor_inn": "",
+        "location": {
+          "city_name": "Novosibirsk",
+          "city_full_name": "Novosibirsk, Russia",
+          "city_gc_id": 54,
+          "loading_address": "Severny proezd 3",
+          "lon": 82.9204,
+          "lat": 55.0302
+        },
+        "cargo": {
+          "name": "Home appliances",
+          "package_name": "",
+          "weight": "8.625",
+          "volume": "29.750",
+          "length": "0",
+          "width": "0",
+          "height": "0",
+          "oversized": false,
+          "package_amount": null
+        },
+        "contact": {
+          "name": "Unloading contact",
+          "phone": "+79004445566"
+        }
+      },
+      {
+        "row_num": 3,
+        "op_type": "Unloading",
+        "start_date": "2026-05-28T11:00:00",
+        "end_date": "2026-05-28T13:00:00",
+        "comment": "Final unloading point",
+        "contractor": "",
+        "contractor_inn": "",
+        "location": {
+          "city_name": "Yekaterinburg",
+          "city_full_name": "Yekaterinburg, Russia",
+          "city_gc_id": 66,
+          "loading_address": "Logisticheskaya 7",
+          "lon": 60.6057,
+          "lat": 56.8389
+        },
+        "cargo": {
+          "name": "Home appliances",
+          "package_name": "",
+          "weight": "8.625",
+          "volume": "29.750",
+          "length": "0",
+          "width": "0",
+          "height": "0",
+          "oversized": false,
+          "package_amount": null
+        },
+        "contact": {
+          "name": "Unloading contact",
+          "phone": "+79004445566"
+        }
+      }
+    ],
+    "admitted_organizations": [],
+    "hide_bets_history": false,
+    "list": {
+      "priority_sort": 13,
+      "is_assembly": false,
+      "price_per_km": 40.44,
+      "route": {
+        "load": {
+          "city": "Kazan",
+          "address": "Proizvodstvennaya 18",
+          "date": "2026-05-27T10:00:00",
+          "city_gc_id": 16,
+          "points_count": 1
+        },
+        "unload": {
+          "city": "Yekaterinburg",
+          "address": "Logisticheskaya 7",
+          "date": "2026-05-28T17:00:00",
+          "city_gc_id": 66,
+          "points_count": 1
+        }
+      },
+      "cargo": {
+        "name": "Home appliances",
+        "weight": 17.25,
+        "volume": 59.5,
+        "incoterms": ""
+      },
+      "organizer": {
+        "is_hide_organization": false
+      },
+      "payment": {
+        "consignor": null,
+        "consignee": null
+      },
+      "trading": {
+        "direction": null,
+        "comment": null,
+        "is_available": false,
+        "is_accredited": true
+      }
+    }
+  },
+  {
+    "main": {
+      "id": 1250,
+      "cargo_num": "00000001073",
+      "cargo_date": "2026-05-18T12:00:00",
+      "order_uid": "550e8400-e29b-41d4-a716-446655440014",
+      "auc_type": "Up",
+      "created_at": "2026-05-25T13:00:00"
+    },
+    "organizer": {
+      "subscriber_id": 112,
+      "subscriber_code": "112",
+      "infobase_code": "RU_Cargo_01",
+      "organization_name": "PromSnab",
+      "organization_inn": "7703769198",
+      "organization_kpp": "770301015",
+      "organization_id": 354
+    },
+    "contacts": [
+      {
+        "name": "Contact 15",
+        "phone": "+79001234514",
+        "work_phone": null,
+        "uid": "550e8400-e29b-41d4-a716-446655440015",
+        "email": "contact15@example.com"
+      }
+    ],
+    "cargo": {
+      "price": "79000",
+      "currency": 643,
+      "is_international": false,
+      "distance": 2380,
+      "truck_count": 3,
+      "body_type": "Container truck",
+      "temp_from": 0,
+      "temp_to": 0,
+      "conics": 2,
+      "belts": 0,
+      "adr": 0,
+      "coupling": false,
+      "air_pass": false,
+      "low_loader": false,
+      "additional_load": false,
+      "containered": false,
+      "container_type": null,
+      "container_size": null,
+      "loading_types": {
+        "side": true,
+        "top": false,
+        "rear": true,
+        "full": false
+      },
+      "docs": {
+        "tir": false,
+        "cmr": true,
+        "t1": false,
+        "med": false
+      },
+      "car": {
+        "type": "Truck tractor",
+        "weight": 20,
+        "volume": 82,
+        "width": 2.4,
+        "length": 13.6,
+        "height": 2.7
+      }
+    },
+    "trading": {
+      "status": "InProgress",
+      "status_mobile": "Winner",
+      "start_time": "2026-05-27T16:00:00",
+      "stop_time": "2026-05-27T17:00:00",
+      "bid_measurement_type": "PerRoute",
+      "can_set_bet": false,
+      "allow_counter_bets": true,
+      "hide_bets_history": false,
+      "hide_places": false,
+      "no_view_cargo_price": false,
+      "hide_points_address_and_contacts": false,
+      "is_bidder": true,
+      "is_favorite": false,
+      "is_last_bet_with_vat": true,
+      "red_bet_with_vat": false,
+      "red_bet_no_vat": false,
+      "send_deal_before_load": false,
+      "chat_id": null,
+      "price": {
+        "start": 82000,
+        "start_no_vat": 68333.33,
+        "current": 79000,
+        "current_no_vat": 65833.33,
+        "available": null,
+        "available_no_vat": null,
+        "min": null,
+        "min_no_vat": null,
+        "max": 82000,
+        "max_no_vat": 68333.33,
+        "step": null,
+        "step_no_vat": null,
+        "price_per_km": 42.29
+      },
+      "your": {
+        "bet": true,
+        "last_bet": 78000,
+        "last_bet_with_vat": 78000,
+        "win": true
+      },
+      "settings": {
+        "prolong_after_bet": 10,
+        "winner_confirm": 1,
+        "winner_counter_mode": null,
+        "transmission_time_in": 24,
+        "coefficient": 10
+      }
+    },
+    "payment": {
+      "condition": "Payment by original transport documents",
+      "condition_predefined": "OriginalDocuments",
+      "form": "Bank transfer with VAT",
+      "delay": 30,
+      "delay_type": "CalendarDays",
+      "currency_code": "643",
+      "prepay": "0"
+    },
+    "assembly": {
+      "num": "AS-114",
+      "date": "2026-05-24T11:00:00"
+    },
+    "routes": [
+      {
+        "row_num": 1,
+        "op_type": "Loading",
+        "start_date": "2026-05-26T09:00:00",
+        "end_date": "2026-05-26T11:00:00",
+        "comment": "First loading point",
+        "contractor": "",
+        "contractor_inn": "",
+        "location": {
+          "city_name": "Yekaterinburg",
+          "city_full_name": "Yekaterinburg, Russia",
+          "city_gc_id": 66,
+          "loading_address": "Logisticheskaya 7",
+          "lon": 60.6057,
+          "lat": 56.8389
+        },
+        "cargo": {
+          "name": "Furniture",
+          "package_name": "",
+          "weight": "9.250",
+          "volume": "32.000",
+          "length": "0",
+          "width": "0",
+          "height": "0",
+          "oversized": false,
+          "package_amount": null
+        },
+        "contact": {
+          "name": "Loading contact",
+          "phone": "+79001112233"
+        }
+      },
+      {
+        "row_num": 2,
+        "op_type": "Loading",
+        "start_date": "2026-05-27T10:00:00",
+        "end_date": "2026-05-27T12:00:00",
+        "comment": "Second loading point",
+        "contractor": "",
+        "contractor_inn": "",
+        "location": {
+          "city_name": "Krasnodar",
+          "city_full_name": "Krasnodar, Russia",
+          "city_gc_id": 23,
+          "loading_address": "Yuzhnaya 21",
+          "lon": 38.9753,
+          "lat": 45.0355
+        },
+        "cargo": {
+          "name": "Furniture",
+          "package_name": "",
+          "weight": "9.250",
+          "volume": "32.000",
+          "length": "0",
+          "width": "0",
+          "height": "0",
+          "oversized": false,
+          "package_amount": null
+        },
+        "contact": {
+          "name": "Loading contact",
+          "phone": "+79001112233"
+        }
+      },
+      {
+        "row_num": 3,
+        "op_type": "Unloading",
+        "start_date": "2026-05-28T11:00:00",
+        "end_date": "2026-05-28T13:00:00",
+        "comment": "First unloading point",
+        "contractor": "",
+        "contractor_inn": "",
+        "location": {
+          "city_name": "Nizhny Novgorod",
+          "city_full_name": "Nizhny Novgorod, Russia",
+          "city_gc_id": 52,
+          "loading_address": "Gruzovaya 5",
+          "lon": 44.002,
+          "lat": 56.3269
+        },
+        "cargo": {
+          "name": "Furniture",
+          "package_name": "",
+          "weight": "9.250",
+          "volume": "32.000",
+          "length": "0",
+          "width": "0",
+          "height": "0",
+          "oversized": false,
+          "package_amount": null
+        },
+        "contact": {
+          "name": "Unloading contact",
+          "phone": "+79004445566"
+        }
+      },
+      {
+        "row_num": 4,
+        "op_type": "Unloading",
+        "start_date": "2026-05-29T12:00:00",
+        "end_date": "2026-05-29T14:00:00",
+        "comment": "Second unloading point",
+        "contractor": "",
+        "contractor_inn": "",
+        "location": {
+          "city_name": "Novosibirsk",
+          "city_full_name": "Novosibirsk, Russia",
+          "city_gc_id": 54,
+          "loading_address": "Severny proezd 3",
+          "lon": 82.9204,
+          "lat": 55.0302
+        },
+        "cargo": {
+          "name": "Furniture",
+          "package_name": "",
+          "weight": "9.250",
+          "volume": "32.000",
+          "length": "0",
+          "width": "0",
+          "height": "0",
+          "oversized": false,
+          "package_amount": null
+        },
+        "contact": {
+          "name": "Unloading contact",
+          "phone": "+79004445566"
+        }
+      }
+    ],
+    "admitted_organizations": [],
+    "hide_bets_history": false,
+    "list": {
+      "priority_sort": 14,
+      "is_assembly": true,
+      "price_per_km": 42.29,
+      "route": {
+        "load": {
+          "city": "Yekaterinburg",
+          "address": "Logisticheskaya 7",
+          "date": "2026-05-28T11:00:00",
+          "city_gc_id": 66,
+          "points_count": 2
+        },
+        "unload": {
+          "city": "Novosibirsk",
+          "address": "Severny proezd 3",
+          "date": "2026-05-29T18:00:00",
+          "city_gc_id": 54,
+          "points_count": 1
+        }
+      },
+      "cargo": {
+        "name": "Furniture",
+        "weight": 18.5,
+        "volume": 64,
+        "incoterms": ""
+      },
+      "organizer": {
+        "is_hide_organization": false
+      },
+      "payment": {
+        "consignor": null,
+        "consignee": null
+      },
+      "trading": {
+        "direction": "Up",
+        "comment": null,
+        "is_available": false,
+        "is_accredited": true
+      }
+    }
+  },
+  {
+    "main": {
+      "id": 1251,
+      "cargo_num": "00000001074",
+      "cargo_date": "2026-05-19T13:00:00",
+      "order_uid": "550e8400-e29b-41d4-a716-446655440015",
+      "auc_type": "FixPrice",
+      "created_at": "2026-05-25T14:00:00"
+    },
+    "organizer": {
+      "subscriber_id": 113,
+      "subscriber_code": "113",
+      "infobase_code": "RU_Cargo_01",
+      "organization_name": "Rail Auto",
+      "organization_inn": "7703769199",
+      "organization_kpp": "770301016",
+      "organization_id": 355
+    },
+    "contacts": [
+      {
+        "name": "Contact 16",
+        "phone": "+79001234515",
+        "work_phone": null,
+        "uid": "550e8400-e29b-41d4-a716-446655440016",
+        "email": "contact16@example.com"
+      }
+    ],
+    "cargo": {
+      "price": "82500",
+      "currency": 643,
+      "is_international": true,
+      "distance": 2500,
+      "truck_count": 1,
+      "body_type": "Tilt",
+      "temp_from": 0,
+      "temp_to": 0,
+      "conics": 0,
+      "belts": 1,
+      "adr": 0,
+      "coupling": false,
+      "air_pass": true,
+      "low_loader": false,
+      "additional_load": false,
+      "containered": false,
+      "container_type": null,
+      "container_size": null,
+      "loading_types": {
+        "side": false,
+        "top": true,
+        "rear": true,
+        "full": false
+      },
+      "docs": {
+        "tir": true,
+        "cmr": false,
+        "t1": false,
+        "med": false
+      },
+      "car": {
+        "type": "Truck",
+        "weight": 20,
+        "volume": 82,
+        "width": 2.4,
+        "length": 13.6,
+        "height": 2.7
+      }
+    },
+    "trading": {
+      "status": "Finished",
+      "status_mobile": "Accepted",
+      "start_time": "2026-05-25T16:00:00",
+      "stop_time": "2026-05-25T17:00:00",
+      "bid_measurement_type": "PerKm",
+      "can_set_bet": false,
+      "allow_counter_bets": false,
+      "hide_bets_history": false,
+      "hide_places": false,
+      "no_view_cargo_price": false,
+      "hide_points_address_and_contacts": false,
+      "is_bidder": true,
+      "is_favorite": false,
+      "is_last_bet_with_vat": true,
+      "red_bet_with_vat": false,
+      "red_bet_no_vat": false,
+      "send_deal_before_load": false,
+      "chat_id": null,
+      "price": {
+        "start": 85500,
+        "start_no_vat": 71250,
+        "current": 82500,
+        "current_no_vat": 68750,
+        "available": null,
+        "available_no_vat": null,
+        "min": null,
+        "min_no_vat": null,
+        "max": 85500,
+        "max_no_vat": 71250,
+        "step": null,
+        "step_no_vat": null,
+        "price_per_km": 44.14
+      },
+      "your": {
+        "bet": true,
+        "last_bet": 81500,
+        "last_bet_with_vat": 81500,
+        "win": false
+      },
+      "settings": {
+        "prolong_after_bet": 10,
+        "winner_confirm": 1,
+        "winner_counter_mode": null,
+        "transmission_time_in": 24,
+        "coefficient": 10
+      }
+    },
+    "payment": {
+      "condition": "Payment by original transport documents",
+      "condition_predefined": "OriginalDocuments",
+      "form": "Bank transfer without VAT",
+      "delay": 30,
+      "delay_type": "CalendarDays",
+      "currency_code": "643",
+      "prepay": "0"
+    },
+    "assembly": {
+      "num": null,
+      "date": null
+    },
+    "routes": [
+      {
+        "row_num": 1,
+        "op_type": "Loading",
+        "start_date": "2026-05-26T09:00:00",
+        "end_date": "2026-05-26T11:00:00",
+        "comment": null,
+        "contractor": "",
+        "contractor_inn": "",
+        "location": {
+          "city_name": "Novosibirsk",
+          "city_full_name": "Novosibirsk, Russia",
+          "city_gc_id": 54,
+          "loading_address": "Severny proezd 3",
+          "lon": 82.9204,
+          "lat": 55.0302
+        },
+        "cargo": {
+          "name": "Food products",
+          "package_name": "",
+          "weight": "19.750",
+          "volume": "68.500",
+          "length": "0",
+          "width": "0",
+          "height": "0",
+          "oversized": false,
+          "package_amount": null
+        },
+        "contact": {
+          "name": "Loading contact",
+          "phone": "+79001112233"
+        }
+      },
+      {
+        "row_num": 2,
+        "op_type": "Unloading",
+        "start_date": "2026-05-27T10:00:00",
+        "end_date": "2026-05-27T12:00:00",
+        "comment": null,
+        "contractor": "",
+        "contractor_inn": "",
+        "location": {
+          "city_name": "Krasnodar",
+          "city_full_name": "Krasnodar, Russia",
+          "city_gc_id": 23,
+          "loading_address": "Yuzhnaya 21",
+          "lon": 38.9753,
+          "lat": 45.0355
+        },
+        "cargo": {
+          "name": "Food products",
+          "package_name": "",
+          "weight": "19.750",
+          "volume": "68.500",
+          "length": "0",
+          "width": "0",
+          "height": "0",
+          "oversized": false,
+          "package_amount": null
+        },
+        "contact": {
+          "name": "Unloading contact",
+          "phone": "+79004445566"
+        }
+      }
+    ],
+    "admitted_organizations": [],
+    "hide_bets_history": false,
+    "list": {
+      "priority_sort": 15,
+      "is_assembly": false,
+      "price_per_km": 44.14,
+      "route": {
+        "load": {
+          "city": "Novosibirsk",
+          "address": "Severny proezd 3",
+          "date": "2026-05-26T12:00:00",
+          "city_gc_id": 54,
+          "points_count": 1
+        },
+        "unload": {
+          "city": "Krasnodar",
+          "address": "Yuzhnaya 21",
+          "date": "2026-05-27T19:00:00",
+          "city_gc_id": 23,
+          "points_count": 2
+        }
+      },
+      "cargo": {
+        "name": "Food products",
+        "weight": 19.75,
+        "volume": 68.5,
+        "incoterms": ""
+      },
+      "organizer": {
+        "is_hide_organization": false
+      },
+      "payment": {
+        "consignor": null,
+        "consignee": null
+      },
+      "trading": {
+        "direction": null,
+        "comment": null,
+        "is_available": false,
+        "is_accredited": true
+      }
+    }
+  },
+  {
+    "main": {
+      "id": 1252,
+      "cargo_num": "00000001075",
+      "cargo_date": "2026-05-20T14:00:00",
+      "order_uid": "550e8400-e29b-41d4-a716-446655440016",
+      "auc_type": "Down",
+      "created_at": "2026-05-25T15:00:00"
+    },
+    "organizer": {
+      "subscriber_id": 114,
+      "subscriber_code": "114",
+      "infobase_code": "RU_Cargo_01",
+      "organization_name": "Logistics Plus",
+      "organization_inn": "7703769200",
+      "organization_kpp": "770301017",
+      "organization_id": 356
+    },
+    "contacts": [
+      {
+        "name": "Dmitry Orlov",
+        "phone": "+79001234516",
+        "work_phone": "+74951234516",
+        "uid": "550e8400-e29b-41d4-a716-446655440017",
+        "email": "dmitry.orlov@logistics-plus.example"
+      }
+    ],
+    "cargo": {
+      "price": "86000",
+      "currency": 643,
+      "is_international": false,
+      "distance": 2620,
+      "truck_count": 2,
+      "body_type": "Van",
+      "temp_from": 0,
+      "temp_to": 0,
+      "conics": 1,
+      "belts": 2,
+      "adr": 0,
+      "coupling": false,
+      "air_pass": false,
+      "low_loader": true,
+      "additional_load": false,
+      "containered": false,
+      "container_type": null,
+      "container_size": null,
+      "loading_types": {
+        "side": true,
+        "top": false,
+        "rear": true,
+        "full": true
+      },
+      "docs": {
+        "tir": false,
+        "cmr": true,
+        "t1": false,
+        "med": false
+      },
+      "car": {
+        "type": "Truck tractor",
+        "weight": 20,
+        "volume": 82,
+        "width": 2.4,
+        "length": 13.6,
+        "height": 2.7
+      }
+    },
+    "trading": {
+      "status": "Stopped",
+      "status_mobile": "NotParticipating",
+      "start_time": "2026-05-26T16:00:00",
+      "stop_time": "2026-05-26T17:00:00",
+      "bid_measurement_type": "PerRoute",
+      "can_set_bet": false,
+      "allow_counter_bets": true,
+      "hide_bets_history": false,
+      "hide_places": false,
+      "no_view_cargo_price": false,
+      "hide_points_address_and_contacts": true,
+      "is_bidder": false,
+      "is_favorite": false,
+      "is_last_bet_with_vat": null,
+      "red_bet_with_vat": false,
+      "red_bet_no_vat": false,
+      "send_deal_before_load": false,
+      "chat_id": null,
+      "price": {
+        "start": 89000,
+        "start_no_vat": 74166.67,
+        "current": 86000,
+        "current_no_vat": 71666.67,
+        "available": null,
+        "available_no_vat": null,
+        "min": null,
+        "min_no_vat": null,
+        "max": 89000,
+        "max_no_vat": 74166.67,
+        "step": null,
+        "step_no_vat": null,
+        "price_per_km": 45.99
+      },
+      "your": {
+        "bet": false,
+        "last_bet": null,
+        "last_bet_with_vat": null,
+        "win": false
+      },
+      "settings": {
+        "prolong_after_bet": 10,
+        "winner_confirm": 1,
+        "winner_counter_mode": null,
+        "transmission_time_in": 24,
+        "coefficient": 10
+      }
+    },
+    "payment": {
+      "condition": "Payment by original transport documents",
+      "condition_predefined": "OriginalDocuments",
+      "form": "Bank transfer with VAT",
+      "delay": 30,
+      "delay_type": "CalendarDays",
+      "currency_code": "643",
+      "prepay": "0"
+    },
+    "assembly": {
+      "num": null,
+      "date": null
+    },
+    "routes": [
+      {
+        "row_num": 1,
+        "op_type": "Loading",
+        "start_date": "2026-05-26T09:00:00",
+        "end_date": "2026-05-26T11:00:00",
+        "comment": "Main loading point",
+        "contractor": "",
+        "contractor_inn": "",
+        "location": {
+          "city_name": "Krasnodar",
+          "city_full_name": "Krasnodar, Russia",
+          "city_gc_id": 23,
+          "loading_address": "Yuzhnaya 21",
+          "lon": 38.9753,
+          "lat": 45.0355
+        },
+        "cargo": {
+          "name": "Metal rolls",
+          "package_name": "",
+          "weight": "10.500",
+          "volume": "36.500",
+          "length": "0",
+          "width": "0",
+          "height": "0",
+          "oversized": false,
+          "package_amount": null
+        },
+        "contact": {
+          "name": "Loading contact",
+          "phone": "+79001112233"
+        }
+      },
+      {
+        "row_num": 2,
+        "op_type": "Loading",
+        "start_date": "2026-05-27T10:00:00",
+        "end_date": "2026-05-27T12:00:00",
+        "comment": "Additional loading point",
+        "contractor": "",
+        "contractor_inn": "",
+        "location": {
+          "city_name": "Samara",
+          "city_full_name": "Samara, Russia",
+          "city_gc_id": 63,
+          "loading_address": "Zavodskaya 14",
+          "lon": 50.1002,
+          "lat": 53.1959
+        },
+        "cargo": {
+          "name": "Metal rolls",
+          "package_name": "",
+          "weight": "10.500",
+          "volume": "36.500",
+          "length": "0",
+          "width": "0",
+          "height": "0",
+          "oversized": false,
+          "package_amount": null
+        },
+        "contact": {
+          "name": "Loading contact",
+          "phone": "+79001112233"
+        }
+      },
+      {
+        "row_num": 3,
+        "op_type": "Unloading",
+        "start_date": "2026-05-28T11:00:00",
+        "end_date": "2026-05-28T13:00:00",
+        "comment": null,
+        "contractor": "",
+        "contractor_inn": "",
+        "location": {
+          "city_name": "Nizhny Novgorod",
+          "city_full_name": "Nizhny Novgorod, Russia",
+          "city_gc_id": 52,
+          "loading_address": "Gruzovaya 5",
+          "lon": 44.002,
+          "lat": 56.3269
+        },
+        "cargo": {
+          "name": "Metal rolls",
+          "package_name": "",
+          "weight": "21.000",
+          "volume": "73.000",
+          "length": "0",
+          "width": "0",
+          "height": "0",
+          "oversized": false,
+          "package_amount": null
+        },
+        "contact": {
+          "name": "Unloading contact",
+          "phone": "+79004445566"
+        }
+      }
+    ],
+    "admitted_organizations": [],
+    "hide_bets_history": false,
+    "list": {
+      "priority_sort": 16,
+      "is_assembly": false,
+      "price_per_km": 45.99,
+      "route": {
+        "load": {
+          "city": "Krasnodar",
+          "address": "Yuzhnaya 21",
+          "date": "2026-05-27T09:00:00",
+          "city_gc_id": 23,
+          "points_count": 2
+        },
+        "unload": {
+          "city": "Nizhny Novgorod",
+          "address": "Gruzovaya 5",
+          "date": "2026-05-28T16:00:00",
+          "city_gc_id": 52,
+          "points_count": 1
+        }
+      },
+      "cargo": {
+        "name": "Metal rolls",
+        "weight": 21,
+        "volume": 73,
+        "incoterms": ""
+      },
+      "organizer": {
+        "is_hide_organization": true
+      },
+      "payment": {
+        "consignor": null,
+        "consignee": null
+      },
+      "trading": {
+        "direction": "Down",
+        "comment": null,
+        "is_available": false,
+        "is_accredited": true
+      }
+    }
+  },
+  {
+    "main": {
+      "id": 1253,
+      "cargo_num": "00000001076",
+      "cargo_date": "2026-05-21T15:00:00",
+      "order_uid": "550e8400-e29b-41d4-a716-446655440017",
+      "auc_type": "Request",
+      "created_at": "2026-05-25T16:00:00"
+    },
+    "organizer": {
+      "subscriber_id": 115,
+      "subscriber_code": "115",
+      "infobase_code": "RU_Cargo_01",
+      "organization_name": "TK Magistral",
+      "organization_inn": "7703769201",
+      "organization_kpp": "770301018",
+      "organization_id": 357
+    },
+    "contacts": [
+      {
+        "name": "Contact 18",
+        "phone": "+79001234517",
+        "work_phone": null,
+        "uid": "550e8400-e29b-41d4-a716-446655440018",
+        "email": "contact18@example.com"
+      }
+    ],
+    "cargo": {
+      "price": "89500",
+      "currency": 643,
+      "is_international": false,
+      "distance": null,
+      "truck_count": 3,
+      "body_type": "Refrigerator",
+      "temp_from": null,
+      "temp_to": null,
+      "conics": 2,
+      "belts": 3,
+      "adr": 0,
+      "coupling": false,
+      "air_pass": false,
+      "low_loader": false,
+      "additional_load": false,
+      "containered": false,
+      "container_type": null,
+      "container_size": null,
+      "loading_types": {
+        "side": false,
+        "top": false,
+        "rear": true,
+        "full": false
+      },
+      "docs": {
+        "tir": false,
+        "cmr": false,
+        "t1": false,
+        "med": false
+      },
+      "car": {
+        "type": "Truck",
+        "weight": 20,
+        "volume": 82,
+        "width": 2.4,
+        "length": 13.6,
+        "height": 2.7
+      }
+    },
+    "trading": {
+      "status": "Canceled",
+      "status_mobile": "NotParticipating",
+      "start_time": "2026-05-27T16:00:00",
+      "stop_time": "2026-05-27T17:00:00",
+      "bid_measurement_type": "PerKm",
+      "can_set_bet": false,
+      "allow_counter_bets": false,
+      "hide_bets_history": false,
+      "hide_places": false,
+      "no_view_cargo_price": false,
+      "hide_points_address_and_contacts": false,
+      "is_bidder": false,
+      "is_favorite": false,
+      "is_last_bet_with_vat": null,
+      "red_bet_with_vat": false,
+      "red_bet_no_vat": false,
+      "send_deal_before_load": false,
+      "chat_id": null,
+      "price": {
+        "start": 92500,
+        "start_no_vat": 77083.33,
+        "current": 89500,
+        "current_no_vat": 74583.33,
+        "available": null,
+        "available_no_vat": null,
+        "min": null,
+        "min_no_vat": null,
+        "max": 92500,
+        "max_no_vat": 77083.33,
+        "step": null,
+        "step_no_vat": null,
+        "price_per_km": 47.84
+      },
+      "your": {
+        "bet": false,
+        "last_bet": null,
+        "last_bet_with_vat": null,
+        "win": false
+      },
+      "settings": {
+        "prolong_after_bet": 10,
+        "winner_confirm": 1,
+        "winner_counter_mode": null,
+        "transmission_time_in": 24,
+        "coefficient": 10
+      }
+    },
+    "payment": {
+      "condition": null,
+      "condition_predefined": null,
+      "form": "Bank transfer without VAT",
+      "delay": null,
+      "delay_type": "Unknown",
+      "currency_code": "643",
+      "prepay": null
+    },
+    "assembly": {
+      "num": null,
+      "date": null
+    },
+    "routes": [
+      {
+        "row_num": 1,
+        "op_type": "Loading",
+        "start_date": "2026-05-26T09:00:00",
+        "end_date": "2026-05-26T11:00:00",
+        "comment": null,
+        "contractor": "",
+        "contractor_inn": "",
+        "location": {
+          "city_name": "Nizhny Novgorod",
+          "city_full_name": "Nizhny Novgorod, Russia",
+          "city_gc_id": 52,
+          "loading_address": "Gruzovaya 5",
+          "lon": 44.002,
+          "lat": 56.3269
+        },
+        "cargo": {
+          "name": "Auto parts",
+          "package_name": "",
+          "weight": "22.250",
+          "volume": "77.500",
+          "length": "0",
+          "width": "0",
+          "height": "0",
+          "oversized": false,
+          "package_amount": null
+        },
+        "contact": {
+          "name": "Loading contact",
+          "phone": "+79001112233"
+        }
+      },
+      {
+        "row_num": 2,
+        "op_type": "Unloading",
+        "start_date": "2026-05-27T10:00:00",
+        "end_date": "2026-05-27T12:00:00",
+        "comment": "Intermediate unloading point",
+        "contractor": "",
+        "contractor_inn": "",
+        "location": {
+          "city_name": "Rostov-on-Don",
+          "city_full_name": "Rostov-on-Don, Russia",
+          "city_gc_id": 61,
+          "loading_address": "Donskaya 8",
+          "lon": 39.7203,
+          "lat": 47.2225
+        },
+        "cargo": {
+          "name": "Auto parts",
+          "package_name": "",
+          "weight": "11.125",
+          "volume": "38.750",
+          "length": "0",
+          "width": "0",
+          "height": "0",
+          "oversized": false,
+          "package_amount": null
+        },
+        "contact": {
+          "name": "Unloading contact",
+          "phone": "+79004445566"
+        }
+      },
+      {
+        "row_num": 3,
+        "op_type": "Unloading",
+        "start_date": "2026-05-28T11:00:00",
+        "end_date": "2026-05-28T13:00:00",
+        "comment": "Final unloading point",
+        "contractor": "",
+        "contractor_inn": "",
+        "location": {
+          "city_name": "Samara",
+          "city_full_name": "Samara, Russia",
+          "city_gc_id": 63,
+          "loading_address": "Zavodskaya 14",
+          "lon": 50.1002,
+          "lat": 53.1959
+        },
+        "cargo": {
+          "name": "Auto parts",
+          "package_name": "",
+          "weight": "11.125",
+          "volume": "38.750",
+          "length": "0",
+          "width": "0",
+          "height": "0",
+          "oversized": false,
+          "package_amount": null
+        },
+        "contact": {
+          "name": "Unloading contact",
+          "phone": "+79004445566"
+        }
+      }
+    ],
+    "admitted_organizations": [],
+    "hide_bets_history": false,
+    "list": {
+      "priority_sort": 17,
+      "is_assembly": false,
+      "price_per_km": 47.84,
+      "route": {
+        "load": {
+          "city": "Nizhny Novgorod",
+          "address": "Gruzovaya 5",
+          "date": "2026-05-28T10:00:00",
+          "city_gc_id": 52,
+          "points_count": 1
+        },
+        "unload": {
+          "city": "Samara",
+          "address": "Zavodskaya 14",
+          "date": "2026-05-29T17:00:00",
+          "city_gc_id": 63,
+          "points_count": 1
+        }
+      },
+      "cargo": {
+        "name": "Auto parts",
+        "weight": 22.25,
+        "volume": 77.5,
+        "incoterms": ""
+      },
+      "organizer": {
+        "is_hide_organization": false
+      },
+      "payment": {
+        "consignor": null,
+        "consignee": null
+      },
+      "trading": {
+        "direction": null,
+        "comment": null,
+        "is_available": false,
+        "is_accredited": false
+      }
+    }
+  },
+  {
+    "main": {
+      "id": 1254,
+      "cargo_num": "00000001077",
+      "cargo_date": "2026-05-22T10:00:00",
+      "order_uid": "550e8400-e29b-41d4-a716-446655440018",
+      "auc_type": "Up",
+      "created_at": "2026-05-25T11:00:00"
+    },
+    "organizer": {
+      "subscriber_id": 116,
+      "subscriber_code": "116",
+      "infobase_code": "RU_Cargo_01",
+      "organization_name": "SouthTrans",
+      "organization_inn": "7703769202",
+      "organization_kpp": "770301019",
+      "organization_id": 358
+    },
+    "contacts": [
+      {
+        "name": "Contact 19",
+        "phone": "+79001234518",
+        "work_phone": null,
+        "uid": "550e8400-e29b-41d4-a716-446655440019",
+        "email": "contact19@example.com"
+      }
+    ],
+    "cargo": {
+      "price": "93000",
+      "currency": 643,
+      "is_international": false,
+      "distance": 2860,
+      "truck_count": 1,
+      "body_type": "Isothermal",
+      "temp_from": 0,
+      "temp_to": 0,
+      "conics": 0,
+      "belts": 4,
+      "adr": 1,
+      "coupling": false,
+      "air_pass": false,
+      "low_loader": false,
+      "additional_load": false,
+      "containered": false,
+      "container_type": null,
+      "container_size": null,
+      "loading_types": {
+        "side": true,
+        "top": true,
+        "rear": true,
+        "full": false
+      },
+      "docs": {
+        "tir": false,
+        "cmr": true,
+        "t1": true,
+        "med": false
+      },
+      "car": {
+        "type": "Truck tractor",
+        "weight": 20,
+        "volume": 82,
+        "width": 2.4,
+        "length": 13.6,
+        "height": 2.7
+      }
+    },
+    "trading": {
+      "status": "DeterminateWinner",
+      "status_mobile": "Losing",
+      "start_time": "2026-05-25T16:00:00",
+      "stop_time": "2026-05-25T17:00:00",
+      "bid_measurement_type": "PerRoute",
+      "can_set_bet": false,
+      "allow_counter_bets": true,
+      "hide_bets_history": false,
+      "hide_places": true,
+      "no_view_cargo_price": false,
+      "hide_points_address_and_contacts": false,
+      "is_bidder": true,
+      "is_favorite": false,
+      "is_last_bet_with_vat": true,
+      "red_bet_with_vat": false,
+      "red_bet_no_vat": false,
+      "send_deal_before_load": false,
+      "chat_id": null,
+      "price": {
+        "start": 96000,
+        "start_no_vat": 80000,
+        "current": 93000,
+        "current_no_vat": 77500,
+        "available": null,
+        "available_no_vat": null,
+        "min": null,
+        "min_no_vat": null,
+        "max": 96000,
+        "max_no_vat": 80000,
+        "step": null,
+        "step_no_vat": null,
+        "price_per_km": 49.69
+      },
+      "your": {
+        "bet": true,
+        "last_bet": 92000,
+        "last_bet_with_vat": 92000,
+        "win": false
+      },
+      "settings": {
+        "prolong_after_bet": 10,
+        "winner_confirm": 1,
+        "winner_counter_mode": null,
+        "transmission_time_in": 24,
+        "coefficient": 10
+      }
+    },
+    "payment": {
+      "condition": "Payment by original transport documents",
+      "condition_predefined": "OriginalDocuments",
+      "form": "Bank transfer with VAT",
+      "delay": 30,
+      "delay_type": "CalendarDays",
+      "currency_code": "643",
+      "prepay": "0"
+    },
+    "assembly": {
+      "num": null,
+      "date": null
+    },
+    "routes": [
+      {
+        "row_num": 1,
+        "op_type": "Loading",
+        "start_date": "2026-05-26T09:00:00",
+        "end_date": "2026-05-26T11:00:00",
+        "comment": "First loading point",
+        "contractor": "",
+        "contractor_inn": "",
+        "location": {
+          "city_name": "Samara",
+          "city_full_name": "Samara, Russia",
+          "city_gc_id": 63,
+          "loading_address": "Zavodskaya 14",
+          "lon": 50.1002,
+          "lat": 53.1959
+        },
+        "cargo": {
+          "name": "Chemical products",
+          "package_name": "",
+          "weight": "11.750",
+          "volume": "41.000",
+          "length": "0",
+          "width": "0",
+          "height": "0",
+          "oversized": false,
+          "package_amount": null
+        },
+        "contact": {
+          "name": "Loading contact",
+          "phone": "+79001112233"
+        }
+      },
+      {
+        "row_num": 2,
+        "op_type": "Loading",
+        "start_date": "2026-05-27T10:00:00",
+        "end_date": "2026-05-27T12:00:00",
+        "comment": "Second loading point",
+        "contractor": "",
+        "contractor_inn": "",
+        "location": {
+          "city_name": "Perm",
+          "city_full_name": "Perm, Russia",
+          "city_gc_id": 59,
+          "loading_address": "Transportnaya 9",
+          "lon": 56.238,
+          "lat": 58.01
+        },
+        "cargo": {
+          "name": "Chemical products",
+          "package_name": "",
+          "weight": "11.750",
+          "volume": "41.000",
+          "length": "0",
+          "width": "0",
+          "height": "0",
+          "oversized": false,
+          "package_amount": null
+        },
+        "contact": {
+          "name": "Loading contact",
+          "phone": "+79001112233"
+        }
+      },
+      {
+        "row_num": 3,
+        "op_type": "Unloading",
+        "start_date": "2026-05-28T11:00:00",
+        "end_date": "2026-05-28T13:00:00",
+        "comment": "First unloading point",
+        "contractor": "",
+        "contractor_inn": "",
+        "location": {
+          "city_name": "Moscow",
+          "city_full_name": "Moscow, Russia",
+          "city_gc_id": 100,
+          "loading_address": "Skladskaya 12",
+          "lon": 37.6173,
+          "lat": 55.7558
+        },
+        "cargo": {
+          "name": "Chemical products",
+          "package_name": "",
+          "weight": "11.750",
+          "volume": "41.000",
+          "length": "0",
+          "width": "0",
+          "height": "0",
+          "oversized": false,
+          "package_amount": null
+        },
+        "contact": {
+          "name": "Unloading contact",
+          "phone": "+79004445566"
+        }
+      },
+      {
+        "row_num": 4,
+        "op_type": "Unloading",
+        "start_date": "2026-05-29T12:00:00",
+        "end_date": "2026-05-29T14:00:00",
+        "comment": "Second unloading point",
+        "contractor": "",
+        "contractor_inn": "",
+        "location": {
+          "city_name": "Rostov-on-Don",
+          "city_full_name": "Rostov-on-Don, Russia",
+          "city_gc_id": 61,
+          "loading_address": "Donskaya 8",
+          "lon": 39.7203,
+          "lat": 47.2225
+        },
+        "cargo": {
+          "name": "Chemical products",
+          "package_name": "",
+          "weight": "11.750",
+          "volume": "41.000",
+          "length": "0",
+          "width": "0",
+          "height": "0",
+          "oversized": false,
+          "package_amount": null
+        },
+        "contact": {
+          "name": "Unloading contact",
+          "phone": "+79004445566"
+        }
+      }
+    ],
+    "admitted_organizations": [],
+    "hide_bets_history": false,
+    "list": {
+      "priority_sort": 18,
+      "is_assembly": false,
+      "price_per_km": 49.69,
+      "route": {
+        "load": {
+          "city": "Samara",
+          "address": "Zavodskaya 14",
+          "date": "2026-05-26T11:00:00",
+          "city_gc_id": 63,
+          "points_count": 2
+        },
+        "unload": {
+          "city": "Rostov-on-Don",
+          "address": "Donskaya 8",
+          "date": "2026-05-27T18:00:00",
+          "city_gc_id": 61,
+          "points_count": 2
+        }
+      },
+      "cargo": {
+        "name": "Chemical products",
+        "weight": 23.5,
+        "volume": 82,
+        "incoterms": ""
+      },
+      "organizer": {
+        "is_hide_organization": false
+      },
+      "payment": {
+        "consignor": null,
+        "consignee": null
+      },
+      "trading": {
+        "direction": "Up",
+        "comment": null,
+        "is_available": false,
+        "is_accredited": true
+      }
+    }
+  },
+  {
+    "main": {
+      "id": 1255,
+      "cargo_num": "00000001078",
+      "cargo_date": "2026-05-23T11:00:00",
+      "order_uid": "550e8400-e29b-41d4-a716-446655440019",
+      "auc_type": "FixPrice",
+      "created_at": "2026-05-25T12:00:00"
+    },
+    "organizer": {
+      "subscriber_id": 117,
+      "subscriber_code": "117",
+      "infobase_code": "RU_Cargo_01",
+      "organization_name": "East Cargo",
+      "organization_inn": "7703769203",
+      "organization_kpp": "770301020",
+      "organization_id": 359
+    },
+    "contacts": [
+      {
+        "name": "Contact 20",
+        "phone": "+79001234519",
+        "work_phone": null,
+        "uid": "3a05d045-0e67-4f85-b20a-de81d18bba7a",
+        "email": "contact20@example.com"
+      }
+    ],
+    "cargo": {
+      "price": "96500",
+      "currency": 643,
+      "is_international": false,
+      "distance": 2980,
+      "truck_count": 2,
+      "body_type": "Container truck",
+      "temp_from": 0,
+      "temp_to": 0,
+      "conics": 1,
+      "belts": 5,
+      "adr": 0,
+      "coupling": false,
+      "air_pass": false,
+      "low_loader": false,
+      "additional_load": false,
+      "containered": true,
+      "container_type": "40HC",
+      "container_size": "40",
+      "loading_types": {
+        "side": false,
+        "top": false,
+        "rear": true,
+        "full": false
+      },
+      "docs": {
+        "tir": false,
+        "cmr": false,
+        "t1": false,
+        "med": false
+      },
+      "car": {
+        "type": "Truck",
+        "weight": 20,
+        "volume": 82,
+        "width": 2.4,
+        "length": 13.6,
+        "height": 2.7
+      }
+    },
+    "trading": {
+      "status": "Auction",
+      "status_mobile": "OnPending",
+      "start_time": "2026-05-26T16:00:00",
+      "stop_time": "2026-05-26T17:00:00",
+      "bid_measurement_type": "PerKm",
+      "can_set_bet": true,
+      "allow_counter_bets": false,
+      "hide_bets_history": false,
+      "hide_places": false,
+      "no_view_cargo_price": false,
+      "hide_points_address_and_contacts": false,
+      "is_bidder": true,
+      "is_favorite": false,
+      "is_last_bet_with_vat": true,
+      "red_bet_with_vat": false,
+      "red_bet_no_vat": false,
+      "send_deal_before_load": false,
+      "chat_id": null,
+      "price": {
+        "start": 99500,
+        "start_no_vat": 82916.67,
+        "current": 96500,
+        "current_no_vat": 80416.67,
+        "available": 95500,
+        "available_no_vat": 79583.33,
+        "min": 86500,
+        "min_no_vat": 72083.33,
+        "max": 99500,
+        "max_no_vat": 82916.67,
+        "step": 500,
+        "step_no_vat": 416.67,
+        "price_per_km": 51.54
+      },
+      "your": {
+        "bet": true,
+        "last_bet": 95500,
+        "last_bet_with_vat": 95500,
+        "win": false
+      },
+      "settings": {
+        "prolong_after_bet": 10,
+        "winner_confirm": 1,
+        "winner_counter_mode": null,
+        "transmission_time_in": 24,
+        "coefficient": 10
+      }
+    },
+    "payment": {
+      "condition": "Payment by original transport documents",
+      "condition_predefined": "OriginalDocuments",
+      "form": "Bank transfer without VAT",
+      "delay": 30,
+      "delay_type": "CalendarDays",
+      "currency_code": "643",
+      "prepay": "0"
+    },
+    "assembly": {
+      "num": null,
+      "date": null
+    },
+    "routes": [
+      {
+        "row_num": 1,
+        "op_type": "Loading",
+        "start_date": "2026-05-26T09:00:00",
+        "end_date": "2026-05-26T11:00:00",
+        "comment": null,
+        "contractor": "",
+        "contractor_inn": "",
+        "location": {
+          "city_name": "Rostov-on-Don",
+          "city_full_name": "Rostov-on-Don, Russia",
+          "city_gc_id": 61,
+          "loading_address": "Donskaya 8",
+          "lon": 39.7203,
+          "lat": 47.2225
+        },
+        "cargo": {
+          "name": "Textile",
+          "package_name": "",
+          "weight": "24.750",
+          "volume": "86.500",
+          "length": "0",
+          "width": "0",
+          "height": "0",
+          "oversized": false,
+          "package_amount": null
+        },
+        "contact": {
+          "name": "Loading contact",
+          "phone": "+79001112233"
+        }
+      },
+      {
+        "row_num": 2,
+        "op_type": "Unloading",
+        "start_date": "2026-05-27T10:00:00",
+        "end_date": "2026-05-27T12:00:00",
+        "comment": null,
+        "contractor": "",
+        "contractor_inn": "",
+        "location": {
+          "city_name": "Perm",
+          "city_full_name": "Perm, Russia",
+          "city_gc_id": 59,
+          "loading_address": "Transportnaya 9",
+          "lon": 56.238,
+          "lat": 58.01
+        },
+        "cargo": {
+          "name": "Textile",
+          "package_name": "",
+          "weight": "24.750",
+          "volume": "86.500",
+          "length": "0",
+          "width": "0",
+          "height": "0",
+          "oversized": false,
+          "package_amount": null
+        },
+        "contact": {
+          "name": "Unloading contact",
+          "phone": "+79004445566"
+        }
+      }
+    ],
+    "admitted_organizations": [],
+    "hide_bets_history": false,
+    "list": {
+      "priority_sort": 19,
+      "is_assembly": false,
+      "price_per_km": 51.54,
+      "route": {
+        "load": {
+          "city": "Rostov-on-Don",
+          "address": "Donskaya 8",
+          "date": "2026-05-27T12:00:00",
+          "city_gc_id": 61,
+          "points_count": 1
+        },
+        "unload": {
+          "city": "Perm",
+          "address": "Transportnaya 9",
+          "date": "2026-05-28T19:00:00",
+          "city_gc_id": 59,
+          "points_count": 1
+        }
+      },
+      "cargo": {
+        "name": "Textile",
+        "weight": 24.75,
+        "volume": 86.5,
+        "incoterms": ""
+      },
+      "organizer": {
+        "is_hide_organization": false
+      },
+      "payment": {
+        "consignor": null,
+        "consignee": null
+      },
+      "trading": {
+        "direction": null,
+        "comment": "Auction is available",
+        "is_available": true,
+        "is_accredited": true
+      }
+    }
+  }
+]

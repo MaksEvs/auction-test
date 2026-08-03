@@ -1,0 +1,55 @@
+import type { IAuctionShowTrading } from '@/entities/auction/types/auction-details'
+
+export function createAuctionTradingFixture(
+  overrides: Partial<IAuctionShowTrading> = {},
+): IAuctionShowTrading {
+  return {
+    status: 'Auction',
+    status_mobile: 'NotParticipating',
+    start_time: '2026-05-25T16:00:00',
+    stop_time: '2026-05-25T17:00:00',
+    bid_measurement_type: 'PerRoute',
+    can_set_bet: true,
+    allow_counter_bets: true,
+    hide_bets_history: false,
+    hide_places: false,
+    no_view_cargo_price: false,
+    hide_points_address_and_contacts: false,
+    is_bidder: false,
+    is_favorite: false,
+    is_last_bet_with_vat: null,
+    red_bet_with_vat: false,
+    red_bet_no_vat: false,
+    send_deal_before_load: false,
+    chat_id: null,
+    price: {
+      start: 33000,
+      start_no_vat: 27500,
+      current: 30000,
+      current_no_vat: 25000,
+      available: 29500,
+      available_no_vat: 24583.33,
+      min: 20000,
+      min_no_vat: 16666.67,
+      max: 33000,
+      max_no_vat: 27500,
+      step: 500,
+      step_no_vat: 416.67,
+      price_per_km: 16.39,
+    },
+    your: {
+      bet: false,
+      last_bet: null,
+      last_bet_with_vat: null,
+      win: false,
+    },
+    settings: {
+      prolong_after_bet: 10,
+      winner_confirm: 1,
+      winner_counter_mode: null,
+      transmission_time_in: 24,
+      coefficient: 10,
+    },
+    ...overrides,
+  }
+}
