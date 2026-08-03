@@ -30,3 +30,4 @@ export function calculateAvailableAuctionPrice(
 function roundPrice(price: number): number {
   return Number(price.toFixed(PRICE_FRACTION_DIGITS));
 }
+// коммент
