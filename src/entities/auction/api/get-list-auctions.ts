@@ -1,10 +1,10 @@
-import { fetchJson } from '@/shared/api/fetch-json'
+import { fetchJson } from '@/shared/api/fetch-json';
 import type {
   IAuctionListRequest,
   IAuctionListResponseBase,
-} from '@/entities/auction/types/auction-list'
+} from '@/entities/auction/types/auction-list';
 
-const AUCTIONS_LIST_URL = '/api/v1/auctions/list'
+const AUCTIONS_LIST_URL = '/api/v1/auctions/list';
 
 export function getListAuctions(
   params: IAuctionListRequest = {},
@@ -15,5 +15,5 @@ export function getListAuctions(
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(params),
-  })
+  });
 }

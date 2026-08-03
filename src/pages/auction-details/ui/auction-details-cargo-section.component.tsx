@@ -1,17 +1,17 @@
-import Alert from '@mui/material/Alert'
-import Chip from '@mui/material/Chip'
-import Divider from '@mui/material/Divider'
-import Typography from '@mui/material/Typography'
+import Alert from '@mui/material/Alert';
+import Chip from '@mui/material/Chip';
+import Divider from '@mui/material/Divider';
+import Typography from '@mui/material/Typography';
 import {
   AUCTION_DOCUMENT_LABELS,
   AUCTION_LOADING_TYPE_LABELS,
   AUCTION_VEHICLE_REQUIREMENT_LABELS,
-} from '@/pages/auction-details/constants/auction-details.constants'
+} from '@/pages/auction-details/constants/auction-details.constants';
 import {
   formatAuctionDetailsMoney,
   formatAuctionDetailsValue,
   formatAuctionDetailsValueWithUnit,
-} from '@/pages/auction-details/helpers/format-auction-details-value'
+} from '@/pages/auction-details/helpers/format-auction-details-value';
 import {
   AuctionDetailsCargoOptionBoxStyled,
   AuctionDetailsCargoOptionsGridStyled,
@@ -20,8 +20,8 @@ import {
   AuctionDetailsFullWidthSectionPaperStyled,
   AuctionDetailsValueLabelTypographyStyled,
   AuctionDetailsValueRowBoxStyled,
-} from '@/pages/auction-details/styles/auction-details.styles'
-import type { IAuctionDetailsCargoSectionProps } from '@/pages/auction-details/types/auction-details-sections'
+} from '@/pages/auction-details/styles/auction-details.styles';
+import type { IAuctionDetailsCargoSectionProps } from '@/pages/auction-details/types/auction-details-sections';
 
 export function AuctionDetailsCargoSection({
   cargo,
@@ -29,7 +29,7 @@ export function AuctionDetailsCargoSection({
   isCargoPriceHidden,
   currencyCode,
 }: IAuctionDetailsCargoSectionProps) {
-  const cargoPrice = cargo.price.trim().length > 0 ? Number(cargo.price) : null
+  const cargoPrice = cargo.price.trim().length > 0 ? Number(cargo.price) : null;
   const hasAdditionalRequirements =
     (cargo.adr !== null && cargo.adr > 0) ||
     (cargo.conics !== null && cargo.conics > 0) ||
@@ -37,13 +37,11 @@ export function AuctionDetailsCargoSection({
     cargo.coupling ||
     cargo.air_pass ||
     cargo.low_loader ||
-    cargo.additional_load
+    cargo.additional_load;
   const activeLoadingTypes = AUCTION_LOADING_TYPE_LABELS.filter(
     ({ key }) => cargo.loading_types[key],
-  )
-  const activeDocuments = AUCTION_DOCUMENT_LABELS.filter(
-    ({ key }) => cargo.docs[key],
-  )
+  );
+  const activeDocuments = AUCTION_DOCUMENT_LABELS.filter(({ key }) => cargo.docs[key]);
 
   return (
     <AuctionDetailsFullWidthSectionPaperStyled variant="outlined">
@@ -138,7 +136,9 @@ export function AuctionDetailsCargoSection({
         </AuctionDetailsCargoOptionBoxStyled>
 
         <AuctionDetailsCargoOptionBoxStyled>
-          <Typography variant="h6" component="h3">Способы загрузки</Typography>
+          <Typography variant="h6" component="h3">
+            Способы загрузки
+          </Typography>
           {activeLoadingTypes.length > 0 ? (
             <AuctionDetailsChipsBoxStyled>
               {activeLoadingTypes.map(({ key, label }) => (
@@ -151,7 +151,9 @@ export function AuctionDetailsCargoSection({
         </AuctionDetailsCargoOptionBoxStyled>
 
         <AuctionDetailsCargoOptionBoxStyled>
-          <Typography variant="h6" component="h3">Документы</Typography>
+          <Typography variant="h6" component="h3">
+            Документы
+          </Typography>
           {activeDocuments.length > 0 ? (
             <AuctionDetailsChipsBoxStyled>
               {activeDocuments.map(({ key, label }) => (
@@ -164,15 +166,21 @@ export function AuctionDetailsCargoSection({
         </AuctionDetailsCargoOptionBoxStyled>
 
         <AuctionDetailsCargoOptionBoxStyled>
-          <Typography variant="h6" component="h3">Контейнер</Typography>
+          <Typography variant="h6" component="h3">
+            Контейнер
+          </Typography>
           {cargo.containered ? (
             <AuctionDetailsCompactValuesBoxStyled>
               <AuctionDetailsValueRowBoxStyled>
-                <AuctionDetailsValueLabelTypographyStyled>Тип</AuctionDetailsValueLabelTypographyStyled>
+                <AuctionDetailsValueLabelTypographyStyled>
+                  Тип
+                </AuctionDetailsValueLabelTypographyStyled>
                 <Typography>{formatAuctionDetailsValue(cargo.container_type)}</Typography>
               </AuctionDetailsValueRowBoxStyled>
               <AuctionDetailsValueRowBoxStyled>
-                <AuctionDetailsValueLabelTypographyStyled>Размер</AuctionDetailsValueLabelTypographyStyled>
+                <AuctionDetailsValueLabelTypographyStyled>
+                  Размер
+                </AuctionDetailsValueLabelTypographyStyled>
                 <Typography>{formatAuctionDetailsValue(cargo.container_size)}</Typography>
               </AuctionDetailsValueRowBoxStyled>
             </AuctionDetailsCompactValuesBoxStyled>
@@ -202,9 +210,7 @@ export function AuctionDetailsCargoSection({
               <AuctionDetailsValueLabelTypographyStyled>
                 {label}
               </AuctionDetailsValueLabelTypographyStyled>
-              <Typography>
-                {formatAuctionDetailsValueWithUnit(cargo.car?.[key], unit)}
-              </Typography>
+              <Typography>{formatAuctionDetailsValueWithUnit(cargo.car?.[key], unit)}</Typography>
             </AuctionDetailsValueRowBoxStyled>
           ))}
         </AuctionDetailsCompactValuesBoxStyled>
@@ -212,5 +218,5 @@ export function AuctionDetailsCargoSection({
         <Alert severity="info">Дополнительные требования к ТС не указаны.</Alert>
       )}
     </AuctionDetailsFullWidthSectionPaperStyled>
-  )
+  );
 }

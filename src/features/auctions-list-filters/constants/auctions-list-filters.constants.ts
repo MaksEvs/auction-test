@@ -1,16 +1,16 @@
-import type { TTradingStatus } from '@/entities/auction/types/auction-list'
+import type { TTradingStatus } from '@/entities/auction/types/auction-list';
 import type {
   IAuctionsListFilterOption,
   TAuctionFilterType,
   TBooleanFilterValue,
-} from '@/features/auctions-list-filters/types/auctions-list-filters'
+} from '@/features/auctions-list-filters/types/auctions-list-filters';
 
 export const AUCTION_TYPE_VALUES = [
   'Request',
   'Up',
   'Down',
   'FixPrice',
-] as const satisfies readonly TAuctionFilterType[]
+] as const satisfies readonly TAuctionFilterType[];
 
 export const TRADING_STATUS_VALUES = [
   'NotParticipating',
@@ -22,16 +22,17 @@ export const TRADING_STATUS_VALUES = [
   'Winner',
   'Accepted',
   'Unknown',
-] as const satisfies readonly TTradingStatus[]
+] as const satisfies readonly TTradingStatus[];
 
-export const DATE_INPUT_REGEXP = /^\d{4}-\d{2}-\d{2}$/
+export const DATE_INPUT_REGEXP = /^\d{4}-\d{2}-\d{2}$/;
 
-export const AUCTION_TYPE_FILTER_OPTIONS: readonly IAuctionsListFilterOption<TAuctionFilterType>[] = [
-  { value: 'Request', label: 'Заявочный' },
-  { value: 'Up', label: 'На повышение' },
-  { value: 'Down', label: 'На понижение' },
-  { value: 'FixPrice', label: 'Фиксированная цена' },
-]
+export const AUCTION_TYPE_FILTER_OPTIONS: readonly IAuctionsListFilterOption<TAuctionFilterType>[] =
+  [
+    { value: 'Request', label: 'Заявочный' },
+    { value: 'Up', label: 'На повышение' },
+    { value: 'Down', label: 'На понижение' },
+    { value: 'FixPrice', label: 'Фиксированная цена' },
+  ];
 
 export const AUCTION_STATUS_FILTER_OPTIONS: readonly IAuctionsListFilterOption<number>[] = [
   { value: 1, label: 'Планирование' },
@@ -41,7 +42,7 @@ export const AUCTION_STATUS_FILTER_OPTIONS: readonly IAuctionsListFilterOption<n
   { value: 5, label: 'В работе' },
   { value: 6, label: 'Завершён' },
   { value: 7, label: 'Остановлен' },
-]
+];
 
 export const TRADING_STATUS_FILTER_OPTIONS: readonly IAuctionsListFilterOption<TTradingStatus>[] = [
   { value: 'NotParticipating', label: 'Не участвую' },
@@ -53,7 +54,7 @@ export const TRADING_STATUS_FILTER_OPTIONS: readonly IAuctionsListFilterOption<T
   { value: 'Winner', label: 'Победитель' },
   { value: 'Accepted', label: 'Принято' },
   { value: 'Unknown', label: 'Неизвестен' },
-]
+];
 
 export const AUCTION_CITY_FILTER_OPTIONS: readonly IAuctionsListFilterOption<string>[] = [
   { value: 'Kazan', label: 'Казань' },
@@ -66,10 +67,10 @@ export const AUCTION_CITY_FILTER_OPTIONS: readonly IAuctionsListFilterOption<str
   { value: 'Saint Petersburg', label: 'Санкт-Петербург' },
   { value: 'Samara', label: 'Самара' },
   { value: 'Yekaterinburg', label: 'Екатеринбург' },
-]
+];
 
 export const BOOLEAN_FILTER_OPTIONS: readonly IAuctionsListFilterOption<TBooleanFilterValue>[] = [
   { value: '', label: 'Все' },
   { value: 'true', label: 'Да' },
   { value: 'false', label: 'Нет' },
-]
+];

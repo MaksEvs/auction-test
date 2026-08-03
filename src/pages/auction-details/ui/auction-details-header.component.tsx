@@ -1,24 +1,21 @@
-import Box from '@mui/material/Box'
-import Chip from '@mui/material/Chip'
-import Typography from '@mui/material/Typography'
+import Box from '@mui/material/Box';
+import Chip from '@mui/material/Chip';
+import Typography from '@mui/material/Typography';
 import {
   AUCTION_STATUS_COLORS,
   EAuctionStatusLabel,
   EAuctionTypeLabel,
   ETradingStatusLabel,
   TRADING_STATUS_COLORS,
-} from '@/entities/auction/constants/auction-list-card.constants'
-import { formatAuctionDetailsDateTime } from '@/pages/auction-details/helpers/format-auction-details-value'
+} from '@/entities/auction/constants/auction-list-card.constants';
+import { formatAuctionDetailsDateTime } from '@/pages/auction-details/helpers/format-auction-details-value';
 import {
   AuctionDetailsChipsBoxStyled,
   AuctionDetailsHeaderBoxStyled,
-} from '@/pages/auction-details/styles/auction-details.styles'
-import type { IAuctionDetailsHeaderProps } from '@/pages/auction-details/types/auction-details-sections'
+} from '@/pages/auction-details/styles/auction-details.styles';
+import type { IAuctionDetailsHeaderProps } from '@/pages/auction-details/types/auction-details-sections';
 
-export function AuctionDetailsHeader({
-  main,
-  trading,
-}: IAuctionDetailsHeaderProps) {
+export function AuctionDetailsHeader({ main, trading }: IAuctionDetailsHeaderProps) {
   return (
     <AuctionDetailsHeaderBoxStyled>
       <Box>
@@ -40,10 +37,7 @@ export function AuctionDetailsHeader({
       </Box>
 
       <AuctionDetailsChipsBoxStyled>
-        <Chip
-          label={`Тип: ${EAuctionTypeLabel[main.auc_type]}`}
-          variant="outlined"
-        />
+        <Chip label={`Тип: ${EAuctionTypeLabel[main.auc_type]}`} variant="outlined" />
         <Chip
           label={EAuctionStatusLabel[trading.status]}
           color={AUCTION_STATUS_COLORS[trading.status]}
@@ -55,5 +49,5 @@ export function AuctionDetailsHeader({
         />
       </AuctionDetailsChipsBoxStyled>
     </AuctionDetailsHeaderBoxStyled>
-  )
+  );
 }

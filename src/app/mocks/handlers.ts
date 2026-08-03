@@ -1,6 +1,4 @@
-import type { RequestHandler } from 'msw'
-import { auctionHandlers } from '@/app/mocks/handlers/auctions'
+import type { RequestHandler } from 'msw';
+import { auctionHandlers } from '@/app/mocks/handlers/auctions';
 
-export const handlers: RequestHandler[] = [
-   ...auctionHandlers,
-]
+export const handlers: RequestHandler[] = [...auctionHandlers];

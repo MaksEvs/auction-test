@@ -1,26 +1,26 @@
-import Alert from '@mui/material/Alert'
-import Chip from '@mui/material/Chip'
-import Divider from '@mui/material/Divider'
-import Typography from '@mui/material/Typography'
-import { EAuctionTypeLabel } from '@/entities/auction/constants/auction-list-card.constants'
+import Alert from '@mui/material/Alert';
+import Chip from '@mui/material/Chip';
+import Divider from '@mui/material/Divider';
+import Typography from '@mui/material/Typography';
+import { EAuctionTypeLabel } from '@/entities/auction/constants/auction-list-card.constants';
 import {
   AUCTION_TRADING_SETTING_LABELS,
   EAuctionBidMeasurementTypeLabel,
-} from '@/pages/auction-details/constants/auction-details.constants'
+} from '@/pages/auction-details/constants/auction-details.constants';
 import {
   formatAuctionDetailsDateTime,
   formatAuctionDetailsMoney,
   formatAuctionDetailsValue,
   formatAuctionDetailsValueWithUnit,
-} from '@/pages/auction-details/helpers/format-auction-details-value'
+} from '@/pages/auction-details/helpers/format-auction-details-value';
 import {
   AuctionDetailsChipsBoxStyled,
   AuctionDetailsCompactValuesBoxStyled,
   AuctionDetailsFullWidthSectionPaperStyled,
   AuctionDetailsValueLabelTypographyStyled,
   AuctionDetailsValueRowBoxStyled,
-} from '@/pages/auction-details/styles/auction-details.styles'
-import type { IAuctionDetailsTradingSectionProps } from '@/pages/auction-details/types/auction-details-sections'
+} from '@/pages/auction-details/styles/auction-details.styles';
+import type { IAuctionDetailsTradingSectionProps } from '@/pages/auction-details/types/auction-details-sections';
 
 export function AuctionDetailsTradingSection({
   auctionType,
@@ -39,20 +39,14 @@ export function AuctionDetailsTradingSection({
           color={trading.can_set_bet ? 'success' : 'default'}
         />
         <Chip
-          label={
-            trading.allow_counter_bets
-              ? 'Контрставки разрешены'
-              : 'Контрставки запрещены'
-          }
+          label={trading.allow_counter_bets ? 'Контрставки разрешены' : 'Контрставки запрещены'}
           variant="outlined"
         />
         {trading.your.win && <Chip label="Вы победитель" color="success" />}
       </AuctionDetailsChipsBoxStyled>
 
       {trading.no_view_cargo_price && (
-        <Alert severity="info">
-          Организатор ограничил просмотр ценовых данных груза.
-        </Alert>
+        <Alert severity="info">Организатор ограничил просмотр ценовых данных груза.</Alert>
       )}
 
       {trading.hide_bets_history && (
@@ -200,10 +194,7 @@ export function AuctionDetailsTradingSection({
             Доступная ставка
           </AuctionDetailsValueLabelTypographyStyled>
           <Typography>
-            {formatAuctionDetailsMoney(
-              trading.price.available_no_vat,
-              currencyCode,
-            )}
+            {formatAuctionDetailsMoney(trading.price.available_no_vat, currencyCode)}
           </Typography>
         </AuctionDetailsValueRowBoxStyled>
 
@@ -253,9 +244,7 @@ export function AuctionDetailsTradingSection({
           <AuctionDetailsValueLabelTypographyStyled>
             Последняя ставка без НДС
           </AuctionDetailsValueLabelTypographyStyled>
-          <Typography>
-            {formatAuctionDetailsMoney(trading.your.last_bet, currencyCode)}
-          </Typography>
+          <Typography>{formatAuctionDetailsMoney(trading.your.last_bet, currencyCode)}</Typography>
         </AuctionDetailsValueRowBoxStyled>
 
         <AuctionDetailsValueRowBoxStyled>
@@ -294,5 +283,5 @@ export function AuctionDetailsTradingSection({
         ))}
       </AuctionDetailsCompactValuesBoxStyled>
     </AuctionDetailsFullWidthSectionPaperStyled>
-  )
+  );
 }

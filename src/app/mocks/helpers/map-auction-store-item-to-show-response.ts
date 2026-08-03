@@ -1,19 +1,14 @@
-import { calculateAvailableAuctionPrice } from '@/app/mocks/helpers/calculate-available-auction-price'
-import { calculatePriceNoVat } from '@/app/mocks/helpers/calculate-price-no-vat'
-import type { IAuctionStoreItem } from '@/app/mocks/types/auction-store'
-import type { IAuctionShowResponse } from '@/entities/auction/types/auction-details'
+import { calculateAvailableAuctionPrice } from '@/app/mocks/helpers/calculate-available-auction-price';
+import { calculatePriceNoVat } from '@/app/mocks/helpers/calculate-price-no-vat';
+import type { IAuctionStoreItem } from '@/app/mocks/types/auction-store';
+import type { IAuctionShowResponse } from '@/entities/auction/types/auction-details';
 
 export function mapAuctionStoreItemToShowResponse(
   auction: IAuctionStoreItem,
 ): IAuctionShowResponse {
-  const availablePrice = calculateAvailableAuctionPrice(
-    auction,
-    auction.trading.price.current,
-  )
-  const isDirectedAuction = auction.main.auc_type === 'Down'
-    || auction.main.auc_type === 'Up'
-  const canSetBet = auction.trading.can_set_bet
-    && (!isDirectedAuction || availablePrice !== null)
+  const availablePrice = calculateAvailableAuctionPrice(auction, auction.trading.price.current);
+  const isDirectedAuction = auction.main.auc_type === 'Down' || auction.main.auc_type === 'Up';
+  const canSetBet = auction.trading.can_set_bet && (!isDirectedAuction || availablePrice !== null);
 
   return {
     main: {
@@ -41,9 +36,7 @@ export function mapAuctionStoreItemToShowResponse(
       price: {
         ...auction.trading.price,
         available: availablePrice,
-        available_no_vat: availablePrice === null
-          ? null
-          : calculatePriceNoVat(availablePrice),
+        available_no_vat: availablePrice === null ? null : calculatePriceNoVat(availablePrice),
       },
     },
     payment: auction.payment,
@@ -51,5 +44,5 @@ export function mapAuctionStoreItemToShowResponse(
     routes: auction.routes,
     admitted_organizations: auction.admitted_organizations,
     hide_bets_history: auction.hide_bets_history,
-  }
+  };
 }

@@ -1,5 +1,5 @@
-import { Box, Paper, Stack, Typography } from '@mui/material'
-import { styled } from '@mui/material/styles'
+import { Box, Paper, Stack, Typography } from '@mui/material';
+import { styled } from '@mui/material/styles';
 
 export const NotFoundPageContainer = styled(Box)(({ theme }) => ({
   minHeight: '100vh',
@@ -8,7 +8,7 @@ export const NotFoundPageContainer = styled(Box)(({ theme }) => ({
   justifyContent: 'center',
   padding: theme.spacing(2),
   backgroundColor: theme.palette.background.default,
-}))
+}));
 
 export const NotFoundCard = styled(Paper)(({ theme }) => ({
   width: '100%',
@@ -21,7 +21,7 @@ export const NotFoundCard = styled(Paper)(({ theme }) => ({
     padding: theme.spacing(4, 2),
     borderRadius: theme.spacing(2),
   },
-}))
+}));
 
 export const NotFoundCode = styled(Typography)(({ theme }) => ({
   marginBottom: theme.spacing(2),
@@ -33,7 +33,7 @@ export const NotFoundCode = styled(Typography)(({ theme }) => ({
   [theme.breakpoints.down('sm')]: {
     fontSize: 72,
   },
-}))
+}));
 
 export const NotFoundTitle = styled(Typography)(({ theme }) => ({
   marginBottom: theme.spacing(2),
@@ -42,13 +42,13 @@ export const NotFoundTitle = styled(Typography)(({ theme }) => ({
   [theme.breakpoints.down('sm')]: {
     fontSize: 26,
   },
-}))
+}));
 
 export const NotFoundDescription = styled(Typography)(({ theme }) => ({
   maxWidth: 440,
   margin: `0 auto ${theme.spacing(4)}`,
   color: theme.palette.text.secondary,
-}))
+}));
 
 export const NotFoundActions = styled(Stack)(({ theme }) => ({
   flexDirection: 'row',
@@ -58,4 +58,4 @@ export const NotFoundActions = styled(Stack)(({ theme }) => ({
   [theme.breakpoints.down('sm')]: {
     flexDirection: 'column',
   },
-}))
+}));

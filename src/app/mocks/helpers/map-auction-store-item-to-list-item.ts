@@ -1,9 +1,7 @@
-import type { IAuctionStoreItem } from '@/app/mocks/types/auction-store'
-import type { IAuctionListItem } from '@/entities/auction/types/auction-list'
+import type { IAuctionStoreItem } from '@/app/mocks/types/auction-store';
+import type { IAuctionListItem } from '@/entities/auction/types/auction-list';
 
-export function mapAuctionStoreItemToListItem(
-  auction: IAuctionStoreItem,
-): IAuctionListItem {
+export function mapAuctionStoreItemToListItem(auction: IAuctionStoreItem): IAuctionListItem {
   return {
     main: {
       id: auction.main.id,
@@ -82,14 +80,12 @@ export function mapAuctionStoreItemToListItem(
       consignor: auction.list.payment.consignor,
       consignee: auction.list.payment.consignee,
     },
-  }
+  };
 }
 
-function mapAuctionStoreCarToListCar(
-  auction: IAuctionStoreItem,
-): IAuctionListItem['cargo']['car'] {
+function mapAuctionStoreCarToListCar(auction: IAuctionStoreItem): IAuctionListItem['cargo']['car'] {
   if (!auction.cargo.car) {
-    return null
+    return null;
   }
 
   return {
@@ -99,5 +95,5 @@ function mapAuctionStoreCarToListCar(
     width: auction.cargo.car.width ?? 0,
     length: auction.cargo.car.length ?? 0,
     height: auction.cargo.car.height ?? 0,
-  }
+  };
 }

@@ -1,13 +1,13 @@
-import Alert from '@mui/material/Alert'
-import Chip from '@mui/material/Chip'
-import Divider from '@mui/material/Divider'
-import Typography from '@mui/material/Typography'
-import { EAuctionOperationTypeLabel } from '@/pages/auction-details/constants/auction-details.constants'
+import Alert from '@mui/material/Alert';
+import Chip from '@mui/material/Chip';
+import Divider from '@mui/material/Divider';
+import Typography from '@mui/material/Typography';
+import { EAuctionOperationTypeLabel } from '@/pages/auction-details/constants/auction-details.constants';
 import {
   formatAuctionDetailsDateTime,
   formatAuctionDetailsValue,
   formatAuctionDetailsValueWithUnit,
-} from '@/pages/auction-details/helpers/format-auction-details-value'
+} from '@/pages/auction-details/helpers/format-auction-details-value';
 import {
   AuctionDetailsChipsBoxStyled,
   AuctionDetailsCompactValuesBoxStyled,
@@ -16,8 +16,8 @@ import {
   AuctionDetailsRoutePointsBoxStyled,
   AuctionDetailsValueLabelTypographyStyled,
   AuctionDetailsValueRowBoxStyled,
-} from '@/pages/auction-details/styles/auction-details.styles'
-import type { IAuctionDetailsRouteSectionProps } from '@/pages/auction-details/types/auction-details-sections'
+} from '@/pages/auction-details/styles/auction-details.styles';
+import type { IAuctionDetailsRouteSectionProps } from '@/pages/auction-details/types/auction-details-sections';
 
 export function AuctionDetailsRouteSection({
   routes,
@@ -30,9 +30,7 @@ export function AuctionDetailsRouteSection({
       </Typography>
 
       {areAddressesAndContactsHidden && (
-        <Alert severity="info">
-          Точные адреса и контакты точек маршрута скрыты организатором.
-        </Alert>
+        <Alert severity="info">Точные адреса и контакты точек маршрута скрыты организатором.</Alert>
       )}
 
       {routes.length === 0 ? (
@@ -40,10 +38,7 @@ export function AuctionDetailsRouteSection({
       ) : (
         <AuctionDetailsRoutePointsBoxStyled>
           {routes.map((routePoint) => (
-            <AuctionDetailsRoutePointPaperStyled
-              key={routePoint.row_num}
-              variant="outlined"
-            >
+            <AuctionDetailsRoutePointPaperStyled key={routePoint.row_num} variant="outlined">
               <AuctionDetailsChipsBoxStyled>
                 <Chip
                   label={`${routePoint.row_num}. ${EAuctionOperationTypeLabel[routePoint.op_type]}`}
@@ -64,18 +59,14 @@ export function AuctionDetailsRouteSection({
                   <AuctionDetailsValueLabelTypographyStyled>
                     Начало
                   </AuctionDetailsValueLabelTypographyStyled>
-                  <Typography>
-                    {formatAuctionDetailsDateTime(routePoint.start_date)}
-                  </Typography>
+                  <Typography>{formatAuctionDetailsDateTime(routePoint.start_date)}</Typography>
                 </AuctionDetailsValueRowBoxStyled>
 
                 <AuctionDetailsValueRowBoxStyled>
                   <AuctionDetailsValueLabelTypographyStyled>
                     Окончание
                   </AuctionDetailsValueLabelTypographyStyled>
-                  <Typography>
-                    {formatAuctionDetailsDateTime(routePoint.end_date)}
-                  </Typography>
+                  <Typography>{formatAuctionDetailsDateTime(routePoint.end_date)}</Typography>
                 </AuctionDetailsValueRowBoxStyled>
 
                 {!areAddressesAndContactsHidden && (
@@ -93,9 +84,7 @@ export function AuctionDetailsRouteSection({
                       <AuctionDetailsValueLabelTypographyStyled>
                         Контрагент
                       </AuctionDetailsValueLabelTypographyStyled>
-                      <Typography>
-                        {formatAuctionDetailsValue(routePoint.contractor)}
-                      </Typography>
+                      <Typography>{formatAuctionDetailsValue(routePoint.contractor)}</Typography>
                     </AuctionDetailsValueRowBoxStyled>
 
                     <AuctionDetailsValueRowBoxStyled>
@@ -178,5 +167,5 @@ export function AuctionDetailsRouteSection({
         </AuctionDetailsRoutePointsBoxStyled>
       )}
     </AuctionDetailsFullWidthSectionPaperStyled>
-  )
+  );
 }

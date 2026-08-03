@@ -1,4 +1,4 @@
-import type { IAuctionShowTrading } from '@/entities/auction/types/auction-details'
+import type { IAuctionShowTrading } from '@/entities/auction/types/auction-details';
 
 export function createAuctionTradingFixture(
   overrides: Partial<IAuctionShowTrading> = {},
@@ -51,5 +51,5 @@ export function createAuctionTradingFixture(
       coefficient: 10,
     },
     ...overrides,
-  }
+  };
 }

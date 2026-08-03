@@ -1,29 +1,29 @@
-import { useEffect } from 'react'
-import { Controller, useForm } from 'react-hook-form'
-import { zodResolver } from '@hookform/resolvers/zod'
-import Autocomplete from '@mui/material/Autocomplete'
-import Button from '@mui/material/Button'
-import MenuItem from '@mui/material/MenuItem'
-import TextField from '@mui/material/TextField'
-import Typography from '@mui/material/Typography'
+import { useEffect } from 'react';
+import { Controller, useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import Autocomplete from '@mui/material/Autocomplete';
+import Button from '@mui/material/Button';
+import MenuItem from '@mui/material/MenuItem';
+import TextField from '@mui/material/TextField';
+import Typography from '@mui/material/Typography';
 import {
   AUCTION_CITY_FILTER_OPTIONS,
   AUCTION_STATUS_FILTER_OPTIONS,
   AUCTION_TYPE_FILTER_OPTIONS,
   BOOLEAN_FILTER_OPTIONS,
   TRADING_STATUS_FILTER_OPTIONS,
-} from '@/features/auctions-list-filters/constants/auctions-list-filters.constants'
-import { auctionsListFiltersFormSchema } from '@/features/auctions-list-filters/model/auctions-list-filters-form'
+} from '@/features/auctions-list-filters/constants/auctions-list-filters.constants';
+import { auctionsListFiltersFormSchema } from '@/features/auctions-list-filters/model/auctions-list-filters-form';
 import {
   AuctionsListFiltersActionsBoxStyled,
   AuctionsListFiltersFieldsBoxStyled,
   AuctionsListFiltersRootPaperStyled,
-} from '@/features/auctions-list-filters/styles/auctions-list-filters.styles'
+} from '@/features/auctions-list-filters/styles/auctions-list-filters.styles';
 import type {
   IAuctionsListFiltersFormValues,
   IAuctionsListFiltersProps,
-} from '@/features/auctions-list-filters/types/auctions-list-filters'
-import { getSelectedOptions } from '@/features/auctions-list-filters/helpers/get-selected-options'
+} from '@/features/auctions-list-filters/types/auctions-list-filters';
+import { getSelectedOptions } from '@/features/auctions-list-filters/helpers/get-selected-options';
 
 export function AuctionsListFilters({
   values,
@@ -40,11 +40,11 @@ export function AuctionsListFilters({
   } = useForm<IAuctionsListFiltersFormValues>({
     resolver: zodResolver(auctionsListFiltersFormSchema),
     defaultValues: values,
-  })
+  });
 
   useEffect(() => {
-    reset(values)
-  }, [reset, values])
+    reset(values);
+  }, [reset, values]);
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
@@ -69,21 +69,12 @@ export function AuctionsListFilters({
                 multiple
                 size="small"
                 options={AUCTION_TYPE_FILTER_OPTIONS}
-                value={getSelectedOptions(
-                  AUCTION_TYPE_FILTER_OPTIONS,
-                  field.value,
-                )}
+                value={getSelectedOptions(AUCTION_TYPE_FILTER_OPTIONS, field.value)}
                 disabled={isLoading}
                 getOptionLabel={(option) => option.label}
-                isOptionEqualToValue={(option, value) =>
-                  option.value === value.value
-                }
-                onChange={(_, options) =>
-                  field.onChange(options.map((option) => option.value))
-                }
-                renderInput={(params) => (
-                  <TextField {...params} label="Тип аукциона" />
-                )}
+                isOptionEqualToValue={(option, value) => option.value === value.value}
+                onChange={(_, options) => field.onChange(options.map((option) => option.value))}
+                renderInput={(params) => <TextField {...params} label="Тип аукциона" />}
               />
             )}
           />
@@ -96,21 +87,12 @@ export function AuctionsListFilters({
                 multiple
                 size="small"
                 options={AUCTION_STATUS_FILTER_OPTIONS}
-                value={getSelectedOptions(
-                  AUCTION_STATUS_FILTER_OPTIONS,
-                  field.value,
-                )}
+                value={getSelectedOptions(AUCTION_STATUS_FILTER_OPTIONS, field.value)}
                 disabled={isLoading}
                 getOptionLabel={(option) => option.label}
-                isOptionEqualToValue={(option, value) =>
-                  option.value === value.value
-                }
-                onChange={(_, options) =>
-                  field.onChange(options.map((option) => option.value))
-                }
-                renderInput={(params) => (
-                  <TextField {...params} label="Статус аукциона" />
-                )}
+                isOptionEqualToValue={(option, value) => option.value === value.value}
+                onChange={(_, options) => field.onChange(options.map((option) => option.value))}
+                renderInput={(params) => <TextField {...params} label="Статус аукциона" />}
               />
             )}
           />
@@ -123,21 +105,12 @@ export function AuctionsListFilters({
                 multiple
                 size="small"
                 options={TRADING_STATUS_FILTER_OPTIONS}
-                value={getSelectedOptions(
-                  TRADING_STATUS_FILTER_OPTIONS,
-                  field.value,
-                )}
+                value={getSelectedOptions(TRADING_STATUS_FILTER_OPTIONS, field.value)}
                 disabled={isLoading}
                 getOptionLabel={(option) => option.label}
-                isOptionEqualToValue={(option, value) =>
-                  option.value === value.value
-                }
-                onChange={(_, options) =>
-                  field.onChange(options.map((option) => option.value))
-                }
-                renderInput={(params) => (
-                  <TextField {...params} label="Мой статус" />
-                )}
+                isOptionEqualToValue={(option, value) => option.value === value.value}
+                onChange={(_, options) => field.onChange(options.map((option) => option.value))}
+                renderInput={(params) => <TextField {...params} label="Мой статус" />}
               />
             )}
           />
@@ -282,12 +255,7 @@ export function AuctionsListFilters({
         </AuctionsListFiltersFieldsBoxStyled>
 
         <AuctionsListFiltersActionsBoxStyled>
-          <Button
-            type="button"
-            color="inherit"
-            disabled={isLoading}
-            onClick={onReset}
-          >
+          <Button type="button" color="inherit" disabled={isLoading} onClick={onReset}>
             Сбросить
           </Button>
           <Button type="submit" variant="contained" disabled={isLoading}>
@@ -296,5 +264,5 @@ export function AuctionsListFilters({
         </AuctionsListFiltersActionsBoxStyled>
       </AuctionsListFiltersRootPaperStyled>
     </form>
-  )
+  );
 }

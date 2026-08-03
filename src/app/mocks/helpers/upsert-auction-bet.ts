@@ -1,15 +1,15 @@
-import { auctionBetsByAuctionUuid } from '@/app/mocks/data/auction-bets'
-import { calculatePriceNoVat } from '@/app/mocks/helpers/calculate-price-no-vat'
-import type { TAuctionStoreAuctionType } from '@/app/mocks/types/auction-store'
-import type { IBetItem } from '@/entities/auction/types/auction-bet'
+import { auctionBetsByAuctionUuid } from '@/app/mocks/data/auction-bets';
+import { calculatePriceNoVat } from '@/app/mocks/helpers/calculate-price-no-vat';
+import type { TAuctionStoreAuctionType } from '@/app/mocks/types/auction-store';
+import type { IBetItem } from '@/entities/auction/types/auction-bet';
 
 export function createBetItem(params: {
-  auctionId: number
-  auctionUuid: string
-  price: number
+  auctionId: number;
+  auctionUuid: string;
+  price: number;
 }): IBetItem {
-  const currentBets = auctionBetsByAuctionUuid[params.auctionUuid] ?? []
-  const priceNoVat = calculatePriceNoVat(params.price)
+  const currentBets = auctionBetsByAuctionUuid[params.auctionUuid] ?? [];
+  const priceNoVat = calculatePriceNoVat(params.price);
 
   return {
     id: getNextBetId(),
@@ -36,7 +36,7 @@ export function createBetItem(params: {
       payment_type: 'Bank transfer with VAT',
       vat_rate: '20',
     },
-  }
+  };
 }
 
 export function replaceOrInsertSubscriberBet(
@@ -44,52 +44,48 @@ export function replaceOrInsertSubscriberBet(
   nextBet: IBetItem,
   auctionType: TAuctionStoreAuctionType,
 ): IBetItem[] {
-  const otherSubscriberBets = bets.filter(
-    (bet) => bet.subscriber_id !== nextBet.subscriber_id,
-  )
-  const nextBets = [nextBet, ...otherSubscriberBets]
+  const otherSubscriberBets = bets.filter((bet) => bet.subscriber_id !== nextBet.subscriber_id);
+  const nextBets = [nextBet, ...otherSubscriberBets];
 
-  return rerankAuctionBets(nextBets, auctionType)
+  return rerankAuctionBets(nextBets, auctionType);
 }
 
 function getNextBetId(): number {
-  return Object.values(auctionBetsByAuctionUuid).flat().length + 1
+  return Object.values(auctionBetsByAuctionUuid).flat().length + 1;
 }
 
-function rerankAuctionBets(
-  bets: IBetItem[],
-  auctionType: TAuctionStoreAuctionType,
-): IBetItem[] {
+function rerankAuctionBets(bets: IBetItem[], auctionType: TAuctionStoreAuctionType): IBetItem[] {
   if (auctionType !== 'Down' && auctionType !== 'Up') {
-    return bets
+    return bets;
   }
 
   const activeBets = bets
     .filter((bet) => !bet.is_rejected)
     .sort((leftBet, rightBet) => {
-      const priceDifference = auctionType === 'Down'
-        ? leftBet.price_with_vat - rightBet.price_with_vat
-        : rightBet.price_with_vat - leftBet.price_with_vat
+      const priceDifference =
+        auctionType === 'Down'
+          ? leftBet.price_with_vat - rightBet.price_with_vat
+          : rightBet.price_with_vat - leftBet.price_with_vat;
 
       if (priceDifference !== 0) {
-        return priceDifference
+        return priceDifference;
       }
 
-      const createdAtDifference = new Date(leftBet.created_at).getTime()
-        - new Date(rightBet.created_at).getTime()
+      const createdAtDifference =
+        new Date(leftBet.created_at).getTime() - new Date(rightBet.created_at).getTime();
 
-      return createdAtDifference || leftBet.id - rightBet.id
+      return createdAtDifference || leftBet.id - rightBet.id;
     })
     .map((bet, index) => ({
       ...bet,
       place: index + 1,
-    }))
+    }));
   const rejectedBets = bets
     .filter((bet) => bet.is_rejected)
     .map((bet) => ({
       ...bet,
       place: null,
-    }))
+    }));
 
-  return [...activeBets, ...rejectedBets]
+  return [...activeBets, ...rejectedBets];
 }

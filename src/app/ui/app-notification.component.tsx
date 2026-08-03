@@ -1,16 +1,14 @@
-import Alert from '@mui/material/Alert'
-import Snackbar from '@mui/material/Snackbar'
-import { useNotificationStore } from '@/shared/model/notification-store'
+import Alert from '@mui/material/Alert';
+import Snackbar from '@mui/material/Snackbar';
+import { useNotificationStore } from '@/shared/model/notification-store';
 
-const NOTIFICATION_AUTO_HIDE_DURATION_MS = 5000
+const NOTIFICATION_AUTO_HIDE_DURATION_MS = 5000;
 
 export function AppNotification() {
-  const isOpen = useNotificationStore((state) => state.isOpen)
-  const message = useNotificationStore((state) => state.message)
-  const severity = useNotificationStore((state) => state.severity)
-  const closeNotification = useNotificationStore(
-    (state) => state.closeNotification,
-  )
+  const isOpen = useNotificationStore((state) => state.isOpen);
+  const message = useNotificationStore((state) => state.message);
+  const severity = useNotificationStore((state) => state.severity);
+  const closeNotification = useNotificationStore((state) => state.closeNotification);
 
   return (
     <Snackbar
@@ -28,5 +26,5 @@ export function AppNotification() {
         {message}
       </Alert>
     </Snackbar>
-  )
+  );
 }

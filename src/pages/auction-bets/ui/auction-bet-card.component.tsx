@@ -1,11 +1,6 @@
-import Chip from '@mui/material/Chip'
-import Divider from '@mui/material/Divider'
-import Typography from '@mui/material/Typography'
-import {
-  formatAuctionBetDateTime,
-  formatAuctionBetMoney,
-  formatAuctionBetValue,
-} from '@/pages/auction-bets/helpers/format-auction-bet-value'
+import Chip from '@mui/material/Chip';
+import Divider from '@mui/material/Divider';
+import Typography from '@mui/material/Typography';
 import {
   AuctionBetChipsBoxStyled,
   AuctionBetHeaderBoxStyled,
@@ -13,8 +8,15 @@ import {
   AuctionBetValueLabelTypographyStyled,
   AuctionBetValueRowBoxStyled,
   AuctionBetValuesBoxStyled,
-} from '@/pages/auction-bets/styles/auction-bets.styles'
-import type { IAuctionBetCardProps } from '@/pages/auction-bets/types/auction-bets'
+} from '@/pages/auction-bets/styles/auction-bets.styles';
+import type { IAuctionBetCardProps } from '@/pages/auction-bets/types/auction-bets';
+import {
+  formatDateTime,
+  formatDisplayValue,
+  formatMoney,
+} from '@/shared/helpers/format-display-value';
+
+const EMPTY_VALUE = '—';
 
 export function AuctionBetCard({ bet }: IAuctionBetCardProps) {
   return (
@@ -22,15 +24,15 @@ export function AuctionBetCard({ bet }: IAuctionBetCardProps) {
       <AuctionBetHeaderBoxStyled>
         <div>
           <Typography variant="h6" component="h2">
-            {formatAuctionBetValue(bet.organization_name)}
+            {formatDisplayValue(bet.organization_name, EMPTY_VALUE)}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            ИНН {formatAuctionBetValue(bet.organization_inn)}
+            ИНН {formatDisplayValue(bet.organization_inn, EMPTY_VALUE)}
           </Typography>
         </div>
 
         <Typography variant="body2" color="text.secondary">
-          {formatAuctionBetDateTime(bet.created_at)}
+          {formatDateTime(bet.created_at, EMPTY_VALUE)}
         </Typography>
       </AuctionBetHeaderBoxStyled>
 
@@ -47,56 +49,56 @@ export function AuctionBetCard({ bet }: IAuctionBetCardProps) {
           <AuctionBetValueLabelTypographyStyled variant="body2">
             Цена с НДС
           </AuctionBetValueLabelTypographyStyled>
-          <Typography>{formatAuctionBetMoney(bet.price_with_vat)}</Typography>
+          <Typography>{formatMoney(bet.price_with_vat, '643', EMPTY_VALUE)}</Typography>
         </AuctionBetValueRowBoxStyled>
 
         <AuctionBetValueRowBoxStyled>
           <AuctionBetValueLabelTypographyStyled variant="body2">
             Цена без НДС
           </AuctionBetValueLabelTypographyStyled>
-          <Typography>{formatAuctionBetMoney(bet.price_no_vat)}</Typography>
+          <Typography>{formatMoney(bet.price_no_vat, '643', EMPTY_VALUE)}</Typography>
         </AuctionBetValueRowBoxStyled>
 
         <AuctionBetValueRowBoxStyled>
           <AuctionBetValueLabelTypographyStyled variant="body2">
             Место в рейтинге
           </AuctionBetValueLabelTypographyStyled>
-          <Typography>{formatAuctionBetValue(bet.place)}</Typography>
+          <Typography>{formatDisplayValue(bet.place, EMPTY_VALUE)}</Typography>
         </AuctionBetValueRowBoxStyled>
 
         <AuctionBetValueRowBoxStyled>
           <AuctionBetValueLabelTypographyStyled variant="body2">
             Тип оплаты
           </AuctionBetValueLabelTypographyStyled>
-          <Typography>{formatAuctionBetValue(bet.price_info.payment_type)}</Typography>
+          <Typography>{formatDisplayValue(bet.price_info.payment_type, EMPTY_VALUE)}</Typography>
         </AuctionBetValueRowBoxStyled>
 
         <AuctionBetValueRowBoxStyled>
           <AuctionBetValueLabelTypographyStyled variant="body2">
             Ставка НДС
           </AuctionBetValueLabelTypographyStyled>
-          <Typography>{formatAuctionBetValue(bet.price_info.vat_rate)}</Typography>
+          <Typography>{formatDisplayValue(bet.price_info.vat_rate, EMPTY_VALUE)}</Typography>
         </AuctionBetValueRowBoxStyled>
 
         <AuctionBetValueRowBoxStyled>
           <AuctionBetValueLabelTypographyStyled variant="body2">
             Контакт
           </AuctionBetValueLabelTypographyStyled>
-          <Typography>{formatAuctionBetValue(bet.contact_name)}</Typography>
+          <Typography>{formatDisplayValue(bet.contact_name, EMPTY_VALUE)}</Typography>
         </AuctionBetValueRowBoxStyled>
 
         <AuctionBetValueRowBoxStyled>
           <AuctionBetValueLabelTypographyStyled variant="body2">
             Телефон
           </AuctionBetValueLabelTypographyStyled>
-          <Typography>{formatAuctionBetValue(bet.contact_phone)}</Typography>
+          <Typography>{formatDisplayValue(bet.contact_phone, EMPTY_VALUE)}</Typography>
         </AuctionBetValueRowBoxStyled>
 
         <AuctionBetValueRowBoxStyled>
           <AuctionBetValueLabelTypographyStyled variant="body2">
             Комментарий
           </AuctionBetValueLabelTypographyStyled>
-          <Typography>{formatAuctionBetValue(bet.transporter_comment)}</Typography>
+          <Typography>{formatDisplayValue(bet.transporter_comment, EMPTY_VALUE)}</Typography>
         </AuctionBetValueRowBoxStyled>
 
         {bet.is_rejected && (
@@ -105,11 +107,11 @@ export function AuctionBetCard({ bet }: IAuctionBetCardProps) {
               Причина отмены
             </AuctionBetValueLabelTypographyStyled>
             <Typography color="error.main">
-              {formatAuctionBetValue(bet.cancel_reason)}
+              {formatDisplayValue(bet.cancel_reason, EMPTY_VALUE)}
             </Typography>
           </AuctionBetValueRowBoxStyled>
         )}
       </AuctionBetValuesBoxStyled>
     </AuctionBetRootPaperStyled>
-  )
+  );
 }

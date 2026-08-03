@@ -1,10 +1,10 @@
-import Box from '@mui/material/Box'
-import { styled } from '@mui/material/styles'
+import Box from '@mui/material/Box';
+import { styled } from '@mui/material/styles';
 
 export const SetAuctionBetFormStyled = styled('form')(({ theme }) => ({
   display: 'grid',
   gap: theme.spacing(2),
-}))
+}));
 
 export const SetAuctionBetSummaryBoxStyled = styled(Box)(({ theme }) => ({
   display: 'grid',
@@ -14,14 +14,14 @@ export const SetAuctionBetSummaryBoxStyled = styled(Box)(({ theme }) => ({
   [theme.breakpoints.up('sm')]: {
     gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
   },
-}))
+}));
 
 export const SetAuctionBetSummaryItemStyled = styled(Box)(({ theme }) => ({
   minWidth: 0,
   padding: theme.spacing(1.5),
   border: `1px solid ${theme.palette.divider}`,
   borderRadius: theme.shape.borderRadius,
-}))
+}));
 
 export const SetAuctionBetActionsBoxStyled = styled(Box)(({ theme }) => ({
   display: 'flex',
@@ -40,4 +40,4 @@ export const SetAuctionBetActionsBoxStyled = styled(Box)(({ theme }) => ({
       width: 'auto',
     },
   },
-}))
+}));

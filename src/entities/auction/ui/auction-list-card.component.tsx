@@ -1,57 +1,50 @@
-import { Link, useLocation } from '@tanstack/react-router'
-import { useQueryClient } from '@tanstack/react-query'
-import Box from '@mui/material/Box'
-import Button from '@mui/material/Button'
-import Chip from '@mui/material/Chip'
-import Typography from '@mui/material/Typography'
+import { Link, useLocation } from '@tanstack/react-router';
+import { useQueryClient } from '@tanstack/react-query';
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import Chip from '@mui/material/Chip';
+import Typography from '@mui/material/Typography';
 import {
   AUCTION_STATUS_COLORS,
   EAuctionStatusLabel,
   EAuctionTypeLabel,
   ETradingStatusLabel,
   TRADING_STATUS_COLORS,
-} from '@/entities/auction/constants/auction-list-card.constants'
-import { getAuctionQueryOptions } from '@/entities/auction/api/use-auction-query'
-import { getAuctionListCardActionLabel } from '@/entities/auction/helpers/get-auction-list-card-action-label'
-import { formatCurrencyCode } from '@/shared/helpers/format-currency-code'
+} from '@/entities/auction/constants/auction-list-card.constants';
+import { getAuctionQueryOptions } from '@/entities/auction/api/use-auction-query';
+import { getAuctionListCardActionLabel } from '@/entities/auction/helpers/get-auction-list-card-action-label';
+import { formatCurrencyCode } from '@/shared/helpers/format-currency-code';
 import {
   AuctionListCardChipsBoxStyled,
   AuctionListCardContentStyled,
   AuctionListCardRootCardStyled,
   AuctionListCardRouteBoxStyled,
-} from '@/entities/auction/styles/auction-list-card.styles'
-import type { IAuctionListCardProps } from '@/entities/auction/types/auction-list-card'
+} from '@/entities/auction/styles/auction-list-card.styles';
+import type { IAuctionListCardProps } from '@/entities/auction/types/auction-list-card';
 
-const AUCTION_DETAILS_PREFETCH_STALE_TIME_MS = 10_000
+const AUCTION_DETAILS_PREFETCH_STALE_TIME_MS = 10_000;
 
 export function AuctionListCard({ auction }: IAuctionListCardProps) {
-  const auctionsListHref = useLocation({ select: (location) => location.href })
-  const queryClient = useQueryClient()
-  const currentPrice = auction.trading.price?.current
-  const actionLabel = getAuctionListCardActionLabel(auction)
+  const auctionsListHref = useLocation({ select: (location) => location.href });
+  const queryClient = useQueryClient();
+  const currentPrice = auction.trading.price?.current;
+  const actionLabel = getAuctionListCardActionLabel(auction);
 
   function prefetchAuctionDetails() {
     void queryClient.prefetchQuery({
       ...getAuctionQueryOptions(auction.main.order_uid),
       staleTime: AUCTION_DETAILS_PREFETCH_STALE_TIME_MS,
-    })
+    });
   }
 
   const actionButton = (
-    <Button
-      variant="contained"
-      size="small"
-      sx={{ px: 2, borderRadius: 2, fontWeight: 600 }}
-    >
+    <Button variant="contained" size="small" sx={{ px: 2, borderRadius: 2, fontWeight: 600 }}>
       {actionLabel}
     </Button>
-  )
+  );
 
   return (
-    <AuctionListCardRootCardStyled
-      variant="outlined"
-      onMouseEnter={prefetchAuctionDetails}
-    >
+    <AuctionListCardRootCardStyled variant="outlined" onMouseEnter={prefetchAuctionDetails}>
       <AuctionListCardContentStyled>
         <Typography
           variant="h5"
@@ -122,8 +115,7 @@ export function AuctionListCard({ auction }: IAuctionListCardProps) {
           </Typography>
 
           <Typography variant="body2" color="text.secondary">
-            Текущая цена: {currentPrice ?? '—'}{' '}
-            {formatCurrencyCode(auction.payment.currency_code)}
+            Текущая цена: {currentPrice ?? '—'} {formatCurrencyCode(auction.payment.currency_code)}
           </Typography>
 
           <Typography variant="body2" color="text.secondary">
@@ -162,5 +154,5 @@ export function AuctionListCard({ auction }: IAuctionListCardProps) {
         </Box>
       </AuctionListCardContentStyled>
     </AuctionListCardRootCardStyled>
-  )
+  );
 }

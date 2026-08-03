@@ -1,43 +1,43 @@
-import { useLocation, useNavigate, useParams } from '@tanstack/react-router'
-import Alert from '@mui/material/Alert'
-import Box from '@mui/material/Box'
-import CircularProgress from '@mui/material/CircularProgress'
-import { useAuctionQuery } from '@/entities/auction/api/use-auction-query'
-import { parseAuctionsListSearchParams } from '@/features/auctions-list-filters/model/auctions-list-search-params'
+import { useLocation, useNavigate, useParams } from '@tanstack/react-router';
+import Alert from '@mui/material/Alert';
+import Box from '@mui/material/Box';
+import CircularProgress from '@mui/material/CircularProgress';
+import { useAuctionQuery } from '@/entities/auction/api/use-auction-query';
+import { parseAuctionsListSearchParams } from '@/features/auctions-list-filters/model/auctions-list-search-params';
 import {
   AuctionDetailsActionsBoxStyled,
   AuctionDetailsBackButtonStyled,
   AuctionDetailsBetsHistoryButtonStyled,
   AuctionDetailsPageContainerStyled,
   AuctionDetailsSectionsBoxStyled,
-} from '@/pages/auction-details/styles/auction-details.styles'
-import { AuctionDetailsCargoSection } from '@/pages/auction-details/ui/auction-details-cargo-section.component'
-import { AuctionDetailsHeader } from '@/pages/auction-details/ui/auction-details-header.component'
-import { AuctionDetailsOrganizerSection } from '@/pages/auction-details/ui/auction-details-organizer-section.component'
-import { AuctionDetailsPaymentSection } from '@/pages/auction-details/ui/auction-details-payment-section.component'
-import { AuctionDetailsRouteSection } from '@/pages/auction-details/ui/auction-details-route-section.component'
-import { AuctionDetailsTradingSection } from '@/pages/auction-details/ui/auction-details-trading-section.component'
-import { NotFoundPage } from '@/pages/not-found/ui/not-found-page.component'
-import { isApiNotFoundError } from '@/shared/api/is-api-not-found-error'
+} from '@/pages/auction-details/styles/auction-details.styles';
+import { AuctionDetailsCargoSection } from '@/pages/auction-details/ui/auction-details-cargo-section.component';
+import { AuctionDetailsHeader } from '@/pages/auction-details/ui/auction-details-header.component';
+import { AuctionDetailsOrganizerSection } from '@/pages/auction-details/ui/auction-details-organizer-section.component';
+import { AuctionDetailsPaymentSection } from '@/pages/auction-details/ui/auction-details-payment-section.component';
+import { AuctionDetailsRouteSection } from '@/pages/auction-details/ui/auction-details-route-section.component';
+import { AuctionDetailsTradingSection } from '@/pages/auction-details/ui/auction-details-trading-section.component';
+import { NotFoundPage } from '@/pages/not-found/ui/not-found-page.component';
+import { isApiNotFoundError } from '@/shared/api/is-api-not-found-error';
 
 export function AuctionDetailsPage() {
-  const { auctionUuid } = useParams({ from: '/auctions/$auctionUuid' })
+  const { auctionUuid } = useParams({ from: '/auctions/$auctionUuid' });
   const auctionsListHref = useLocation({
     select: (location) => location.state.auctionsListHref,
-  })
-  const navigate = useNavigate({ from: '/auctions/$auctionUuid' })
-  const { data: auction, error, isError, isPending } = useAuctionQuery(auctionUuid)
+  });
+  const navigate = useNavigate({ from: '/auctions/$auctionUuid' });
+  const { data: auction, error, isError, isPending } = useAuctionQuery(auctionUuid);
 
   function handleAuctionsListOpen() {
     if (auctionsListHref) {
-      void navigate({ href: auctionsListHref })
-      return
+      void navigate({ href: auctionsListHref });
+      return;
     }
 
     void navigate({
       to: '/',
       search: parseAuctionsListSearchParams({ page: 1 }),
-    })
+    });
   }
 
   function handleBetsHistoryOpen() {
@@ -45,7 +45,7 @@ export function AuctionDetailsPage() {
       to: '/auctions/$auctionUuid/bets',
       params: { auctionUuid },
       state: { auctionsListHref },
-    })
+    });
   }
 
   function handleSetBetOpen() {
@@ -53,7 +53,7 @@ export function AuctionDetailsPage() {
       to: '/auctions/$auctionUuid/bet',
       params: { auctionUuid },
       state: { auctionsListHref },
-    })
+    });
   }
 
   if (isPending) {
@@ -63,29 +63,24 @@ export function AuctionDetailsPage() {
           <CircularProgress />
         </Box>
       </AuctionDetailsPageContainerStyled>
-    )
+    );
   }
 
   if (isApiNotFoundError(error)) {
-    return <NotFoundPage />
+    return <NotFoundPage />;
   }
 
   if (isError || !auction) {
     return (
       <AuctionDetailsPageContainerStyled maxWidth="xl">
-        <Alert severity="error">
-          Не удалось загрузить детальную информацию об аукционе.
-        </Alert>
+        <Alert severity="error">Не удалось загрузить детальную информацию об аукционе.</Alert>
       </AuctionDetailsPageContainerStyled>
-    )
+    );
   }
 
   return (
     <AuctionDetailsPageContainerStyled maxWidth="xl">
-      <AuctionDetailsBackButtonStyled
-        onClick={handleAuctionsListOpen}
-        variant="outlined"
-      >
+      <AuctionDetailsBackButtonStyled onClick={handleAuctionsListOpen} variant="outlined">
         К списку аукционов
       </AuctionDetailsBackButtonStyled>
 
@@ -93,10 +88,7 @@ export function AuctionDetailsPage() {
 
       <AuctionDetailsActionsBoxStyled>
         {auction.trading.can_set_bet && (
-          <AuctionDetailsBetsHistoryButtonStyled
-            onClick={handleSetBetOpen}
-            variant="contained"
-          >
+          <AuctionDetailsBetsHistoryButtonStyled onClick={handleSetBetOpen} variant="contained">
             {auction.trading.your.bet ? 'Изменить ставку' : 'Сделать ставку'}
           </AuctionDetailsBetsHistoryButtonStyled>
         )}
@@ -120,9 +112,7 @@ export function AuctionDetailsPage() {
 
         <AuctionDetailsRouteSection
           routes={auction.routes}
-          areAddressesAndContactsHidden={
-            auction.trading.hide_points_address_and_contacts
-          }
+          areAddressesAndContactsHidden={auction.trading.hide_points_address_and_contacts}
         />
 
         <AuctionDetailsCargoSection
@@ -139,5 +129,5 @@ export function AuctionDetailsPage() {
         />
       </AuctionDetailsSectionsBoxStyled>
     </AuctionDetailsPageContainerStyled>
-  )
+  );
 }

@@ -1,29 +1,28 @@
-import { useMemo } from 'react'
-import { useForm } from 'react-hook-form'
-import { zodResolver } from '@hookform/resolvers/zod'
-import { useQueryClient } from '@tanstack/react-query'
-import Alert from '@mui/material/Alert'
-import Button from '@mui/material/Button'
-import TextField from '@mui/material/TextField'
-import Typography from '@mui/material/Typography'
-import { useSetAuctionBetMutation } from '@/entities/auction/api/use-set-auction-bet-mutation'
-import { mapSetAuctionBetFormValuesToRequest } from '@/features/set-auction-bet/helpers/map-set-auction-bet-form-values-to-request'
-import { createSetAuctionBetFormSchema } from '@/features/set-auction-bet/model/create-set-auction-bet-form-schema'
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { useQueryClient } from '@tanstack/react-query';
+import Alert from '@mui/material/Alert';
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
+import Typography from '@mui/material/Typography';
+import { useSetAuctionBetMutation } from '@/entities/auction/api/use-set-auction-bet-mutation';
+import { mapSetAuctionBetFormValuesToRequest } from '@/features/set-auction-bet/helpers/map-set-auction-bet-form-values-to-request';
+import { createSetAuctionBetFormSchema } from '@/features/set-auction-bet/model/create-set-auction-bet-form-schema';
 import {
   SetAuctionBetActionsBoxStyled,
   SetAuctionBetFormStyled,
   SetAuctionBetSummaryBoxStyled,
   SetAuctionBetSummaryItemStyled,
-} from '@/features/set-auction-bet/styles/set-auction-bet-form.styles'
+} from '@/features/set-auction-bet/styles/set-auction-bet-form.styles';
 import type {
   ISetAuctionBetConstraints,
   ISetAuctionBetFormProps,
   ISetAuctionBetFormValues,
-} from '@/features/set-auction-bet/types/set-auction-bet'
-import { isApiValidationError } from '@/shared/api/is-api-validation-error'
-import { formatCurrencyCode } from '@/shared/helpers/format-currency-code'
-import { formatMoney } from '@/shared/helpers/format-display-value'
-import { useNotificationStore } from '@/shared/model/notification-store'
+} from '@/features/set-auction-bet/types/set-auction-bet';
+import { isApiValidationError } from '@/shared/api/is-api-validation-error';
+import { formatCurrencyCode } from '@/shared/helpers/format-currency-code';
+import { formatMoney } from '@/shared/helpers/format-display-value';
+import { useNotificationStore } from '@/shared/model/notification-store';
 
 export function SetAuctionBetForm({
   auctionUuid,
@@ -33,22 +32,16 @@ export function SetAuctionBetForm({
   onCancel,
   onSuccess,
 }: ISetAuctionBetFormProps) {
-  const constraints = useMemo<ISetAuctionBetConstraints>(() => ({
+  const constraints: ISetAuctionBetConstraints = {
     auctionType,
     available: trading.price.available,
     min: trading.price.min,
     max: trading.price.max,
     step: trading.price.step,
-  }), [auctionType, trading.price])
-  const schema = useMemo(
-    () => createSetAuctionBetFormSchema(constraints),
-    [constraints],
-  )
+  };
   const defaultPrice = trading.your.bet
-    ? trading.your.last_bet_with_vat
-      ?? trading.your.last_bet
-      ?? trading.price.available
-    : trading.price.available
+    ? (trading.your.last_bet_with_vat ?? trading.your.last_bet ?? trading.price.available)
+    : trading.price.available;
   const {
     register,
     handleSubmit,
@@ -56,57 +49,47 @@ export function SetAuctionBetForm({
     clearErrors,
     formState: { errors },
   } = useForm<ISetAuctionBetFormValues>({
-    resolver: zodResolver(schema),
+    resolver: zodResolver(createSetAuctionBetFormSchema(constraints)),
     defaultValues: {
       price: defaultPrice === null ? '' : String(defaultPrice),
     },
-  })
-  const setAuctionBetMutation = useSetAuctionBetMutation({ auctionUuid })
-  const queryClient = useQueryClient()
-  const showNotification = useNotificationStore(
-    (state) => state.showNotification,
-  )
-  const measurementLabel = trading.bid_measurement_type === 'PerKm'
-    ? 'за км'
-    : 'за рейс'
+  });
+  const setAuctionBetMutation = useSetAuctionBetMutation({ auctionUuid });
+  const queryClient = useQueryClient();
+  const showNotification = useNotificationStore((state) => state.showNotification);
+  const measurementLabel = trading.bid_measurement_type === 'PerKm' ? 'за км' : 'за рейс';
 
   async function submitForm(values: ISetAuctionBetFormValues) {
-    clearErrors('root.server')
+    clearErrors('root.server');
 
     try {
-      await setAuctionBetMutation.mutateAsync(
-        mapSetAuctionBetFormValuesToRequest(values),
-      )
+      await setAuctionBetMutation.mutateAsync(mapSetAuctionBetFormValuesToRequest(values));
       showNotification(
-        trading.your.bet
-          ? 'Ставка успешно изменена'
-          : 'Ставка успешно сделана',
+        trading.your.bet ? 'Ставка успешно изменена' : 'Ставка успешно сделана',
         'success',
-      )
-      onSuccess()
+      );
+      onSuccess();
     } catch (error) {
       if (isApiValidationError(error)) {
-        const priceError = error.data.errors.find(({ field }) => field === 'price')
+        const priceError = error.data.errors.find(({ field }) => field === 'price');
 
         setError('price', {
           type: 'server',
           message: priceError?.message ?? error.data.message,
-        })
+        });
         await queryClient.invalidateQueries({
           queryKey: ['auctions', 'details', auctionUuid],
-        })
-        return
+        });
+        return;
       }
 
-      const errorMessage = error instanceof Error
-        ? error.message
-        : 'Не удалось сохранить ставку'
+      const errorMessage = error instanceof Error ? error.message : 'Не удалось сохранить ставку';
 
       setError('root.server', {
         type: 'server',
         message: errorMessage,
-      })
-      showNotification(errorMessage, 'error')
+      });
+      showNotification(errorMessage, 'error');
     }
   }
 
@@ -136,9 +119,7 @@ export function SetAuctionBetForm({
             <Typography variant="caption" color="text.secondary">
               Минимальная цена
             </Typography>
-            <Typography variant="body1">
-              {formatMoney(trading.price.min, currencyCode)}
-            </Typography>
+            <Typography variant="body1">{formatMoney(trading.price.min, currencyCode)}</Typography>
           </SetAuctionBetSummaryItemStyled>
         )}
 
@@ -147,9 +128,7 @@ export function SetAuctionBetForm({
             <Typography variant="caption" color="text.secondary">
               Максимальная цена
             </Typography>
-            <Typography variant="body1">
-              {formatMoney(trading.price.max, currencyCode)}
-            </Typography>
+            <Typography variant="body1">{formatMoney(trading.price.max, currencyCode)}</Typography>
           </SetAuctionBetSummaryItemStyled>
         )}
 
@@ -158,9 +137,7 @@ export function SetAuctionBetForm({
             <Typography variant="caption" color="text.secondary">
               Шаг ставки
             </Typography>
-            <Typography variant="body1">
-              {formatMoney(trading.price.step, currencyCode)}
-            </Typography>
+            <Typography variant="body1">{formatMoney(trading.price.step, currencyCode)}</Typography>
           </SetAuctionBetSummaryItemStyled>
         )}
 
@@ -170,10 +147,7 @@ export function SetAuctionBetForm({
               Ваша последняя ставка
             </Typography>
             <Typography variant="body1">
-              {formatMoney(
-                trading.your.last_bet_with_vat ?? trading.your.last_bet,
-                currencyCode,
-              )}
+              {formatMoney(trading.your.last_bet_with_vat ?? trading.your.last_bet, currencyCode)}
             </Typography>
           </SetAuctionBetSummaryItemStyled>
         )}
@@ -186,9 +160,7 @@ export function SetAuctionBetForm({
         fullWidth
         disabled={setAuctionBetMutation.isPending}
         error={Boolean(errors.price)}
-        helperText={
-          errors.price?.message ?? `Валюта: ${formatCurrencyCode(currencyCode)}`
-        }
+        helperText={errors.price?.message ?? `Валюта: ${formatCurrencyCode(currencyCode)}`}
         slotProps={{
           htmlInput: {
             min: constraints.min ?? undefined,
@@ -199,9 +171,7 @@ export function SetAuctionBetForm({
         {...register('price')}
       />
 
-      {errors.root?.server?.message && (
-        <Alert severity="error">{errors.root.server.message}</Alert>
-      )}
+      {errors.root?.server?.message && <Alert severity="error">{errors.root.server.message}</Alert>}
 
       <SetAuctionBetActionsBoxStyled>
         <Button
@@ -212,11 +182,7 @@ export function SetAuctionBetForm({
         >
           К аукциону
         </Button>
-        <Button
-          type="submit"
-          variant="contained"
-          disabled={setAuctionBetMutation.isPending}
-        >
+        <Button type="submit" variant="contained" disabled={setAuctionBetMutation.isPending}>
           {setAuctionBetMutation.isPending
             ? 'Сохранение...'
             : trading.your.bet
@@ -225,5 +191,5 @@ export function SetAuctionBetForm({
         </Button>
       </SetAuctionBetActionsBoxStyled>
     </SetAuctionBetFormStyled>
-  )
+  );
 }

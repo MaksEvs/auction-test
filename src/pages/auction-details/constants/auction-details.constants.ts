@@ -3,9 +3,9 @@ import type {
   ICarRequirements,
   IDocs,
   ILoadingTypes,
-} from '@/entities/auction/types/auction-details'
+} from '@/entities/auction/types/auction-details';
 
-export const AUCTION_DETAILS_EMPTY_VALUE = '—'
+export const AUCTION_DETAILS_EMPTY_VALUE = '—';
 
 export enum EAuctionOperationTypeLabel {
   Loading = 'Погрузка',
@@ -31,9 +31,9 @@ export const AUCTION_LOADING_TYPE_LABELS = [
   { key: 'rear', label: 'Задняя' },
   { key: 'full', label: 'Полная растентовка' },
 ] as const satisfies ReadonlyArray<{
-  key: keyof ILoadingTypes
-  label: string
-}>
+  key: keyof ILoadingTypes;
+  label: string;
+}>;
 
 export const AUCTION_DOCUMENT_LABELS = [
   { key: 'tir', label: 'TIR' },
@@ -41,9 +41,9 @@ export const AUCTION_DOCUMENT_LABELS = [
   { key: 't1', label: 'T1' },
   { key: 'med', label: 'Медицинская книжка' },
 ] as const satisfies ReadonlyArray<{
-  key: keyof IDocs
-  label: string
-}>
+  key: keyof IDocs;
+  label: string;
+}>;
 
 export const AUCTION_VEHICLE_REQUIREMENT_LABELS = [
   { key: 'weight', label: 'Грузоподъёмность', unit: 'т' },
@@ -52,10 +52,10 @@ export const AUCTION_VEHICLE_REQUIREMENT_LABELS = [
   { key: 'length', label: 'Длина', unit: 'м' },
   { key: 'height', label: 'Высота', unit: 'м' },
 ] as const satisfies ReadonlyArray<{
-  key: Exclude<keyof ICarRequirements, 'type'>
-  label: string
-  unit: string
-}>
+  key: Exclude<keyof ICarRequirements, 'type'>;
+  label: string;
+  unit: string;
+}>;
 
 export const AUCTION_TRADING_SETTING_LABELS = [
   { key: 'prolong_after_bet', label: 'Продление после ставки', unit: 'мин' },
@@ -64,7 +64,7 @@ export const AUCTION_TRADING_SETTING_LABELS = [
   { key: 'transmission_time_in', label: 'Срок передачи данных', unit: 'ч' },
   { key: 'coefficient', label: 'Коэффициент', unit: '' },
 ] as const satisfies ReadonlyArray<{
-  key: keyof IAuctionShowTradingSettings
-  label: string
-  unit: string
-}>
+  key: keyof IAuctionShowTradingSettings;
+  label: string;
+  unit: string;
+}>;

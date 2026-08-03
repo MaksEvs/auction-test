@@ -1,4 +1,4 @@
-import type { IBetItem } from '@/entities/auction/types/auction-bet'
+import type { IBetItem } from '@/entities/auction/types/auction-bet';
 
 export const auctionBetsByAuctionUuid: Record<string, IBetItem[]> = {
   '3a05d045-0e67-4f85-b20a-de81d18bba7a': [
@@ -830,4 +830,4 @@ export const auctionBetsByAuctionUuid: Record<string, IBetItem[]> = {
     },
   ],
   '550e8400-e29b-41d4-a716-446655440017': [],
-}
+};

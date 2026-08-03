@@ -1,9 +1,9 @@
-import { styled } from '@mui/material/styles'
-import Box from '@mui/material/Box'
-import Button from '@mui/material/Button'
-import Container from '@mui/material/Container'
-import Paper from '@mui/material/Paper'
-import Typography from '@mui/material/Typography'
+import { styled } from '@mui/material/styles';
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import Container from '@mui/material/Container';
+import Paper from '@mui/material/Paper';
+import Typography from '@mui/material/Typography';
 
 export const AuctionDetailsPageContainerStyled = styled(Container)(({ theme }) => ({
   paddingTop: theme.spacing(3),
@@ -13,7 +13,7 @@ export const AuctionDetailsPageContainerStyled = styled(Container)(({ theme }) =
     paddingTop: theme.spacing(5),
     paddingBottom: theme.spacing(7),
   },
-}))
+}));
 
 export const AuctionDetailsBackButtonStyled = styled(Button)(({ theme }) => ({
   width: '100%',
@@ -28,7 +28,7 @@ export const AuctionDetailsBackButtonStyled = styled(Button)(({ theme }) => ({
   [theme.breakpoints.up('sm')]: {
     width: 'auto',
   },
-}))
+}));
 
 export const AuctionDetailsHeaderBoxStyled = styled(Box)(({ theme }) => ({
   display: 'flex',
@@ -41,7 +41,7 @@ export const AuctionDetailsHeaderBoxStyled = styled(Box)(({ theme }) => ({
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
-}))
+}));
 
 export const AuctionDetailsActionsBoxStyled = styled(Box)(({ theme }) => ({
   display: 'flex',
@@ -54,24 +54,22 @@ export const AuctionDetailsActionsBoxStyled = styled(Box)(({ theme }) => ({
     flexDirection: 'row',
     flexWrap: 'wrap',
   },
-}))
+}));
 
-export const AuctionDetailsBetsHistoryButtonStyled = styled(Button)(
-  ({ theme }) => ({
-    width: '100%',
-    minHeight: 44,
-    paddingInline: theme.spacing(2.5),
-    boxShadow: theme.shadows[2],
+export const AuctionDetailsBetsHistoryButtonStyled = styled(Button)(({ theme }) => ({
+  width: '100%',
+  minHeight: 44,
+  paddingInline: theme.spacing(2.5),
+  boxShadow: theme.shadows[2],
 
-    '&:hover': {
-      boxShadow: theme.shadows[4],
-    },
+  '&:hover': {
+    boxShadow: theme.shadows[4],
+  },
 
-    [theme.breakpoints.up('sm')]: {
-      width: 'auto',
-    },
-  }),
-)
+  [theme.breakpoints.up('sm')]: {
+    width: 'auto',
+  },
+}));
 
 export const AuctionDetailsSectionsBoxStyled = styled(Box)(({ theme }) => ({
   display: 'grid',
@@ -82,7 +80,7 @@ export const AuctionDetailsSectionsBoxStyled = styled(Box)(({ theme }) => ({
   [theme.breakpoints.up('md')]: {
     gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
   },
-}))
+}));
 
 export const AuctionDetailsSectionPaperStyled = styled(Paper)(({ theme }) => ({
   display: 'flex',
@@ -90,27 +88,27 @@ export const AuctionDetailsSectionPaperStyled = styled(Paper)(({ theme }) => ({
   gap: theme.spacing(1.5),
   minWidth: 0,
   padding: theme.spacing(2),
-}))
+}));
 
-export const AuctionDetailsFullWidthSectionPaperStyled = styled(
-  AuctionDetailsSectionPaperStyled,
-)(() => ({
-  gridColumn: '1 / -1',
-}))
+export const AuctionDetailsFullWidthSectionPaperStyled = styled(AuctionDetailsSectionPaperStyled)(
+  () => ({
+    gridColumn: '1 / -1',
+  }),
+);
 
 export const AuctionDetailsValuesBoxStyled = styled(Box)(({ theme }) => ({
   display: 'grid',
   gap: theme.spacing(0.75),
-}))
+}));
 
-export const AuctionDetailsCompactValuesBoxStyled = styled(
-  AuctionDetailsValuesBoxStyled,
-)(({ theme }) => ({
-  [theme.breakpoints.up('lg')]: {
-    columnGap: theme.spacing(3),
-    gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
-  },
-}))
+export const AuctionDetailsCompactValuesBoxStyled = styled(AuctionDetailsValuesBoxStyled)(
+  ({ theme }) => ({
+    [theme.breakpoints.up('lg')]: {
+      columnGap: theme.spacing(3),
+      gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
+    },
+  }),
+);
 
 export const AuctionDetailsValueRowBoxStyled = styled(Box)(({ theme }) => ({
   display: 'grid',
@@ -122,13 +120,11 @@ export const AuctionDetailsValueRowBoxStyled = styled(Box)(({ theme }) => ({
     columnGap: theme.spacing(1.5),
     gridTemplateColumns: 'minmax(140px, 42%) minmax(0, 1fr)',
   },
-}))
+}));
 
-export const AuctionDetailsValueLabelTypographyStyled = styled(Typography)(
-  ({ theme }) => ({
-    color: theme.palette.text.secondary,
-  }),
-)
+export const AuctionDetailsValueLabelTypographyStyled = styled(Typography)(({ theme }) => ({
+  color: theme.palette.text.secondary,
+}));
 
 export const AuctionDetailsRoutePointsBoxStyled = styled(Box)(({ theme }) => ({
   display: 'grid',
@@ -138,21 +134,20 @@ export const AuctionDetailsRoutePointsBoxStyled = styled(Box)(({ theme }) => ({
   [theme.breakpoints.up('lg')]: {
     gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
   },
-
-}))
+}));
 
 export const AuctionDetailsRoutePointPaperStyled = styled(Paper)(({ theme }) => ({
   display: 'grid',
   gap: theme.spacing(1),
   minWidth: 0,
   padding: theme.spacing(1.5),
-}))
+}));
 
 export const AuctionDetailsChipsBoxStyled = styled(Box)(({ theme }) => ({
   display: 'flex',
   flexWrap: 'wrap',
   gap: theme.spacing(0.75),
-}))
+}));
 
 export const AuctionDetailsCargoOptionsGridStyled = styled(Box)(({ theme }) => ({
   display: 'grid',
@@ -162,7 +157,7 @@ export const AuctionDetailsCargoOptionsGridStyled = styled(Box)(({ theme }) => (
   [theme.breakpoints.up('md')]: {
     gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
   },
-}))
+}));
 
 export const AuctionDetailsCargoOptionBoxStyled = styled(Box)(({ theme }) => ({
   display: 'flex',
@@ -172,4 +167,4 @@ export const AuctionDetailsCargoOptionBoxStyled = styled(Box)(({ theme }) => ({
   padding: theme.spacing(1.5),
   border: `1px solid ${theme.palette.divider}`,
   borderRadius: theme.shape.borderRadius,
-}))
+}));

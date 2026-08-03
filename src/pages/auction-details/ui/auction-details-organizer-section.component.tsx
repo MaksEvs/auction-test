@@ -1,14 +1,14 @@
-import Alert from '@mui/material/Alert'
-import Divider from '@mui/material/Divider'
-import Typography from '@mui/material/Typography'
-import { formatAuctionDetailsValue } from '@/pages/auction-details/helpers/format-auction-details-value'
+import Alert from '@mui/material/Alert';
+import Divider from '@mui/material/Divider';
+import Typography from '@mui/material/Typography';
+import { formatAuctionDetailsValue } from '@/pages/auction-details/helpers/format-auction-details-value';
 import {
   AuctionDetailsSectionPaperStyled,
   AuctionDetailsValueLabelTypographyStyled,
   AuctionDetailsValueRowBoxStyled,
   AuctionDetailsValuesBoxStyled,
-} from '@/pages/auction-details/styles/auction-details.styles'
-import type { IAuctionDetailsOrganizerSectionProps } from '@/pages/auction-details/types/auction-details-sections'
+} from '@/pages/auction-details/styles/auction-details.styles';
+import type { IAuctionDetailsOrganizerSectionProps } from '@/pages/auction-details/types/auction-details-sections';
 
 export function AuctionDetailsOrganizerSection({
   organizer,
@@ -30,16 +30,12 @@ export function AuctionDetailsOrganizerSection({
         </AuctionDetailsValueRowBoxStyled>
 
         <AuctionDetailsValueRowBoxStyled>
-          <AuctionDetailsValueLabelTypographyStyled>
-            ИНН
-          </AuctionDetailsValueLabelTypographyStyled>
+          <AuctionDetailsValueLabelTypographyStyled>ИНН</AuctionDetailsValueLabelTypographyStyled>
           <Typography>{formatAuctionDetailsValue(organizer.organization_inn)}</Typography>
         </AuctionDetailsValueRowBoxStyled>
 
         <AuctionDetailsValueRowBoxStyled>
-          <AuctionDetailsValueLabelTypographyStyled>
-            КПП
-          </AuctionDetailsValueLabelTypographyStyled>
+          <AuctionDetailsValueLabelTypographyStyled>КПП</AuctionDetailsValueLabelTypographyStyled>
           <Typography>{formatAuctionDetailsValue(organizer.organization_kpp)}</Typography>
         </AuctionDetailsValueRowBoxStyled>
 
@@ -74,9 +70,7 @@ export function AuctionDetailsOrganizerSection({
         <AuctionDetailsValuesBoxStyled>
           {contacts.map((contact, index) => (
             <AuctionDetailsValuesBoxStyled key={contact.uid ?? index}>
-              <Typography variant="subtitle2">
-                Контакт {index + 1}
-              </Typography>
+              <Typography variant="subtitle2">Контакт {index + 1}</Typography>
 
               <AuctionDetailsValueRowBoxStyled>
                 <AuctionDetailsValueLabelTypographyStyled>
@@ -112,5 +106,5 @@ export function AuctionDetailsOrganizerSection({
         </AuctionDetailsValuesBoxStyled>
       )}
     </AuctionDetailsSectionPaperStyled>
-  )
+  );
 }

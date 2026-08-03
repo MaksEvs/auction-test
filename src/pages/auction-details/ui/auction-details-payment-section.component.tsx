@@ -1,22 +1,20 @@
-import Typography from '@mui/material/Typography'
-import { EAuctionPaymentDelayTypeLabel } from '@/pages/auction-details/constants/auction-details.constants'
+import Typography from '@mui/material/Typography';
+import { EAuctionPaymentDelayTypeLabel } from '@/pages/auction-details/constants/auction-details.constants';
 import {
   formatAuctionDetailsValue,
   formatAuctionDetailsValueWithUnit,
-} from '@/pages/auction-details/helpers/format-auction-details-value'
+} from '@/pages/auction-details/helpers/format-auction-details-value';
 import {
   AuctionDetailsSectionPaperStyled,
   AuctionDetailsValueLabelTypographyStyled,
   AuctionDetailsValueRowBoxStyled,
   AuctionDetailsValuesBoxStyled,
-} from '@/pages/auction-details/styles/auction-details.styles'
-import type { IAuctionDetailsPaymentSectionProps } from '@/pages/auction-details/types/auction-details-sections'
-import { formatCurrencyCode } from '@/shared/helpers/format-currency-code'
+} from '@/pages/auction-details/styles/auction-details.styles';
+import type { IAuctionDetailsPaymentSectionProps } from '@/pages/auction-details/types/auction-details-sections';
+import { formatCurrencyCode } from '@/shared/helpers/format-currency-code';
 
-export function AuctionDetailsPaymentSection({
-  payment,
-}: IAuctionDetailsPaymentSectionProps) {
-  const delayUnit = EAuctionPaymentDelayTypeLabel[payment.delay_type]
+export function AuctionDetailsPaymentSection({ payment }: IAuctionDetailsPaymentSectionProps) {
+  const delayUnit = EAuctionPaymentDelayTypeLabel[payment.delay_type];
 
   return (
     <AuctionDetailsSectionPaperStyled variant="outlined">
@@ -57,9 +55,7 @@ export function AuctionDetailsPaymentSection({
           <AuctionDetailsValueLabelTypographyStyled>
             Отсрочка
           </AuctionDetailsValueLabelTypographyStyled>
-          <Typography>
-            {formatAuctionDetailsValueWithUnit(payment.delay, delayUnit)}
-          </Typography>
+          <Typography>{formatAuctionDetailsValueWithUnit(payment.delay, delayUnit)}</Typography>
         </AuctionDetailsValueRowBoxStyled>
 
         <AuctionDetailsValueRowBoxStyled>
@@ -70,5 +66,5 @@ export function AuctionDetailsPaymentSection({
         </AuctionDetailsValueRowBoxStyled>
       </AuctionDetailsValuesBoxStyled>
     </AuctionDetailsSectionPaperStyled>
-  )
+  );
 }

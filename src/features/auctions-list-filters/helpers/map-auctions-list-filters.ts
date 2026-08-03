@@ -1,8 +1,8 @@
-import type { TAuctionsListSearchParams } from '@/features/auctions-list-filters/model/auctions-list-search-params'
+import type { TAuctionsListSearchParams } from '@/features/auctions-list-filters/model/auctions-list-search-params';
 import type {
   IAuctionsListFiltersFormValues,
   TBooleanFilterValue,
-} from '@/features/auctions-list-filters/types/auctions-list-filters'
+} from '@/features/auctions-list-filters/types/auctions-list-filters';
 
 export function mapAuctionsListSearchParamsToFiltersFormValues(
   searchParams: TAuctionsListSearchParams,
@@ -20,7 +20,7 @@ export function mapAuctionsListSearchParamsToFiltersFormValues(
     is_bidder: mapBooleanToFilterValue(searchParams.is_bidder),
     current_price_from: mapNumberToInputValue(searchParams.current_price_from),
     current_price_to: mapNumberToInputValue(searchParams.current_price_to),
-  }
+  };
 }
 
 export function mapAuctionsListFiltersFormValuesToSearchParams(
@@ -39,35 +39,35 @@ export function mapAuctionsListFiltersFormValuesToSearchParams(
     is_bidder: mapFilterValueToBoolean(values.is_bidder),
     current_price_from: mapPriceInputToNumber(values.current_price_from),
     current_price_to: mapPriceInputToNumber(values.current_price_to),
-  }
+  };
 }
 
 function mapBooleanToFilterValue(value: boolean | undefined): TBooleanFilterValue {
   if (value === undefined) {
-    return ''
+    return '';
   }
 
-  return String(value) as TBooleanFilterValue
+  return String(value) as TBooleanFilterValue;
 }
 
 function mapFilterValueToBoolean(value: TBooleanFilterValue): boolean | undefined {
   if (value === '') {
-    return undefined
+    return undefined;
   }
 
-  return value === 'true'
+  return value === 'true';
 }
 
 function mapNumberToInputValue(value: number | undefined): string {
-  return value === undefined ? '' : String(value)
+  return value === undefined ? '' : String(value);
 }
 
 function mapPriceInputToNumber(value: string): number | undefined {
-  return value === '' ? undefined : Number(value)
+  return value === '' ? undefined : Number(value);
 }
 
 function mapInputStringToOptionalValue(value: string): string | undefined {
-  const trimmedValue = value.trim()
+  const trimmedValue = value.trim();
 
-  return trimmedValue || undefined
+  return trimmedValue || undefined;
 }

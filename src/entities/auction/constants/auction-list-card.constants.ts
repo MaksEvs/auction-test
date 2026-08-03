@@ -1,8 +1,5 @@
-import type { ChipProps } from '@mui/material/Chip'
-import type {
-  TAuctionStatus,
-  TTradingStatus,
-} from '@/entities/auction/types/auction-list'
+import type { ChipProps } from '@mui/material/Chip';
+import type { TAuctionStatus, TTradingStatus } from '@/entities/auction/types/auction-list';
 
 export enum EAuctionStatusLabel {
   Planning = 'Планирование',
@@ -34,7 +31,7 @@ export const AUCTION_STATUS_COLORS: Record<TAuctionStatus, ChipProps['color']> =
   Stopped: 'error',
   Canceled: 'error',
   Unknown: 'default',
-}
+};
 
 export enum ETradingStatusLabel {
   NotParticipating = 'Не участвуете',
@@ -58,4 +55,4 @@ export const TRADING_STATUS_COLORS: Record<TTradingStatus, ChipProps['color']> =
   Winner: 'success',
   Accepted: 'success',
   Unknown: 'default',
-}
+};

@@ -1,11 +1,11 @@
-import Box from '@mui/material/Box'
-import Paper from '@mui/material/Paper'
-import { styled } from '@mui/material/styles'
+import Box from '@mui/material/Box';
+import Paper from '@mui/material/Paper';
+import { styled } from '@mui/material/styles';
 
 export const AuctionsListFiltersRootPaperStyled = styled(Paper)(({ theme }) => ({
   padding: theme.spacing(2),
   borderRadius: theme.spacing(2),
-}))
+}));
 
 export const AuctionsListFiltersFieldsBoxStyled = styled(Box)(({ theme }) => ({
   display: 'grid',
@@ -17,7 +17,7 @@ export const AuctionsListFiltersFieldsBoxStyled = styled(Box)(({ theme }) => ({
   [theme.breakpoints.down('sm')]: {
     gridTemplateColumns: '1fr',
   },
-}))
+}));
 
 export const AuctionsListFiltersActionsBoxStyled = styled(Box)(({ theme }) => ({
   display: 'flex',
@@ -25,4 +25,4 @@ export const AuctionsListFiltersActionsBoxStyled = styled(Box)(({ theme }) => ({
   flexWrap: 'wrap',
   gap: theme.spacing(1),
   marginTop: theme.spacing(2),
-}))
+}));

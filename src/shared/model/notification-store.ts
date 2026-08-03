@@ -1,5 +1,5 @@
-import { create } from 'zustand'
-import type { INotificationState } from '@/shared/types/notification'
+import { create } from 'zustand';
+import type { INotificationState } from '@/shared/types/notification';
 
 export const useNotificationStore = create<INotificationState>((set) => ({
   isOpen: false,
@@ -10,9 +10,9 @@ export const useNotificationStore = create<INotificationState>((set) => ({
       isOpen: true,
       message,
       severity,
-    })
+    });
   },
   closeNotification: () => {
-    set({ isOpen: false })
+    set({ isOpen: false });
   },
-}))
+}));
